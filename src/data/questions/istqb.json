@@ -1,0 +1,2702 @@
+[
+  {
+    "id": "ctfl-001",
+    "certId": "ctfl",
+    "domain": "Software Testing",
+    "question": "Which of the following is a typical test objective?",
+    "options": [
+      "To find defects and prevent their escape to production",
+      "To prove that the software has no bugs",
+      "To ensure development is completed on time",
+      "To replace code reviews and inspections"
+    ],
+    "correctIndex": 0,
+    "explanation": "A key test objective is to find defects so they can be fixed before software reaches users. Testing cannot prove the absence of defects.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctfl-002",
+    "certId": "ctfl",
+    "domain": "Software Testing",
+    "question": "Which testing principle states that testing shows the presence of defects but cannot prove their absence?",
+    "options": [
+      "Exhaustive testing is impossible",
+      "Testing is context dependent",
+      "Testing shows presence of defects, not their absence",
+      "Defects cluster together"
+    ],
+    "correctIndex": 2,
+    "explanation": "One of the seven ISTQB testing principles is that testing can show the presence of defects but cannot prove there are no defects remaining.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctfl-003",
+    "certId": "ctfl",
+    "domain": "Software Testing",
+    "question": "Early testing is important because:",
+    "options": [
+      "Defects found later are cheaper to fix",
+      "The cost of fixing defects increases the later they are found",
+      "Testers can start before requirements exist",
+      "It reduces the need for regression testing"
+    ],
+    "correctIndex": 1,
+    "explanation": "The earlier a defect is detected and fixed, the lower the cost to fix it. This is the principle of 'shift-left' testing.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctfl-004",
+    "certId": "ctfl",
+    "domain": "Software Testing",
+    "question": "In Equivalence Partitioning, if valid input is 1–100, which set correctly identifies the partitions?",
+    "options": [
+      "Invalid: ≤0, Valid: 1–100, Invalid: ≥101",
+      "Valid: 1–50, Valid: 51–100",
+      "Invalid: <0, Valid: 0–100, Invalid: >100",
+      "Valid: 1–100, Invalid: all others as one partition"
+    ],
+    "correctIndex": 0,
+    "explanation": "Equivalence Partitioning divides inputs into partitions: values below the valid range, the valid range itself, and values above — each treated as equivalent within their partition.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctfl-005",
+    "certId": "ctfl",
+    "domain": "Software Testing",
+    "question": "Boundary Value Analysis extends Equivalence Partitioning by testing:",
+    "options": [
+      "Only the middle value of each partition",
+      "The minimum and maximum values of each partition",
+      "Random values within each partition",
+      "The first value of the valid partition only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Boundary Value Analysis tests the edge values at the boundaries of partitions, since defects often occur at boundaries.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctfl-006",
+    "certId": "ctfl",
+    "domain": "Software Testing",
+    "question": "Which test technique uses a table to represent combinations of conditions and corresponding actions?",
+    "options": [
+      "State Transition Testing",
+      "Use Case Testing",
+      "Decision Table Testing",
+      "Equivalence Partitioning"
+    ],
+    "correctIndex": 2,
+    "explanation": "Decision Table Testing represents combinations of inputs (conditions) and the resulting system behaviors (actions) in tabular form, ensuring all combinations are tested.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctfl-007",
+    "certId": "ctfl",
+    "domain": "Software Testing",
+    "question": "What is the primary purpose of a test basis?",
+    "options": [
+      "To describe the test environment configuration",
+      "To provide the source of information used to derive test cases",
+      "To list all defects found during testing",
+      "To define exit criteria for the test project"
+    ],
+    "correctIndex": 1,
+    "explanation": "The test basis is the body of knowledge used to derive test cases. It includes requirements, design documents, code, risk analyses, and other artifacts.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctfl-008",
+    "certId": "ctfl",
+    "domain": "Software Testing",
+    "question": "Which of the following is a characteristic of static testing?",
+    "options": [
+      "The software is executed during testing",
+      "The software is examined without being run",
+      "It always requires a test environment",
+      "It can only be done by the development team"
+    ],
+    "correctIndex": 1,
+    "explanation": "Static testing examines work products such as code, requirements, or design documents without executing the software.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctfl-009",
+    "certId": "ctfl",
+    "domain": "Software Testing",
+    "question": "In a formal review, who is responsible for planning the review and choosing participants?",
+    "options": [
+      "The author",
+      "The moderator",
+      "The manager",
+      "The scribe"
+    ],
+    "correctIndex": 1,
+    "explanation": "In a formal review, the moderator (or review leader) is responsible for planning the review, running the review meeting, and choosing participants.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctfl-010",
+    "certId": "ctfl",
+    "domain": "Software Testing",
+    "question": "Which of the following BEST describes regression testing?",
+    "options": [
+      "Testing performed to discover new features",
+      "Re-testing fixed defects to verify the fix",
+      "Testing to confirm that changes have not adversely affected unchanged parts",
+      "Testing the entire system for the first time"
+    ],
+    "correctIndex": 2,
+    "explanation": "Regression testing confirms that previously tested functionality still works correctly after changes such as bug fixes, enhancements, or configuration changes.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctfl-011",
+    "certId": "ctfl",
+    "domain": "Software Testing",
+    "question": "Which test level focuses on testing the interfaces between integrated components?",
+    "options": [
+      "Unit testing",
+      "Integration testing",
+      "System testing",
+      "Acceptance testing"
+    ],
+    "correctIndex": 1,
+    "explanation": "Integration testing focuses on testing interfaces and interactions between components or systems. It detects defects in the integration points.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctfl-012",
+    "certId": "ctfl",
+    "domain": "Software Testing",
+    "question": "A test charter is typically associated with which test approach?",
+    "options": [
+      "Risk-based testing",
+      "Exploratory testing",
+      "Regression testing",
+      "Boundary value analysis"
+    ],
+    "correctIndex": 1,
+    "explanation": "In exploratory testing, a test charter defines the scope and objectives of a test session, guiding the tester while allowing flexibility in how tests are conducted.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctfl-013",
+    "certId": "ctfl",
+    "domain": "Software Testing",
+    "question": "What does the term 'defect clustering' refer to in software testing?",
+    "options": [
+      "Defects always appear in the same module",
+      "A small number of modules contain most of the defects",
+      "All defects cluster around boundary values",
+      "Defects are evenly distributed across all modules"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Pareto principle applies to defects: a small number of modules or components typically contain the majority of defects (80/20 rule).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctfl-014",
+    "certId": "ctfl",
+    "domain": "Software Testing",
+    "question": "Which coverage criterion requires that each branch (true/false) of every decision point is executed at least once?",
+    "options": [
+      "Statement coverage",
+      "Branch coverage",
+      "Condition coverage",
+      "Path coverage"
+    ],
+    "correctIndex": 1,
+    "explanation": "Branch coverage (also called decision coverage) requires that each branch outcome (true and false) of every decision is exercised at least once.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctfl-015",
+    "certId": "ctfl",
+    "domain": "Software Testing",
+    "question": "When should testing ideally begin in the SDLC according to ISTQB principles?",
+    "options": [
+      "After coding is complete",
+      "At the start of the project, as early as possible",
+      "When the test environment is ready",
+      "After the first system build is available"
+    ],
+    "correctIndex": 1,
+    "explanation": "The ISTQB principle of early testing states that testing activities should start as early as possible in the SDLC to find defects when they are cheapest to fix.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctfl-at-001",
+    "certId": "ctfl-at",
+    "domain": "Software Testing",
+    "question": "In agile development, which of the following BEST describes the role of testers?",
+    "options": [
+      "Testers only execute automated tests",
+      "Testers are a separate, independent team that reviews developer work",
+      "Testers collaborate closely with developers and product owners throughout the iteration",
+      "Testers write acceptance criteria after each sprint"
+    ],
+    "correctIndex": 2,
+    "explanation": "In agile teams, testers are collaborative members who work with developers and product owners from the start, contributing to planning, reviews, and continuous feedback.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctfl-at-002",
+    "certId": "ctfl-at",
+    "domain": "Software Testing",
+    "question": "What is the primary purpose of Acceptance Test-Driven Development (ATDD)?",
+    "options": [
+      "To automate all acceptance tests before coding begins",
+      "To create shared understanding by defining acceptance criteria before implementation",
+      "To replace unit testing with acceptance testing",
+      "To ensure developers write acceptance tests independently"
+    ],
+    "correctIndex": 1,
+    "explanation": "ATDD creates shared understanding among the whole team by collaboratively specifying acceptance criteria (often as examples) before implementation begins.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctfl-at-003",
+    "certId": "ctfl-at",
+    "domain": "Software Testing",
+    "question": "In Scrum, which artifact represents the ordered list of features to be developed?",
+    "options": [
+      "Sprint Backlog",
+      "Increment",
+      "Product Backlog",
+      "Release Plan"
+    ],
+    "correctIndex": 2,
+    "explanation": "The Product Backlog is an ordered list of everything needed in the product. The Sprint Backlog contains items selected for the current sprint.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctfl-at-004",
+    "certId": "ctfl-at",
+    "domain": "Software Testing",
+    "question": "Which agile practice involves the whole team reviewing the increment and getting feedback from stakeholders?",
+    "options": [
+      "Sprint Retrospective",
+      "Sprint Planning",
+      "Daily Scrum",
+      "Sprint Review"
+    ],
+    "correctIndex": 3,
+    "explanation": "The Sprint Review is held at the end of each sprint to inspect the increment and adapt the Product Backlog based on stakeholder feedback.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctfl-at-005",
+    "certId": "ctfl-at",
+    "domain": "Software Testing",
+    "question": "What does the testing quadrant Q1 (Technology-facing, support the team) typically contain?",
+    "options": [
+      "Usability tests and user acceptance tests",
+      "Unit tests and component tests (automated)",
+      "Exploratory testing and scenarios",
+      "Performance and security tests"
+    ],
+    "correctIndex": 1,
+    "explanation": "In the Agile Testing Quadrants, Q1 is technology-facing tests that support the team, including automated unit and component tests at the code level.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctfl-at-006",
+    "certId": "ctfl-at",
+    "domain": "Software Testing",
+    "question": "In an agile context, what is a 'test-last' approach?",
+    "options": [
+      "Tests are written after the feature code is complete",
+      "Tests are written before the feature code as in TDD",
+      "Tests are only performed at the end of the project",
+      "Tests are written during the Sprint Retrospective"
+    ],
+    "correctIndex": 0,
+    "explanation": "Test-last means tests are written after the feature is implemented, in contrast to TDD (test-first) where tests drive the development.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctfl-at-007",
+    "certId": "ctfl-at",
+    "domain": "Software Testing",
+    "question": "What is the main advantage of continuous integration for testing?",
+    "options": [
+      "It eliminates the need for manual testing",
+      "It provides rapid feedback by running automated tests on every code commit",
+      "It replaces regression testing",
+      "It guarantees no defects will reach production"
+    ],
+    "correctIndex": 1,
+    "explanation": "Continuous integration runs automated tests on every commit, providing rapid feedback to developers and catching integration issues early.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctfl-at-008",
+    "certId": "ctfl-at",
+    "domain": "Software Testing",
+    "question": "Which of the following is a key characteristic of a good user story in agile?",
+    "options": [
+      "It is detailed enough to replace all other documentation",
+      "It follows the INVEST criteria (Independent, Negotiable, Valuable, Estimable, Small, Testable)",
+      "It must be written only by the Scrum Master",
+      "It describes the implementation approach in detail"
+    ],
+    "correctIndex": 1,
+    "explanation": "Good user stories follow INVEST: they are Independent, Negotiable, Valuable, Estimable, Small, and Testable.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctfl-at-009",
+    "certId": "ctfl-at",
+    "domain": "Software Testing",
+    "question": "In agile testing, what is the purpose of a 'Definition of Done'?",
+    "options": [
+      "To define when a sprint starts",
+      "To list all tasks in the product backlog",
+      "To provide a shared understanding of what criteria must be met for work to be considered complete",
+      "To define the release schedule"
+    ],
+    "correctIndex": 2,
+    "explanation": "The Definition of Done is a shared checklist of quality criteria that must be met before a user story or sprint increment is considered complete.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctfl-at-010",
+    "certId": "ctfl-at",
+    "domain": "Software Testing",
+    "question": "Which agile testing practice involves writing a failing test before writing the minimum code to make it pass?",
+    "options": [
+      "Behavior-Driven Development",
+      "Test-Driven Development",
+      "Acceptance Test-Driven Development",
+      "Exploratory Testing"
+    ],
+    "correctIndex": 1,
+    "explanation": "TDD follows the Red-Green-Refactor cycle: write a failing test (red), write minimum code to pass (green), then refactor.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctfl-at-011",
+    "certId": "ctfl-at",
+    "domain": "Software Testing",
+    "question": "What is the test automation pyramid concept in agile?",
+    "options": [
+      "More UI tests at the top, more unit tests at the base — prioritizing unit tests due to speed and stability",
+      "More UI tests than unit tests to maximize coverage",
+      "All three layers (unit, service, UI) should have equal numbers of tests",
+      "UI tests are preferred because they test the full system"
+    ],
+    "correctIndex": 0,
+    "explanation": "The automation pyramid has a broad base of fast unit tests, a middle layer of service/integration tests, and a narrow top of slower UI tests — promoting fast feedback.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctfl-at-012",
+    "certId": "ctfl-at",
+    "domain": "Software Testing",
+    "question": "In Kanban, what is the purpose of Work In Progress (WIP) limits?",
+    "options": [
+      "To restrict the number of team members",
+      "To prevent overloading the team and expose bottlenecks in the workflow",
+      "To limit the number of user stories per sprint",
+      "To cap the number of bugs that can be open at once"
+    ],
+    "correctIndex": 1,
+    "explanation": "WIP limits prevent multitasking and overloading, exposing bottlenecks so the team can address flow problems and improve throughput.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctfl-at-013",
+    "certId": "ctfl-at",
+    "domain": "Software Testing",
+    "question": "Which agile manifesto value states 'Working software over comprehensive documentation'?",
+    "options": [
+      "This is not an agile manifesto value",
+      "It is one of the 12 agile principles",
+      "It is one of the four agile manifesto values",
+      "It is part of the Scrum Guide"
+    ],
+    "correctIndex": 2,
+    "explanation": "The Agile Manifesto has four values, one of which is 'Working software over comprehensive documentation' — meaning both have value but working software is prioritized.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctfl-at-014",
+    "certId": "ctfl-at",
+    "domain": "Software Testing",
+    "question": "What is 'pairing' in the context of agile testing?",
+    "options": [
+      "Two QA testers reviewing each other's test cases",
+      "A developer and tester (or two developers) working together at the same workstation",
+      "Linking user stories to acceptance criteria",
+      "Matching defects to the corresponding requirement"
+    ],
+    "correctIndex": 1,
+    "explanation": "Pairing (pair testing or pair programming) involves two people working together at one workstation, combining their knowledge to produce better results.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctfl-at-015",
+    "certId": "ctfl-at",
+    "domain": "Software Testing",
+    "question": "In agile, how should testers handle regression testing given frequent releases?",
+    "options": [
+      "Skip regression testing to meet sprint deadlines",
+      "Run full manual regression suites after every sprint",
+      "Automate regression tests so they can run continuously and quickly",
+      "Delegate regression testing to end users"
+    ],
+    "correctIndex": 2,
+    "explanation": "Automating regression tests is essential in agile to keep pace with frequent releases while maintaining quality — manual regression suites are too slow for sprint cadences.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctal-ta-001",
+    "certId": "ctal-ta",
+    "domain": "Software Testing",
+    "question": "Which black-box test technique selects test cases based on combinations of representative values from each input parameter?",
+    "options": [
+      "Boundary Value Analysis",
+      "Pairwise Testing",
+      "Decision Table Testing",
+      "State Transition Testing"
+    ],
+    "correctIndex": 1,
+    "explanation": "Pairwise (all-pairs) testing selects combinations such that every pair of input values is covered by at least one test case, efficiently reducing the number of tests needed.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctal-ta-002",
+    "certId": "ctal-ta",
+    "domain": "Software Testing",
+    "question": "In cause-effect graphing, what is the primary purpose?",
+    "options": [
+      "To model state transitions in a system",
+      "To identify combinations of inputs (causes) that produce specific outputs (effects)",
+      "To measure code coverage",
+      "To document defects and their root causes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cause-effect graphing is a technique to systematically identify combinations of input conditions (causes) that result in system outputs or behaviors (effects).",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ctal-ta-003",
+    "certId": "ctal-ta",
+    "domain": "Software Testing",
+    "question": "When is experience-based testing most valuable?",
+    "options": [
+      "When complete specifications are available",
+      "When the tester has no domain knowledge",
+      "When specifications are incomplete and tester skill supplements formal techniques",
+      "Only in safety-critical systems"
+    ],
+    "correctIndex": 2,
+    "explanation": "Experience-based techniques like exploratory testing and error guessing are most valuable when specifications are incomplete or unavailable, leveraging tester intuition and domain knowledge.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctal-ta-004",
+    "certId": "ctal-ta",
+    "domain": "Software Testing",
+    "question": "What does Modified Condition/Decision Coverage (MC/DC) require?",
+    "options": [
+      "Each condition in every decision must independently affect the outcome",
+      "All paths through the code must be executed",
+      "Each statement must be executed at least once",
+      "Each branch must be taken at least once"
+    ],
+    "correctIndex": 0,
+    "explanation": "MC/DC requires that each condition in a decision independently shows it can affect the decision outcome. It is commonly required for safety-critical software (DO-178C).",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ctal-ta-005",
+    "certId": "ctal-ta",
+    "domain": "Software Testing",
+    "question": "Which quality characteristic does usability testing primarily evaluate?",
+    "options": [
+      "Reliability",
+      "Portability",
+      "Usability",
+      "Maintainability"
+    ],
+    "correctIndex": 2,
+    "explanation": "Usability testing evaluates the usability quality characteristic — how effectively, efficiently, and satisfactorily users can achieve goals with the system.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctal-ta-006",
+    "certId": "ctal-ta",
+    "domain": "Software Testing",
+    "question": "A state transition diagram shows a system with 5 states and 8 transitions. How many tests are needed for 0-switch coverage?",
+    "options": [
+      "5",
+      "8",
+      "13",
+      "40"
+    ],
+    "correctIndex": 1,
+    "explanation": "0-switch (transition) coverage requires at least one test to exercise each transition. With 8 transitions, the minimum is 8 tests.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ctal-ta-007",
+    "certId": "ctal-ta",
+    "domain": "Software Testing",
+    "question": "Which technique is BEST suited for testing complex business rules with many condition combinations?",
+    "options": [
+      "Boundary Value Analysis",
+      "Equivalence Partitioning",
+      "Decision Table Testing",
+      "State Transition Testing"
+    ],
+    "correctIndex": 2,
+    "explanation": "Decision table testing is ideal for complex business rules where multiple conditions combine to produce different actions or outputs.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctal-ta-008",
+    "certId": "ctal-ta",
+    "domain": "Software Testing",
+    "question": "What is the primary goal of software quality characteristic testing for 'reliability'?",
+    "options": [
+      "Testing how fast the software responds",
+      "Testing how well the software maintains its level of performance under stated conditions for a stated period",
+      "Testing how easy it is to learn the software",
+      "Testing how easily the software can be moved to another platform"
+    ],
+    "correctIndex": 1,
+    "explanation": "Reliability testing evaluates the software's ability to maintain required performance under stated conditions for a specified period (per ISO/IEC 25010).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctal-ta-009",
+    "certId": "ctal-ta",
+    "domain": "Software Testing",
+    "question": "In a formal review, what is the reviewer's primary responsibility?",
+    "options": [
+      "To fix the defects found",
+      "To examine the work product and identify defects and issues",
+      "To plan and coordinate the review",
+      "To record defects found during the review meeting"
+    ],
+    "correctIndex": 1,
+    "explanation": "Reviewers examine the work product to identify defects, ask questions for clarification, and provide feedback. Fixing defects is the author's responsibility.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctal-ta-010",
+    "certId": "ctal-ta",
+    "domain": "Software Testing",
+    "question": "Which type of review is the MOST formal and follows a defined process with trained moderators?",
+    "options": [
+      "Walkthrough",
+      "Technical Review",
+      "Inspection",
+      "Informal Review"
+    ],
+    "correctIndex": 2,
+    "explanation": "Inspections are the most formal review type, following a defined process with trained moderators, entry/exit criteria, checklists, and metrics collection.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctal-ta-011",
+    "certId": "ctal-ta",
+    "domain": "Software Testing",
+    "question": "What is the purpose of test oracles?",
+    "options": [
+      "To generate test cases automatically",
+      "To provide the means of determining whether a test has passed or failed",
+      "To manage the test execution environment",
+      "To prioritize defects found during testing"
+    ],
+    "correctIndex": 1,
+    "explanation": "A test oracle is a source of expected results used to determine whether a test has passed or failed, such as specifications, existing systems, or expert knowledge.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctal-ta-012",
+    "certId": "ctal-ta",
+    "domain": "Software Testing",
+    "question": "Which approach to non-functional testing focuses on how the system behaves under different user load conditions?",
+    "options": [
+      "Security testing",
+      "Load testing",
+      "Accessibility testing",
+      "Portability testing"
+    ],
+    "correctIndex": 1,
+    "explanation": "Load testing evaluates system behavior under expected and peak load conditions, measuring response times, throughput, and resource utilization.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctal-ta-013",
+    "certId": "ctal-ta",
+    "domain": "Software Testing",
+    "question": "In combinatorial testing, what does '2-wise' (pairwise) mean?",
+    "options": [
+      "Tests are performed by two testers simultaneously",
+      "Every pair of parameter values appears in at least one test case",
+      "Two conditions must be true for each test to execute",
+      "Tests are executed twice for verification"
+    ],
+    "correctIndex": 1,
+    "explanation": "2-wise (pairwise) coverage means every combination of any two parameter values appears in at least one test case, providing coverage with fewer tests than exhaustive testing.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ctal-ta-014",
+    "certId": "ctal-ta",
+    "domain": "Software Testing",
+    "question": "What distinguishes exploratory testing from scripted testing?",
+    "options": [
+      "Exploratory testing uses no documentation at all",
+      "In exploratory testing, test design, execution, and learning happen simultaneously",
+      "Scripted testing is always automated",
+      "Exploratory testing cannot find real defects"
+    ],
+    "correctIndex": 1,
+    "explanation": "In exploratory testing, the tester simultaneously designs and executes tests, learning about the system while testing — adapting based on what they discover.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctal-ta-015",
+    "certId": "ctal-ta",
+    "domain": "Software Testing",
+    "question": "Which test design technique is BEST for testing systems where output depends on historical input sequences?",
+    "options": [
+      "Equivalence Partitioning",
+      "State Transition Testing",
+      "Decision Table Testing",
+      "Boundary Value Analysis"
+    ],
+    "correctIndex": 1,
+    "explanation": "State Transition Testing models system behavior as states and transitions, ideal for systems whose output depends on previous events and their sequence.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctal-tm-001",
+    "certId": "ctal-tm",
+    "domain": "Software Testing",
+    "question": "Which element is NOT typically part of a test plan?",
+    "options": [
+      "Test scope and objectives",
+      "Detailed test scripts",
+      "Risk and contingency plans",
+      "Entry and exit criteria"
+    ],
+    "correctIndex": 1,
+    "explanation": "Detailed test scripts belong to test cases and procedures, not the test plan. The test plan contains scope, objectives, resources, schedule, risks, and entry/exit criteria.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctal-tm-002",
+    "certId": "ctal-tm",
+    "domain": "Software Testing",
+    "question": "Risk-based testing prioritizes testing based on:",
+    "options": [
+      "The number of test cases available",
+      "The likelihood and impact of potential failures",
+      "Alphabetical order of requirements",
+      "Developer preference"
+    ],
+    "correctIndex": 1,
+    "explanation": "Risk-based testing prioritizes test effort on areas with the highest risk (combination of likelihood of failure and its impact on the business).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctal-tm-003",
+    "certId": "ctal-tm",
+    "domain": "Software Testing",
+    "question": "Which test estimation technique uses historical data from previous similar projects?",
+    "options": [
+      "Expert opinion",
+      "Metrics-based estimation",
+      "Wideband Delphi",
+      "Work breakdown structure"
+    ],
+    "correctIndex": 1,
+    "explanation": "Metrics-based estimation uses data from previous comparable projects (such as defect density, test productivity rates) to estimate testing effort for the current project.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctal-tm-004",
+    "certId": "ctal-tm",
+    "domain": "Software Testing",
+    "question": "What is the purpose of test monitoring and control?",
+    "options": [
+      "To write test cases for the next release",
+      "To track progress against the test plan and take corrective action when deviations occur",
+      "To configure the test environment",
+      "To train new test team members"
+    ],
+    "correctIndex": 1,
+    "explanation": "Test monitoring collects and analyzes data about test progress; test control takes corrective actions to realign with the test plan when deviations are detected.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctal-tm-005",
+    "certId": "ctal-tm",
+    "domain": "Software Testing",
+    "question": "Which defect report attribute helps assess the urgency of fixing a defect?",
+    "options": [
+      "Defect ID",
+      "Defect priority",
+      "Test case ID",
+      "Build number"
+    ],
+    "correctIndex": 1,
+    "explanation": "Priority indicates the urgency of fixing a defect from a business perspective. Severity indicates the technical impact on the system.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctal-tm-006",
+    "certId": "ctal-tm",
+    "domain": "Software Testing",
+    "question": "What is meant by 'exit criteria' in testing?",
+    "options": [
+      "The conditions under which testing starts",
+      "The conditions that must be met for testing to be considered complete",
+      "The criteria for hiring test team members",
+      "The definition of what constitutes a critical defect"
+    ],
+    "correctIndex": 1,
+    "explanation": "Exit criteria define the conditions that must be satisfied for testing activities to be considered complete and to allow the next phase to begin.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctal-tm-007",
+    "certId": "ctal-tm",
+    "domain": "Software Testing",
+    "question": "Which test metric measures the percentage of test cases that have been executed?",
+    "options": [
+      "Defect density",
+      "Test execution progress",
+      "Mean time between failures",
+      "Defect removal efficiency"
+    ],
+    "correctIndex": 1,
+    "explanation": "Test execution progress (or test case execution rate) measures what percentage of planned test cases have been run, helping track progress against the schedule.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctal-tm-008",
+    "certId": "ctal-tm",
+    "domain": "Software Testing",
+    "question": "What does 'product risk' refer to in test management?",
+    "options": [
+      "The risk that the test team will not complete testing on time",
+      "The potential for the software to fail to satisfy stakeholder needs",
+      "The risk of the test environment being unavailable",
+      "Financial risk to the project budget"
+    ],
+    "correctIndex": 1,
+    "explanation": "Product risk refers to risk related to the quality of the software itself — the chance that the work product may fail to satisfy the needs of stakeholders.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctal-tm-009",
+    "certId": "ctal-tm",
+    "domain": "Software Testing",
+    "question": "What is the Wideband Delphi technique used for in test management?",
+    "options": [
+      "Code coverage analysis",
+      "Consensus-based test estimation using expert opinions",
+      "Test environment configuration",
+      "Defect triage meetings"
+    ],
+    "correctIndex": 1,
+    "explanation": "Wideband Delphi is a consensus-based estimation technique where multiple experts independently provide estimates, discuss differences, and iterate until a consensus is reached.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctal-tm-010",
+    "certId": "ctal-tm",
+    "domain": "Software Testing",
+    "question": "Which of the following BEST describes the difference between severity and priority of a defect?",
+    "options": [
+      "Severity and priority always have the same value",
+      "Severity is the technical impact on the system; priority is the business urgency to fix it",
+      "Priority is the technical impact; severity is the business urgency",
+      "Severity is assigned by the project manager; priority by the tester"
+    ],
+    "correctIndex": 1,
+    "explanation": "Severity measures the technical impact of a defect on the system (e.g., crash vs. cosmetic). Priority measures the business urgency to fix it, which may differ from severity.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctal-tm-011",
+    "certId": "ctal-tm",
+    "domain": "Software Testing",
+    "question": "A test manager wants to measure how effective testing is at finding defects. Which metric should they use?",
+    "options": [
+      "Defect Removal Efficiency (DRE)",
+      "Test case execution rate",
+      "Mean Time To Repair (MTTR)",
+      "Requirements coverage"
+    ],
+    "correctIndex": 0,
+    "explanation": "DRE = (defects found in testing / (defects found in testing + defects found by customers)) × 100. A high DRE indicates effective defect detection before release.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ctal-tm-012",
+    "certId": "ctal-tm",
+    "domain": "Software Testing",
+    "question": "Which test strategy focuses testing on areas of the software that have the highest business risk?",
+    "options": [
+      "Reactive testing strategy",
+      "Risk-based testing strategy",
+      "Regression-averse strategy",
+      "Scripted testing strategy"
+    ],
+    "correctIndex": 1,
+    "explanation": "A risk-based strategy focuses test effort on functionality and features where the probability and impact of failure are highest, optimizing use of limited testing resources.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctal-tm-013",
+    "certId": "ctal-tm",
+    "domain": "Software Testing",
+    "question": "When should a test manager escalate testing issues to senior management?",
+    "options": [
+      "Never — testers should resolve all issues themselves",
+      "Only when the project is cancelled",
+      "When corrective actions within the test team cannot resolve significant schedule, resource, or quality issues",
+      "At every status meeting regardless of issue severity"
+    ],
+    "correctIndex": 2,
+    "explanation": "Escalation is appropriate when issues cannot be resolved at the test team level and have significant impact on schedule, cost, or quality that requires senior management decisions.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctal-tm-014",
+    "certId": "ctal-tm",
+    "domain": "Software Testing",
+    "question": "What is a test summary report primarily used for?",
+    "options": [
+      "To list all test cases that need to be written",
+      "To communicate testing results, deviations from the plan, and a release recommendation to stakeholders",
+      "To configure the test automation framework",
+      "To assign defects to development teams"
+    ],
+    "correctIndex": 1,
+    "explanation": "A test summary report communicates the results of a testing phase to stakeholders, including what was tested, outcomes, deviations, and a recommendation on release readiness.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctal-tm-015",
+    "certId": "ctal-tm",
+    "domain": "Software Testing",
+    "question": "In test planning, what is the purpose of defining entry criteria?",
+    "options": [
+      "To specify when testing activities may begin",
+      "To specify when testing activities are complete",
+      "To list all test cases to be executed",
+      "To identify the test team members"
+    ],
+    "correctIndex": 0,
+    "explanation": "Entry criteria specify the preconditions that must be met before testing can begin, ensuring testing starts when the software and environment are sufficiently ready.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctal-tta-001",
+    "certId": "ctal-tta",
+    "domain": "Software Testing",
+    "question": "Which white-box technique requires that every independent path through a program be tested at least once?",
+    "options": [
+      "Statement coverage",
+      "Branch coverage",
+      "Path coverage",
+      "Condition coverage"
+    ],
+    "correctIndex": 2,
+    "explanation": "Path coverage requires that all independent paths through the program are exercised. It is the most thorough but often impractical for complex programs due to path explosion.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctal-tta-002",
+    "certId": "ctal-tta",
+    "domain": "Software Testing",
+    "question": "Cyclomatic complexity of a module is calculated as:",
+    "options": [
+      "Number of statements + 1",
+      "Number of decisions + 1",
+      "Number of paths through the code",
+      "Lines of code / 10"
+    ],
+    "correctIndex": 1,
+    "explanation": "McCabe's cyclomatic complexity = number of binary decisions + 1 (or equivalently E - N + 2P for a graph). It measures structural complexity and the minimum number of independent paths.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ctal-tta-003",
+    "certId": "ctal-tta",
+    "domain": "Software Testing",
+    "question": "A code module has cyclomatic complexity of 8. What is the minimum number of test cases needed for full branch coverage?",
+    "options": [
+      "4",
+      "7",
+      "8",
+      "16"
+    ],
+    "correctIndex": 2,
+    "explanation": "Cyclomatic complexity equals the minimum number of independent paths, which is also the minimum number of tests needed to achieve full branch coverage.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ctal-tta-004",
+    "certId": "ctal-tta",
+    "domain": "Software Testing",
+    "question": "Which type of analysis involves examining memory for data structures that are used before being initialized?",
+    "options": [
+      "Control flow analysis",
+      "Data flow analysis",
+      "Cyclomatic complexity analysis",
+      "Mutation analysis"
+    ],
+    "correctIndex": 1,
+    "explanation": "Data flow analysis tracks how data is defined and used through a program, detecting anomalies such as variables used before initialization or defined but never used.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctal-tta-005",
+    "certId": "ctal-tta",
+    "domain": "Software Testing",
+    "question": "What does mutation testing measure?",
+    "options": [
+      "The number of code changes between versions",
+      "The effectiveness of a test suite in detecting intentional code faults (mutants)",
+      "The performance impact of code changes",
+      "The coverage achieved by automated tests"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mutation testing introduces intentional small faults (mutants) into the code and measures what percentage of mutants are 'killed' (detected) by the test suite.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctal-tta-006",
+    "certId": "ctal-tta",
+    "domain": "Software Testing",
+    "question": "Which performance testing type validates the system can handle the expected maximum concurrent users?",
+    "options": [
+      "Stress testing",
+      "Spike testing",
+      "Endurance testing",
+      "Load testing"
+    ],
+    "correctIndex": 3,
+    "explanation": "Load testing verifies system performance under the expected maximum concurrent user load, ensuring response times and throughput meet requirements.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctal-tta-007",
+    "certId": "ctal-tta",
+    "domain": "Software Testing",
+    "question": "Which technique injects invalid or unexpected data into a program to discover security vulnerabilities?",
+    "options": [
+      "Load testing",
+      "Mutation testing",
+      "Fuzz testing",
+      "Stress testing"
+    ],
+    "correctIndex": 2,
+    "explanation": "Fuzz testing (fuzzing) sends random, malformed, or unexpected data to a program to discover crashes, assertion failures, memory leaks, and security vulnerabilities.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctal-tta-008",
+    "certId": "ctal-tta",
+    "domain": "Software Testing",
+    "question": "What is the purpose of a test harness in unit testing?",
+    "options": [
+      "To measure code coverage",
+      "To provide the environment and infrastructure needed to execute unit tests, including stubs and drivers",
+      "To report defects automatically",
+      "To manage test data"
+    ],
+    "correctIndex": 1,
+    "explanation": "A test harness provides the collection of software and test data needed to test a unit in isolation, including drivers (to call the unit) and stubs (to simulate dependencies).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctal-tta-009",
+    "certId": "ctal-tta",
+    "domain": "Software Testing",
+    "question": "In static analysis, which tool type analyzes code without executing it to detect potential defects?",
+    "options": [
+      "Profiler",
+      "Debugger",
+      "Linter / static code analyzer",
+      "Test execution framework"
+    ],
+    "correctIndex": 2,
+    "explanation": "Linters and static code analyzers examine source code without executing it, detecting issues like code style violations, potential null pointer dereferences, and security vulnerabilities.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctal-tta-010",
+    "certId": "ctal-tta",
+    "domain": "Software Testing",
+    "question": "Which data flow anomaly indicates a variable is defined but never used?",
+    "options": [
+      "du-anomaly",
+      "dd-anomaly",
+      "ur-anomaly",
+      "du-pair coverage"
+    ],
+    "correctIndex": 0,
+    "explanation": "A du-anomaly (defined-used) occurs when a variable is defined and then another definition follows without a use in between (often called a dd-anomaly), or when defined and never subsequently used.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ctal-tta-011",
+    "certId": "ctal-tta",
+    "domain": "Software Testing",
+    "question": "Endurance testing is used to discover:",
+    "options": [
+      "Maximum system capacity",
+      "Performance degradation over extended periods, such as memory leaks",
+      "System behavior under sudden traffic spikes",
+      "System recovery after failure"
+    ],
+    "correctIndex": 1,
+    "explanation": "Endurance (soak) testing runs the system under normal load for an extended period to detect degradation issues such as memory leaks or resource exhaustion over time.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctal-tta-012",
+    "certId": "ctal-tta",
+    "domain": "Software Testing",
+    "question": "What is the definition of 'test stub'?",
+    "options": [
+      "A replacement for a called component, returning hardcoded or configurable values",
+      "A replacement for the calling component that drives the component under test",
+      "A script that automates test execution",
+      "A log of all test results"
+    ],
+    "correctIndex": 0,
+    "explanation": "A stub replaces a component that the unit under test calls (called component), returning predefined or configurable values to isolate the unit being tested.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctal-tta-013",
+    "certId": "ctal-tta",
+    "domain": "Software Testing",
+    "question": "Which testing type verifies that the software system meets non-functional requirements under adverse conditions?",
+    "options": [
+      "Regression testing",
+      "Stress testing",
+      "Unit testing",
+      "Acceptance testing"
+    ],
+    "correctIndex": 1,
+    "explanation": "Stress testing evaluates system behavior beyond normal operational capacity, at or beyond limits, to find breaking points and ensure graceful degradation.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctal-tta-014",
+    "certId": "ctal-tta",
+    "domain": "Software Testing",
+    "question": "Which code review technique has the author explain the code line-by-line to reviewers?",
+    "options": [
+      "Inspection",
+      "Technical review",
+      "Walkthrough",
+      "Informal review"
+    ],
+    "correctIndex": 2,
+    "explanation": "In a walkthrough, the author leads the review team through the work product, explaining it step by step. The goal is education and defect finding, led by the author.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctal-tta-015",
+    "certId": "ctal-tta",
+    "domain": "Software Testing",
+    "question": "Which static analysis technique checks that the actual data flow in code matches the intended data flow?",
+    "options": [
+      "Control flow analysis",
+      "Data flow analysis",
+      "Mutation analysis",
+      "Call graph analysis"
+    ],
+    "correctIndex": 1,
+    "explanation": "Data flow analysis statically examines how data is used through the program, detecting anomalies where variables are used before initialization or defined but never read.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-ai-001",
+    "certId": "ct-ai",
+    "domain": "Software Testing",
+    "question": "Which type of machine learning involves training on labeled input-output pairs?",
+    "options": [
+      "Unsupervised learning",
+      "Reinforcement learning",
+      "Supervised learning",
+      "Self-supervised learning"
+    ],
+    "correctIndex": 2,
+    "explanation": "Supervised learning trains models on labeled datasets where each training example has an input and corresponding expected output.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-ai-002",
+    "certId": "ct-ai",
+    "domain": "Software Testing",
+    "question": "What is a key challenge when testing AI/ML systems compared to traditional software?",
+    "options": [
+      "AI systems have no code to test",
+      "AI behavior is non-deterministic and cannot be fully defined by explicit rules",
+      "AI systems require no test environment",
+      "AI systems never fail after deployment"
+    ],
+    "correctIndex": 1,
+    "explanation": "AI/ML systems learn from data rather than explicit rules, making their behavior probabilistic and harder to test with traditional pass/fail criteria.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-ai-003",
+    "certId": "ct-ai",
+    "domain": "Software Testing",
+    "question": "What is 'data poisoning' in the context of AI security testing?",
+    "options": [
+      "Corrupting the database containing test results",
+      "Intentionally injecting malicious or misleading data into the training set to manipulate model behavior",
+      "Using invalid data formats in API calls",
+      "Testing with null or empty data inputs"
+    ],
+    "correctIndex": 1,
+    "explanation": "Data poisoning is an adversarial attack where malicious actors corrupt training data to cause a model to learn incorrect patterns or introduce backdoors.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ct-ai-004",
+    "certId": "ct-ai",
+    "domain": "Software Testing",
+    "question": "Which quality characteristic is MOST critical for AI systems used in medical diagnosis?",
+    "options": [
+      "Performance efficiency",
+      "Portability",
+      "Functional correctness and reliability",
+      "Maintainability"
+    ],
+    "correctIndex": 2,
+    "explanation": "For safety-critical AI applications like medical diagnosis, functional correctness and reliability are paramount — incorrect predictions can have life-or-death consequences.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-ai-005",
+    "certId": "ct-ai",
+    "domain": "Software Testing",
+    "question": "What does 'model explainability' mean in AI testing?",
+    "options": [
+      "The AI can explain programming concepts",
+      "The ability to understand and interpret why an AI model made a specific prediction",
+      "The documentation quality of the AI system",
+      "How easily the AI model can be retrained"
+    ],
+    "correctIndex": 1,
+    "explanation": "Model explainability (XAI) refers to the ability to understand and communicate why an AI model produces specific predictions, which is critical for auditing and compliance.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-ai-006",
+    "certId": "ct-ai",
+    "domain": "Software Testing",
+    "question": "What is 'overfitting' in machine learning and why is it a testing concern?",
+    "options": [
+      "The model is too large to deploy; testing checks model size",
+      "The model memorizes training data and performs poorly on new data; testing must verify generalization",
+      "The model is trained on too much data",
+      "The model cannot process all input formats"
+    ],
+    "correctIndex": 1,
+    "explanation": "Overfitting occurs when a model learns training data too well including noise, causing poor performance on new unseen data. Testing must validate model performance on held-out test sets.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-ai-007",
+    "certId": "ct-ai",
+    "domain": "Software Testing",
+    "question": "Which testing approach evaluates whether an AI system produces fair outcomes across different demographic groups?",
+    "options": [
+      "Load testing",
+      "Bias and fairness testing",
+      "Security penetration testing",
+      "Regression testing"
+    ],
+    "correctIndex": 1,
+    "explanation": "Bias and fairness testing evaluates whether an AI system treats different groups (by race, gender, age, etc.) equitably and does not amplify harmful biases from training data.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-ai-008",
+    "certId": "ct-ai",
+    "domain": "Software Testing",
+    "question": "What is an 'adversarial example' in AI testing?",
+    "options": [
+      "A test case designed by a competing team",
+      "A slightly modified input designed to fool a machine learning model into making a wrong prediction",
+      "A test case that always passes regardless of model quality",
+      "Training data from an adversarial domain"
+    ],
+    "correctIndex": 1,
+    "explanation": "Adversarial examples are inputs with small, often imperceptible perturbations that cause ML models to make incorrect predictions, exposing robustness vulnerabilities.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-ai-009",
+    "certId": "ct-ai",
+    "domain": "Software Testing",
+    "question": "When testing a neural network, what does 'neuron coverage' measure?",
+    "options": [
+      "The number of CPU cores utilized during inference",
+      "The percentage of neurons activated by the test suite",
+      "The memory consumed by the model",
+      "The number of layers in the neural network"
+    ],
+    "correctIndex": 1,
+    "explanation": "Neuron coverage is an AI-specific test coverage metric measuring the percentage of neurons that are activated (above a threshold) by the test inputs, analogous to code coverage.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ct-ai-010",
+    "certId": "ct-ai",
+    "domain": "Software Testing",
+    "question": "What is the primary purpose of a confusion matrix in evaluating AI classification models?",
+    "options": [
+      "To confuse the model during testing",
+      "To visualize the model's performance by showing true positives, false positives, true negatives, and false negatives",
+      "To measure training time",
+      "To compare two different AI models"
+    ],
+    "correctIndex": 1,
+    "explanation": "A confusion matrix shows the counts of correct and incorrect classifications across all classes, enabling calculation of precision, recall, F1-score, and other metrics.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-ai-011",
+    "certId": "ct-ai",
+    "domain": "Software Testing",
+    "question": "What is 'concept drift' and why does it matter for AI testing?",
+    "options": [
+      "When developers misunderstand AI concepts",
+      "When the statistical properties of input data change over time, degrading model performance",
+      "When the AI model changes its internal architecture",
+      "When tests drift away from the requirements"
+    ],
+    "correctIndex": 1,
+    "explanation": "Concept drift occurs when the distribution of real-world data changes after model deployment, causing the model to become less accurate. Continuous monitoring and re-testing are required.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ct-ai-012",
+    "certId": "ct-ai",
+    "domain": "Software Testing",
+    "question": "Which metric measures the proportion of actual positives correctly identified by a classification model?",
+    "options": [
+      "Precision",
+      "Recall (sensitivity)",
+      "Specificity",
+      "F1-score"
+    ],
+    "correctIndex": 1,
+    "explanation": "Recall (sensitivity) = True Positives / (True Positives + False Negatives). It measures the model's ability to find all positive instances.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-ai-013",
+    "certId": "ct-ai",
+    "domain": "Software Testing",
+    "question": "What testing approach is used to verify AI system behavior when deployed in the real world matches expected behavior in the lab?",
+    "options": [
+      "Shadow testing (shadow mode deployment)",
+      "Regression testing",
+      "Unit testing",
+      "Acceptance testing"
+    ],
+    "correctIndex": 0,
+    "explanation": "Shadow testing runs the new AI model in parallel with the production system, comparing outputs without affecting users — validating real-world performance before full deployment.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-ai-014",
+    "certId": "ct-ai",
+    "domain": "Software Testing",
+    "question": "What is the key difference between AI testing and traditional software testing?",
+    "options": [
+      "AI testing requires no test cases",
+      "AI systems do not have bugs",
+      "AI systems learn from data, so expected outputs for all inputs cannot be fully pre-specified",
+      "Traditional software testing cannot be automated"
+    ],
+    "correctIndex": 2,
+    "explanation": "Unlike traditional software, AI systems are trained on data and their behavior emerges from that training — making it impossible to pre-specify the correct output for every possible input.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-ai-015",
+    "certId": "ct-ai",
+    "domain": "Software Testing",
+    "question": "Which regulation requires AI systems in high-risk applications (e.g., medical devices, critical infrastructure) to be tested for reliability and safety?",
+    "options": [
+      "GDPR",
+      "EU AI Act",
+      "ISO 27001",
+      "PCI-DSS"
+    ],
+    "correctIndex": 1,
+    "explanation": "The EU AI Act establishes requirements for high-risk AI systems including testing, documentation, and human oversight before and after deployment.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ct-sec-001",
+    "certId": "ct-sec",
+    "domain": "Software Testing",
+    "question": "Which OWASP Top 10 vulnerability involves injecting malicious SQL commands through user input?",
+    "options": [
+      "Cross-Site Scripting (XSS)",
+      "SQL Injection",
+      "Broken Authentication",
+      "Security Misconfiguration"
+    ],
+    "correctIndex": 1,
+    "explanation": "SQL Injection allows attackers to insert malicious SQL commands into queries, potentially accessing, modifying, or deleting database data.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-sec-002",
+    "certId": "ct-sec",
+    "domain": "Software Testing",
+    "question": "What is the difference between a vulnerability and a threat in security testing?",
+    "options": [
+      "They are the same thing",
+      "A vulnerability is a weakness; a threat is a potential harmful event that exploits the weakness",
+      "A threat is a weakness; a vulnerability is a potential attack",
+      "A vulnerability is only found in software; threats exist only externally"
+    ],
+    "correctIndex": 1,
+    "explanation": "A vulnerability is a weakness in the system that could be exploited. A threat is the potential for harm — a threat exploits a vulnerability to cause an impact.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-sec-003",
+    "certId": "ct-sec",
+    "domain": "Software Testing",
+    "question": "Which security testing technique systematically identifies all possible attack vectors on a system?",
+    "options": [
+      "Vulnerability scanning",
+      "Attack surface analysis",
+      "Code review",
+      "Penetration testing"
+    ],
+    "correctIndex": 1,
+    "explanation": "Attack surface analysis identifies all the different points where an attacker could try to enter or extract data from a system, helping prioritize security testing efforts.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-sec-004",
+    "certId": "ct-sec",
+    "domain": "Software Testing",
+    "question": "What does STRIDE stand for in threat modeling?",
+    "options": [
+      "Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege",
+      "Security, Testing, Risk, Identification, Detection, Evaluation",
+      "System, Threat, Reconnaissance, Impact, Defense, Exposure",
+      "Static, Test, Review, Investigate, Develop, Execute"
+    ],
+    "correctIndex": 0,
+    "explanation": "STRIDE is a threat modeling framework identifying six categories: Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ct-sec-005",
+    "certId": "ct-sec",
+    "domain": "Software Testing",
+    "question": "Which type of XSS attack stores the malicious script on the server and serves it to other users?",
+    "options": [
+      "Reflected XSS",
+      "DOM-based XSS",
+      "Stored (Persistent) XSS",
+      "Blind XSS"
+    ],
+    "correctIndex": 2,
+    "explanation": "Stored XSS (persistent XSS) saves the malicious script in the server-side database and serves it to every user who visits the affected page.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-sec-006",
+    "certId": "ct-sec",
+    "domain": "Software Testing",
+    "question": "What is the purpose of a penetration test?",
+    "options": [
+      "To monitor network traffic continuously",
+      "To simulate an attack by an adversary to discover exploitable vulnerabilities",
+      "To scan systems for known vulnerabilities automatically",
+      "To audit access control lists"
+    ],
+    "correctIndex": 1,
+    "explanation": "Penetration testing simulates real-world attacks by skilled testers to identify exploitable vulnerabilities that could be leveraged by malicious actors.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-sec-007",
+    "certId": "ct-sec",
+    "domain": "Software Testing",
+    "question": "Which security control prevents replay attacks in authentication?",
+    "options": [
+      "Password hashing",
+      "Nonces or timestamps in authentication tokens",
+      "Firewall rules",
+      "Input validation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Nonces (one-time tokens) and timestamps in authentication tokens ensure that captured credentials cannot be replayed since each request has a unique value that expires.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ct-sec-008",
+    "certId": "ct-sec",
+    "domain": "Software Testing",
+    "question": "What is 'security regression testing'?",
+    "options": [
+      "Testing new security features for the first time",
+      "Re-testing previously fixed security vulnerabilities to ensure they haven't been reintroduced",
+      "Rolling back to a previous secure version",
+      "Testing security in a regression environment"
+    ],
+    "correctIndex": 1,
+    "explanation": "Security regression testing re-verifies that previously identified and fixed security vulnerabilities have not been reintroduced by subsequent code changes.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-sec-009",
+    "certId": "ct-sec",
+    "domain": "Software Testing",
+    "question": "What does CIA stand for in information security?",
+    "options": [
+      "Control, Integrity, Authentication",
+      "Confidentiality, Integrity, Availability",
+      "Compliance, Impact, Assessment",
+      "Cyber, Investigation, Audit"
+    ],
+    "correctIndex": 1,
+    "explanation": "The CIA triad — Confidentiality (data accessible only to authorized users), Integrity (data not altered), and Availability (data accessible when needed) — forms the core of information security.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-sec-010",
+    "certId": "ct-sec",
+    "domain": "Software Testing",
+    "question": "Which testing technique involves examining source code for security flaws without executing it?",
+    "options": [
+      "Dynamic Application Security Testing (DAST)",
+      "Penetration testing",
+      "Static Application Security Testing (SAST)",
+      "Fuzz testing"
+    ],
+    "correctIndex": 2,
+    "explanation": "SAST analyzes source code, bytecode, or binaries for security vulnerabilities without executing the application — enabling early detection during development.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-sec-011",
+    "certId": "ct-sec",
+    "domain": "Software Testing",
+    "question": "A CSRF attack exploits which vulnerability?",
+    "options": [
+      "Weak password policies",
+      "The browser's trust in an authenticated user's session to perform unintended actions",
+      "SQL injection in form fields",
+      "Insecure direct object references"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cross-Site Request Forgery (CSRF) tricks an authenticated user's browser into making unauthorized requests to a trusted site, exploiting the site's trust in the user's session.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-sec-012",
+    "certId": "ct-sec",
+    "domain": "Software Testing",
+    "question": "What is the primary purpose of security testing in the SDLC?",
+    "options": [
+      "To guarantee 100% security of the system",
+      "To identify security vulnerabilities so they can be remediated before deployment",
+      "To meet audit requirements only",
+      "To replace secure coding practices"
+    ],
+    "correctIndex": 1,
+    "explanation": "Security testing identifies vulnerabilities and weaknesses so they can be addressed before deployment, reducing the risk of exploitation by malicious actors.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-sec-013",
+    "certId": "ct-sec",
+    "domain": "Software Testing",
+    "question": "Which access control model grants access based on the sensitivity of information and the user's clearance level?",
+    "options": [
+      "Discretionary Access Control (DAC)",
+      "Role-Based Access Control (RBAC)",
+      "Mandatory Access Control (MAC)",
+      "Attribute-Based Access Control (ABAC)"
+    ],
+    "correctIndex": 2,
+    "explanation": "Mandatory Access Control uses sensitivity labels and security clearances — the system enforces access policies based on classification levels independent of user decisions.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ct-sec-014",
+    "certId": "ct-sec",
+    "domain": "Software Testing",
+    "question": "What is 'security misuse case testing'?",
+    "options": [
+      "Testing security features that are incorrectly implemented",
+      "Deriving test cases from misuse cases that describe how an attacker would misuse the system",
+      "Testing the misuse of legitimate user accounts",
+      "Security testing performed incorrectly by testers"
+    ],
+    "correctIndex": 1,
+    "explanation": "Misuse case testing defines test scenarios from an attacker's perspective — how a malicious user might misuse the system — complementing use case testing.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-sec-015",
+    "certId": "ct-sec",
+    "domain": "Software Testing",
+    "question": "Which OWASP category refers to insufficient logging and monitoring allowing attacks to go undetected?",
+    "options": [
+      "Broken Access Control",
+      "Security Misconfiguration",
+      "Insufficient Logging and Monitoring",
+      "Cryptographic Failures"
+    ],
+    "correctIndex": 2,
+    "explanation": "Insufficient Logging and Monitoring (OWASP Top 10) means attackers can operate undetected for extended periods because suspicious activity is not captured or alerted upon.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-pt-001",
+    "certId": "ct-pt",
+    "domain": "Software Testing",
+    "question": "Which performance test type determines the maximum load a system can handle while meeting performance goals?",
+    "options": [
+      "Baseline testing",
+      "Capacity testing",
+      "Spike testing",
+      "Endurance testing"
+    ],
+    "correctIndex": 1,
+    "explanation": "Capacity testing determines the maximum number of users or transactions a system can support while still meeting defined performance service level agreements.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-pt-002",
+    "certId": "ct-pt",
+    "domain": "Software Testing",
+    "question": "What is a 'think time' in performance test scripting?",
+    "options": [
+      "The time for testers to analyze results",
+      "The delay between user actions simulating realistic user behavior",
+      "The server processing time for each request",
+      "The time to initialize the performance test tool"
+    ],
+    "correctIndex": 1,
+    "explanation": "Think time models the realistic pause between user interactions (e.g., reading a page before clicking). Without it, load tests generate unrealistically high request rates.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-pt-003",
+    "certId": "ct-pt",
+    "domain": "Software Testing",
+    "question": "What does 'ramp-up' in a load test mean?",
+    "options": [
+      "The percentage of requests that fail",
+      "Gradually increasing the number of virtual users over time to reach the target load",
+      "The rate at which the server processes requests",
+      "The time to restore the system after a test"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ramp-up gradually increases virtual user load to the target level, preventing abrupt resource spikes and more closely simulating realistic user login patterns.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-pt-004",
+    "certId": "ct-pt",
+    "domain": "Software Testing",
+    "question": "Which metric measures the number of requests a system processes per unit of time?",
+    "options": [
+      "Response time",
+      "Throughput",
+      "Error rate",
+      "Latency"
+    ],
+    "correctIndex": 1,
+    "explanation": "Throughput measures how many transactions or requests the system processes per second (or per minute), indicating overall system processing capacity.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-pt-005",
+    "certId": "ct-pt",
+    "domain": "Software Testing",
+    "question": "What is the 90th percentile response time (P90)?",
+    "options": [
+      "The average response time across all requests",
+      "90% of requests are completed within this time value",
+      "The slowest 90% of all requests",
+      "The response time at which 90% of users abandon"
+    ],
+    "correctIndex": 1,
+    "explanation": "P90 (90th percentile) means 90% of requests are completed in less than or equal to that time. Percentile metrics are more meaningful than averages for performance SLAs.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-pt-006",
+    "certId": "ct-pt",
+    "domain": "Software Testing",
+    "question": "Which performance test evaluates system behavior under extreme conditions beyond normal operational capacity?",
+    "options": [
+      "Load testing",
+      "Soak testing",
+      "Stress testing",
+      "Smoke testing"
+    ],
+    "correctIndex": 2,
+    "explanation": "Stress testing pushes the system beyond normal capacity to find its breaking point and verify that it fails gracefully and recovers correctly.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-pt-007",
+    "certId": "ct-pt",
+    "domain": "Software Testing",
+    "question": "What is 'correlation' in a performance test script?",
+    "options": [
+      "Statistical correlation between response times",
+      "Replacing hardcoded session-specific dynamic values captured from one request into subsequent requests",
+      "Correlating test results with business requirements",
+      "Matching virtual user actions with server-side logs"
+    ],
+    "correctIndex": 1,
+    "explanation": "Correlation captures dynamic server-generated values (e.g., session tokens, view state) from responses and parameterizes them into subsequent requests for realistic script replay.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ct-pt-008",
+    "certId": "ct-pt",
+    "domain": "Software Testing",
+    "question": "What is the purpose of baseline testing in performance testing?",
+    "options": [
+      "To test the system at minimum load",
+      "To establish a reference point for future comparison of performance metrics",
+      "To test the base code before feature additions",
+      "To test the system with no concurrent users"
+    ],
+    "correctIndex": 1,
+    "explanation": "Baseline testing establishes a performance benchmark under known conditions, providing a reference point to detect performance regressions in future releases.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-pt-009",
+    "certId": "ct-pt",
+    "domain": "Software Testing",
+    "question": "Which type of performance issue is indicated by memory usage continuously growing without release over time?",
+    "options": [
+      "CPU bottleneck",
+      "Memory leak",
+      "Thread contention",
+      "Database deadlock"
+    ],
+    "correctIndex": 1,
+    "explanation": "A memory leak is characterized by continuously growing memory usage because allocated memory is not properly released, eventually causing system slowdowns or crashes.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-pt-010",
+    "certId": "ct-pt",
+    "domain": "Software Testing",
+    "question": "What is a 'Service Level Agreement' (SLA) in the context of performance testing?",
+    "options": [
+      "An agreement between the test team and development team on test schedules",
+      "A formal contract defining acceptable performance thresholds the system must meet",
+      "A list of performance test tools approved for use",
+      "The budget allocated for performance testing activities"
+    ],
+    "correctIndex": 1,
+    "explanation": "An SLA defines contractual performance requirements (e.g., 95% of requests under 2 seconds) that the system must meet. Performance testing validates compliance with SLA targets.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-pt-011",
+    "certId": "ct-pt",
+    "domain": "Software Testing",
+    "question": "What does 'parameterization' achieve in performance test scripts?",
+    "options": [
+      "Measures response time in multiple units",
+      "Replaces hardcoded data with variable data from files or functions to simulate different users",
+      "Sets configuration parameters for the test tool",
+      "Parameterizes the number of virtual users at runtime"
+    ],
+    "correctIndex": 1,
+    "explanation": "Parameterization replaces hardcoded values (e.g., usernames, search terms) with data from CSV files or other sources, enabling scripts to simulate unique users accessing real-world data.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-pt-012",
+    "certId": "ct-pt",
+    "domain": "Software Testing",
+    "question": "Which performance metric is most relevant for evaluating a real-time trading system?",
+    "options": [
+      "Throughput (transactions per second)",
+      "Latency (individual response time)",
+      "Error rate percentage",
+      "CPU utilization"
+    ],
+    "correctIndex": 1,
+    "explanation": "For real-time trading, latency (the time for each individual transaction to complete) is critical — even milliseconds matter for executing trades at the right price.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-pt-013",
+    "certId": "ct-pt",
+    "domain": "Software Testing",
+    "question": "What is spike testing designed to evaluate?",
+    "options": [
+      "Sustained load over many hours",
+      "System behavior when load suddenly increases dramatically and then returns to normal",
+      "Maximum throughput at constant load",
+      "Memory allocation patterns under normal load"
+    ],
+    "correctIndex": 1,
+    "explanation": "Spike testing evaluates how the system responds to sudden, extreme increases in load (e.g., a news event causing 10x normal traffic) and whether it recovers afterward.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-pt-014",
+    "certId": "ct-pt",
+    "domain": "Software Testing",
+    "question": "Why is test data variety important in performance testing?",
+    "options": [
+      "To satisfy data privacy regulations",
+      "To simulate realistic user behavior and avoid cache effects that would make results unrealistically fast",
+      "To test all code paths",
+      "To ensure the database schema is correct"
+    ],
+    "correctIndex": 1,
+    "explanation": "Using varied, realistic test data prevents artificial cache hits and ensures the test reflects production behavior — repeated identical requests can be served from cache, masking real performance.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-pt-015",
+    "certId": "ct-pt",
+    "domain": "Software Testing",
+    "question": "What performance testing activity involves analyzing server-side metrics (CPU, memory, I/O) alongside client-side response times?",
+    "options": [
+      "Workload modeling",
+      "Infrastructure monitoring",
+      "Test data preparation",
+      "Script recording"
+    ],
+    "correctIndex": 1,
+    "explanation": "Infrastructure monitoring during performance tests correlates server-side resource utilization with client-side response times to identify bottlenecks (e.g., CPU-bound, memory-bound, I/O-bound).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-mbt-001",
+    "certId": "ct-mbt",
+    "domain": "Software Testing",
+    "question": "What is the primary benefit of Model-Based Testing (MBT)?",
+    "options": [
+      "It eliminates the need for any human testers",
+      "Test cases are automatically generated from formal models, improving coverage and consistency",
+      "It replaces all other testing techniques",
+      "It only works for GUI-based systems"
+    ],
+    "correctIndex": 1,
+    "explanation": "MBT derives test cases automatically from a formal model of the system's expected behavior, improving consistency and enabling exhaustive coverage of modeled behavior.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-mbt-002",
+    "certId": "ct-mbt",
+    "domain": "Software Testing",
+    "question": "Which model type is MOST commonly used in MBT for sequential system behavior?",
+    "options": [
+      "Entity-relationship diagram",
+      "Finite state machine (state machine model)",
+      "UML class diagram",
+      "Entity relationship model"
+    ],
+    "correctIndex": 1,
+    "explanation": "Finite state machines are the most common MBT model type, representing system behavior as states and transitions that can be automatically traversed to generate test paths.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-mbt-003",
+    "certId": "ct-mbt",
+    "domain": "Software Testing",
+    "question": "What is an 'online MBT' approach?",
+    "options": [
+      "MBT conducted over the internet",
+      "Test generation and execution happen simultaneously and adapt based on system responses",
+      "MBT using online documentation as the model source",
+      "Automated test execution without a model"
+    ],
+    "correctIndex": 1,
+    "explanation": "Online MBT generates and executes tests simultaneously in real-time, adapting the next test step based on the actual system response — enabling adaptive and explorative testing.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ct-mbt-004",
+    "certId": "ct-mbt",
+    "domain": "Software Testing",
+    "question": "In offline MBT, when are test cases generated?",
+    "options": [
+      "During test execution",
+      "Before test execution, as a separate pre-execution step",
+      "After test execution during reporting",
+      "Only during CI/CD pipeline runs"
+    ],
+    "correctIndex": 1,
+    "explanation": "Offline MBT generates the complete set of test cases from the model before execution begins, allowing review and selection of test cases prior to running them.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-mbt-005",
+    "certId": "ct-mbt",
+    "domain": "Software Testing",
+    "question": "What is a 'test selection criterion' in MBT?",
+    "options": [
+      "The criteria for choosing which MBT tool to use",
+      "A criterion used to determine which test paths to generate from the model (e.g., all transitions, all states)",
+      "The pass/fail criteria for each test",
+      "The criteria for model acceptance"
+    ],
+    "correctIndex": 1,
+    "explanation": "A test selection criterion in MBT specifies what coverage to achieve from the model, such as all-states, all-transitions, or all-transition-pairs (switch coverage).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-mbt-006",
+    "certId": "ct-mbt",
+    "domain": "Software Testing",
+    "question": "What is a key limitation of Model-Based Testing?",
+    "options": [
+      "MBT cannot generate any test cases",
+      "The quality of tests is limited by the accuracy and completeness of the model",
+      "MBT only works with black-box testing",
+      "MBT cannot be used in agile projects"
+    ],
+    "correctIndex": 1,
+    "explanation": "MBT's effectiveness is bounded by model quality — if the model is incomplete or incorrect, the generated tests will miss behaviors not captured in the model ('garbage in, garbage out').",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-mbt-007",
+    "certId": "ct-mbt",
+    "domain": "Software Testing",
+    "question": "Which MBT coverage criterion requires that every pair of consecutive transitions be covered?",
+    "options": [
+      "State coverage",
+      "Transition coverage",
+      "Transition-pair coverage (1-switch coverage)",
+      "Path coverage"
+    ],
+    "correctIndex": 2,
+    "explanation": "Transition-pair (1-switch) coverage requires that every sequence of two consecutive transitions appears in the test suite, catching defects at transition combinations.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ct-mbt-008",
+    "certId": "ct-mbt",
+    "domain": "Software Testing",
+    "question": "What is the role of an 'adapter' in an MBT framework?",
+    "options": [
+      "To adapt the model to different notations",
+      "To translate abstract test steps from the model into concrete test actions executable on the system under test",
+      "To generate the model from requirements",
+      "To compare different MBT tools"
+    ],
+    "correctIndex": 1,
+    "explanation": "In MBT, adapters bridge the gap between abstract model-level test steps and concrete executable test actions on the actual system under test.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ct-mbt-009",
+    "certId": "ct-mbt",
+    "domain": "Software Testing",
+    "question": "Which type of model is used in MBT to describe data-driven behavior using if-then rules?",
+    "options": [
+      "State machine",
+      "Decision model",
+      "Flow graph",
+      "UML sequence diagram"
+    ],
+    "correctIndex": 1,
+    "explanation": "Decision models (such as decision tables or decision trees) represent data-driven business logic with if-then rules and are used in MBT to generate combinatorial test cases.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-mbt-010",
+    "certId": "ct-mbt",
+    "domain": "Software Testing",
+    "question": "What is 'model-based test oracle' in MBT?",
+    "options": [
+      "An Oracle database used in testing",
+      "The model itself is used to determine expected outputs, automatically generating pass/fail verdicts",
+      "A human expert who validates the model",
+      "A tool that validates model syntax"
+    ],
+    "correctIndex": 1,
+    "explanation": "In MBT, the model can serve as the test oracle — automatically generating expected outputs for comparison with actual system outputs, enabling automated pass/fail verdicts.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-mbt-011",
+    "certId": "ct-mbt",
+    "domain": "Software Testing",
+    "question": "Which standard or notation is commonly used to define formal models for MBT?",
+    "options": [
+      "BPMN (Business Process Model and Notation)",
+      "UML state charts or extended finite state machines",
+      "IEEE 829 test documentation standard",
+      "CMMI process area model"
+    ],
+    "correctIndex": 1,
+    "explanation": "UML statecharts and extended finite state machines (EFSMs) are widely used for MBT as they formally describe system behavior that can be traversed algorithmically.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-mbt-012",
+    "certId": "ct-mbt",
+    "domain": "Software Testing",
+    "question": "What is the primary advantage of using MBT in regression testing?",
+    "options": [
+      "It makes regression testing slower but more thorough",
+      "Test suite updates happen automatically when the model is updated, keeping tests synchronized with requirements",
+      "It eliminates the need for regression testing entirely",
+      "Regression tests can only be run once per release"
+    ],
+    "correctIndex": 1,
+    "explanation": "In MBT, updating the model automatically regenerates test cases, keeping regression tests synchronized with requirements changes without manually updating individual test scripts.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-mbt-013",
+    "certId": "ct-mbt",
+    "domain": "Software Testing",
+    "question": "What does 'all-transitions coverage' ensure in an MBT state machine?",
+    "options": [
+      "Every state is visited at least once",
+      "Every transition (edge) in the state machine is exercised by at least one test",
+      "All possible paths through the state machine are executed",
+      "Every state is visited in every possible order"
+    ],
+    "correctIndex": 1,
+    "explanation": "All-transitions coverage requires that each transition (edge between states) is traversed by at least one test case, ensuring every possible state change is tested.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-mbt-014",
+    "certId": "ct-mbt",
+    "domain": "Software Testing",
+    "question": "Which test generation algorithm finds the shortest test suite that achieves all-transitions coverage?",
+    "options": [
+      "Random walk algorithm",
+      "Chinese Postman algorithm",
+      "Depth-first search",
+      "Greedy backtracking"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Chinese Postman algorithm finds the minimum-length path that traverses every edge in a graph at least once, producing the optimal test suite for all-transitions coverage.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ct-mbt-015",
+    "certId": "ct-mbt",
+    "domain": "Software Testing",
+    "question": "When is MBT MOST beneficial to apply?",
+    "options": [
+      "For simple, static systems with no state",
+      "For complex reactive systems where behavior depends on sequences of events and states",
+      "Only for safety-critical systems",
+      "For one-time-use batch processing systems"
+    ],
+    "correctIndex": 1,
+    "explanation": "MBT provides the greatest value for complex reactive systems (like embedded control systems, communication protocols, and business workflows) where behavior is state-dependent and complex.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-ut-001",
+    "certId": "ct-ut",
+    "domain": "Software Testing",
+    "question": "What is the primary goal of usability testing?",
+    "options": [
+      "To verify the system handles large numbers of concurrent users",
+      "To evaluate how effectively and satisfactorily real users can achieve their goals with the system",
+      "To check if the system meets performance SLAs",
+      "To verify the system is accessible to users with disabilities"
+    ],
+    "correctIndex": 1,
+    "explanation": "Usability testing evaluates the user experience — how easily, efficiently, and satisfactorily real users can achieve their goals with the system under realistic conditions.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-ut-002",
+    "certId": "ct-ut",
+    "domain": "Software Testing",
+    "question": "In usability testing, what is a 'think-aloud protocol'?",
+    "options": [
+      "A test script where testers describe their actions",
+      "A technique where participants verbalize their thoughts while using the system",
+      "A protocol for collecting think time data in load tests",
+      "A method for analyzing server-side logs"
+    ],
+    "correctIndex": 1,
+    "explanation": "In think-aloud protocol, participants verbalize their thoughts, feelings, and reasoning while performing tasks, providing insight into their mental model and confusion points.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-ut-003",
+    "certId": "ct-ut",
+    "domain": "Software Testing",
+    "question": "What is 'task completion rate' in usability testing?",
+    "options": [
+      "The number of test cases completed per day",
+      "The percentage of participants who successfully complete a defined task without assistance",
+      "The time taken to complete all usability tests",
+      "The percentage of UI defects fixed"
+    ],
+    "correctIndex": 1,
+    "explanation": "Task completion rate measures what percentage of representative users successfully complete a task — a key usability effectiveness metric.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-ut-004",
+    "certId": "ct-ut",
+    "domain": "Software Testing",
+    "question": "Which accessibility guideline standard is globally recognized for web content accessibility?",
+    "options": [
+      "ISO/IEC 25010",
+      "WCAG (Web Content Accessibility Guidelines)",
+      "IEEE 829",
+      "OWASP Top 10"
+    ],
+    "correctIndex": 1,
+    "explanation": "WCAG (Web Content Accessibility Guidelines) by the W3C is the internationally recognized standard for making web content accessible to people with disabilities.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-ut-005",
+    "certId": "ct-ut",
+    "domain": "Software Testing",
+    "question": "What is 'hallway usability testing'?",
+    "options": [
+      "Testing conducted in a hallway environment",
+      "Informal, quick usability testing with whoever is available (e.g., colleagues), without formal participant selection",
+      "Testing navigation between application screens",
+      "Remote usability testing conducted online"
+    ],
+    "correctIndex": 1,
+    "explanation": "Hallway testing is informal usability testing with conveniently available participants (such as colleagues in a hallway), providing quick early feedback without formal lab setup.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-ut-006",
+    "certId": "ct-ut",
+    "domain": "Software Testing",
+    "question": "Which usability metric measures the time a user spends completing a defined task?",
+    "options": [
+      "Error rate",
+      "Task completion rate",
+      "Time on task",
+      "Satisfaction score"
+    ],
+    "correctIndex": 2,
+    "explanation": "Time on task measures how long it takes a user to complete a specific task — a key efficiency metric in usability testing.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-ut-007",
+    "certId": "ct-ut",
+    "domain": "Software Testing",
+    "question": "What is the System Usability Scale (SUS)?",
+    "options": [
+      "A scale for measuring system performance",
+      "A standardized 10-item questionnaire providing a quick measure of overall usability perception",
+      "A framework for classifying usability defects",
+      "A scale for measuring screen resolution requirements"
+    ],
+    "correctIndex": 1,
+    "explanation": "SUS is a reliable 10-question Likert scale questionnaire widely used to measure perceived usability, providing a score from 0-100 (scores above 68 are considered above average).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-ut-008",
+    "certId": "ct-ut",
+    "domain": "Software Testing",
+    "question": "Which usability testing method involves users completing tasks remotely without a moderator observing in real-time?",
+    "options": [
+      "Moderated lab usability testing",
+      "Unmoderated remote usability testing",
+      "Guerrilla testing",
+      "Eye tracking study"
+    ],
+    "correctIndex": 1,
+    "explanation": "Unmoderated remote testing has participants complete tasks on their own device without a live moderator, using specialized software to record sessions and capture metrics.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-ut-009",
+    "certId": "ct-ut",
+    "domain": "Software Testing",
+    "question": "How many participants does Nielsen's rule suggest for identifying most usability issues in a single usability test session?",
+    "options": [
+      "1-2",
+      "5",
+      "20",
+      "50"
+    ],
+    "correctIndex": 1,
+    "explanation": "Nielsen's research suggests that 5 participants reveal approximately 85% of usability problems in a product, making it efficient for iterative testing with small samples.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-ut-010",
+    "certId": "ct-ut",
+    "domain": "Software Testing",
+    "question": "What is an 'expert review' (cognitive walkthrough) in usability evaluation?",
+    "options": [
+      "A review conducted by the development team",
+      "Usability experts evaluate the interface by simulating how a user would complete tasks, without recruiting real users",
+      "A review of the technical architecture for usability",
+      "A review of test cases by a senior tester"
+    ],
+    "correctIndex": 1,
+    "explanation": "A cognitive walkthrough has usability experts step through the interface as if they were users completing specific tasks, identifying potential usability issues without real user participants.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-ut-011",
+    "certId": "ct-ut",
+    "domain": "Software Testing",
+    "question": "Which usability test artifact documents a realistic scenario describing the context in which a user tries to complete a goal?",
+    "options": [
+      "Test case",
+      "Persona",
+      "Task scenario",
+      "Wireframe"
+    ],
+    "correctIndex": 2,
+    "explanation": "A task scenario describes a realistic context and goal for a user during usability testing — it gives participants the motivation and context to complete tasks naturally.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-ut-012",
+    "certId": "ct-ut",
+    "domain": "Software Testing",
+    "question": "What does WCAG 2.1 Level AA compliance primarily address?",
+    "options": [
+      "High performance of web pages",
+      "Accessibility for a wide range of users including those with visual, auditory, motor, and cognitive disabilities",
+      "Security of web applications",
+      "Cross-browser compatibility"
+    ],
+    "correctIndex": 1,
+    "explanation": "WCAG 2.1 Level AA is the internationally accepted baseline for web accessibility, addressing a wide range of barriers for users with various disabilities under the POUR principles.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-ut-013",
+    "certId": "ct-ut",
+    "domain": "Software Testing",
+    "question": "What is A/B testing in the context of usability?",
+    "options": [
+      "Testing two different versions of a system component with real users to determine which performs better",
+      "Testing from A (start) to B (end) of a workflow",
+      "Alternating between manual and automated testing",
+      "Testing the system with two types of test data"
+    ],
+    "correctIndex": 0,
+    "explanation": "A/B testing presents two variants (A and B) to different user groups simultaneously, using real behavioral data to determine which design achieves better user outcomes.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-ut-014",
+    "certId": "ct-ut",
+    "domain": "Software Testing",
+    "question": "Which technique captures where users look on a screen and how long they look there?",
+    "options": [
+      "Screen recording",
+      "Eye tracking",
+      "Mouse heatmap",
+      "Click tracking"
+    ],
+    "correctIndex": 1,
+    "explanation": "Eye tracking technology records eye movement and fixation patterns, revealing what users attend to on a page and what they miss — providing deep insight into visual attention.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-ut-015",
+    "certId": "ct-ut",
+    "domain": "Software Testing",
+    "question": "What is the primary advantage of moderated usability testing over unmoderated testing?",
+    "options": [
+      "Lower cost and faster execution",
+      "The moderator can probe for reasons behind user behavior and clarify misunderstandings",
+      "More participants can be tested simultaneously",
+      "No participant recruitment is needed"
+    ],
+    "correctIndex": 1,
+    "explanation": "Moderated testing allows the facilitator to ask follow-up questions, clarify tasks, and explore unexpected behavior in depth — revealing the 'why' behind user actions.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-aut-001",
+    "certId": "ct-aut",
+    "domain": "Software Testing",
+    "question": "Which automotive safety standard defines requirements for functional safety of electrical/electronic systems in road vehicles?",
+    "options": [
+      "AUTOSAR",
+      "ISO 26262",
+      "Automotive SPICE",
+      "MISRA C"
+    ],
+    "correctIndex": 1,
+    "explanation": "ISO 26262 is the automotive functional safety standard defining requirements for electrical/electronic systems in road vehicles, including ASIL classification and V-model processes.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-aut-002",
+    "certId": "ct-aut",
+    "domain": "Software Testing",
+    "question": "What does ASIL stand for in ISO 26262?",
+    "options": [
+      "Automotive Safety Integrity Level",
+      "Automotive Software Integration Layer",
+      "Advanced System Integration Level",
+      "Automotive Standard Implementation List"
+    ],
+    "correctIndex": 0,
+    "explanation": "ASIL (Automotive Safety Integrity Level) classifies the risk associated with a safety goal from ASIL A (least stringent) to ASIL D (most stringent).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-aut-003",
+    "certId": "ct-aut",
+    "domain": "Software Testing",
+    "question": "What is the primary purpose of Hardware-in-the-Loop (HIL) testing in automotive?",
+    "options": [
+      "Testing the physical hardware components for defects",
+      "Testing ECU software with real-time simulation of the vehicle environment without the actual vehicle",
+      "Testing hardware integration with the vehicle network",
+      "Testing the hardware manufacturing process"
+    ],
+    "correctIndex": 1,
+    "explanation": "HIL testing connects real ECUs to a real-time simulation of the vehicle/environment, enabling thorough software testing without the risk or cost of real vehicle testing.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-aut-004",
+    "certId": "ct-aut",
+    "domain": "Software Testing",
+    "question": "What does AUTOSAR provide in the automotive context?",
+    "options": [
+      "A safety standard for autonomous vehicles",
+      "A standardized software architecture for automotive ECU software",
+      "A testing framework for automotive systems",
+      "A communication protocol for vehicle networks"
+    ],
+    "correctIndex": 1,
+    "explanation": "AUTOSAR (AUTomotive Open System ARchitecture) is a standardized software architecture for automotive ECUs, defining a layered architecture that separates application software from hardware.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-aut-005",
+    "certId": "ct-aut",
+    "domain": "Software Testing",
+    "question": "Which coding standard is commonly required for safety-critical automotive software?",
+    "options": [
+      "PEP 8",
+      "MISRA C",
+      "Google C++ Style Guide",
+      "OWASP Secure Coding Practices"
+    ],
+    "correctIndex": 1,
+    "explanation": "MISRA C is a widely adopted coding standard for safety-critical embedded C software in automotive, restricting error-prone language features to improve reliability.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-aut-006",
+    "certId": "ct-aut",
+    "domain": "Software Testing",
+    "question": "What testing level in the automotive V-model corresponds to integration testing of ECU software components?",
+    "options": [
+      "Unit testing",
+      "Software integration testing",
+      "Vehicle system testing",
+      "Regression testing"
+    ],
+    "correctIndex": 1,
+    "explanation": "The automotive V-model includes software integration testing (verifying that integrated software components work together) as a distinct level between unit and system testing.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-aut-007",
+    "certId": "ct-aut",
+    "domain": "Software Testing",
+    "question": "What is 'Software-in-the-Loop' (SIL) testing?",
+    "options": [
+      "Testing software while it is running in the production vehicle",
+      "Executing the ECU software on a simulation computer without real hardware, using a simulated environment",
+      "Testing software update loops for ECU firmware",
+      "Testing software integration with hardware on a test bench"
+    ],
+    "correctIndex": 1,
+    "explanation": "SIL testing runs the production ECU software on a desktop simulation environment without target hardware, enabling rapid early validation of software behavior.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-aut-008",
+    "certId": "ct-aut",
+    "domain": "Software Testing",
+    "question": "Which network protocol is the traditional standard for communication between ECUs in automotive?",
+    "options": [
+      "Ethernet",
+      "CAN (Controller Area Network)",
+      "LIN",
+      "FlexRay"
+    ],
+    "correctIndex": 1,
+    "explanation": "CAN (Controller Area Network) has been the dominant automotive communication bus for decades, used for real-time control between ECUs in the vehicle network.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ct-aut-009",
+    "certId": "ct-aut",
+    "domain": "Software Testing",
+    "question": "What is the Automotive SPICE (ASPICE) process model used for?",
+    "options": [
+      "Defining vehicle safety requirements",
+      "Assessing and improving software development process capability in automotive suppliers",
+      "Certifying automotive testing tools",
+      "Defining communication protocols between ECUs"
+    ],
+    "correctIndex": 1,
+    "explanation": "Automotive SPICE is a process reference and assessment model based on ISO/IEC 15504, used to assess the software development process maturity of automotive suppliers.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-aut-010",
+    "certId": "ct-aut",
+    "domain": "Software Testing",
+    "question": "In ISO 26262, what does 'fault injection testing' verify?",
+    "options": [
+      "That the system produces correct outputs for valid inputs",
+      "That the system responds safely and correctly to hardware faults",
+      "That the system handles invalid user inputs",
+      "That the system performance meets SLAs"
+    ],
+    "correctIndex": 1,
+    "explanation": "Fault injection testing deliberately introduces hardware faults to verify that the system detects, responds to, and handles them safely according to the defined safety requirements.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ct-aut-011",
+    "certId": "ct-aut",
+    "domain": "Software Testing",
+    "question": "Which MC/DC coverage level is required by ISO 26262 for ASIL D software?",
+    "options": [
+      "Statement coverage (100%)",
+      "Branch coverage (100%)",
+      "MC/DC coverage (100%)",
+      "Path coverage (100%)"
+    ],
+    "correctIndex": 2,
+    "explanation": "ISO 26262 requires 100% MC/DC (Modified Condition/Decision Coverage) for ASIL D — the highest safety integrity level — reflecting the need to verify that each condition independently affects decisions.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ct-aut-012",
+    "certId": "ct-aut",
+    "domain": "Software Testing",
+    "question": "What is 'back-to-back testing' in automotive software development?",
+    "options": [
+      "Testing the same software twice with different testers",
+      "Comparing the output of a model (e.g., Simulink) with the output of generated production code using the same inputs",
+      "Running two ECUs in parallel for redundancy testing",
+      "Testing forward and backward compatibility of software versions"
+    ],
+    "correctIndex": 1,
+    "explanation": "Back-to-back testing compares outputs of the simulation model (MIL) and the production code (SIL or PIL) for the same inputs, verifying that code generation accurately preserves model behavior.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ct-aut-013",
+    "certId": "ct-aut",
+    "domain": "Software Testing",
+    "question": "What is the primary safety concern in testing Over-The-Air (OTA) software updates for vehicles?",
+    "options": [
+      "Update download speed",
+      "Ensuring updates cannot introduce safety-critical failures or be exploited by malicious actors",
+      "Compatibility with infotainment systems only",
+      "Reducing update file size"
+    ],
+    "correctIndex": 1,
+    "explanation": "OTA updates must be tested rigorously to ensure they cannot introduce safety regressions, are authenticated/authorized, and cannot be hijacked for malicious purposes in safety-critical systems.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-aut-014",
+    "certId": "ct-aut",
+    "domain": "Software Testing",
+    "question": "Which testing approach in automotive uses real driving scenarios to validate ADAS (Advanced Driver Assistance Systems)?",
+    "options": [
+      "Simulation-based testing only",
+      "Closed-track and open-road vehicle-level testing",
+      "Unit testing of sensor fusion algorithms",
+      "Laboratory bench testing"
+    ],
+    "correctIndex": 1,
+    "explanation": "ADAS validation requires closed-track testing (controlled scenarios) and open-road testing in real conditions to validate that systems behave correctly in the full complexity of real traffic.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ct-aut-015",
+    "certId": "ct-aut",
+    "domain": "Software Testing",
+    "question": "What does 'Processor-in-the-Loop' (PIL) testing provide that SIL testing does not?",
+    "options": [
+      "Testing without any hardware",
+      "Execution of code on the actual target processor to validate real-time behavior and timing",
+      "Full vehicle simulation",
+      "Testing of the software architecture"
+    ],
+    "correctIndex": 1,
+    "explanation": "PIL testing runs production code on the actual target processor (not just a simulation computer), allowing validation of real-time performance, timing, and processor-specific behavior.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ctel-tm-001",
+    "certId": "ctel-tm",
+    "domain": "Software Testing",
+    "question": "At the expert level, what is the MOST important differentiator of a test manager's strategic contribution?",
+    "options": [
+      "Writing detailed test scripts",
+      "Aligning the test strategy with organizational business goals and quality risk appetite",
+      "Executing test cases personally",
+      "Configuring the test management tool"
+    ],
+    "correctIndex": 1,
+    "explanation": "Expert-level test managers contribute strategically by aligning testing with organizational objectives, risk tolerance, and quality goals rather than focusing on operational test activities.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctel-tm-002",
+    "certId": "ctel-tm",
+    "domain": "Software Testing",
+    "question": "Which process improvement model provides a framework for assessing and improving software testing processes?",
+    "options": [
+      "CMMI",
+      "TMMi (Test Maturity Model Integration)",
+      "ISO 9001",
+      "ITIL"
+    ],
+    "correctIndex": 1,
+    "explanation": "TMMi (Test Maturity Model Integration) is a framework specifically for improving test processes, with five maturity levels from Initial through Optimization.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctel-tm-003",
+    "certId": "ctel-tm",
+    "domain": "Software Testing",
+    "question": "What is the TMMi Level 2 focus area?",
+    "options": [
+      "Test policy and strategy defined at the organizational level",
+      "Managed: test processes are planned, monitored, and controlled",
+      "Defined: test processes are documented and standardized",
+      "Optimizing: continuous process improvement is built in"
+    ],
+    "correctIndex": 1,
+    "explanation": "TMMi Level 2 (Managed) focuses on project-level management of testing: planning, monitoring, and controlling test processes for individual projects.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ctel-tm-004",
+    "certId": "ctel-tm",
+    "domain": "Software Testing",
+    "question": "How does an expert test manager build a business case for increased test investment?",
+    "options": [
+      "By requesting more headcount without justification",
+      "By demonstrating the cost of quality — the cost of poor quality versus the cost of finding defects earlier",
+      "By citing industry average test budgets",
+      "By showing that competitors have larger test teams"
+    ],
+    "correctIndex": 1,
+    "explanation": "A business case quantifies the cost of quality: prevention costs, appraisal costs, and failure costs — demonstrating ROI when defects are found earlier through improved testing.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ctel-tm-005",
+    "certId": "ctel-tm",
+    "domain": "Software Testing",
+    "question": "What is 'organizational test policy' and who typically defines it?",
+    "options": [
+      "A document defining test procedures for a single project, written by the test lead",
+      "A high-level document defining the organization's philosophy and objectives for testing, typically defined by senior management or a test director",
+      "A collection of all test cases used across projects",
+      "The definition of done for individual test cases"
+    ],
+    "correctIndex": 1,
+    "explanation": "An organizational test policy sets the high-level direction, principles, and objectives for testing across the organization — it is strategic, not project-specific, and defined at a senior level.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctel-tm-006",
+    "certId": "ctel-tm",
+    "domain": "Software Testing",
+    "question": "Which leadership style is MOST effective when managing a highly experienced and self-directed test team?",
+    "options": [
+      "Authoritative / directive",
+      "Delegating / empowering",
+      "Micromanagement",
+      "Transactional"
+    ],
+    "correctIndex": 1,
+    "explanation": "Delegating and empowering leadership is most effective with experienced, motivated teams — giving them autonomy to make decisions while the manager provides support and removes obstacles.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctel-tm-007",
+    "certId": "ctel-tm",
+    "domain": "Software Testing",
+    "question": "What is 'independent testing' and what is its primary advantage?",
+    "options": [
+      "Testing performed by automated tools without human involvement",
+      "Testing performed by a team or individual separate from the development team, reducing bias and increasing defect detection",
+      "Testing performed without a test plan",
+      "Testing that does not depend on any test environment"
+    ],
+    "correctIndex": 1,
+    "explanation": "Independent testing reduces confirmation bias — testers who did not write the code are more likely to find defects because they approach the system with different assumptions.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ctel-tm-008",
+    "certId": "ctel-tm",
+    "domain": "Software Testing",
+    "question": "Which metric provides the most meaningful insight into long-term test process effectiveness?",
+    "options": [
+      "Number of test cases written per sprint",
+      "Defect Removal Efficiency trend over multiple releases",
+      "Percentage of test cases automated",
+      "Number of test environments available"
+    ],
+    "correctIndex": 1,
+    "explanation": "DRE trend over multiple releases shows whether the test process is improving at catching defects before customers do — a strategic effectiveness metric rather than an activity metric.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ctel-tm-009",
+    "certId": "ctel-tm",
+    "domain": "Software Testing",
+    "question": "How should a test manager handle conflict between a project manager who wants to skip regression testing to meet a deadline?",
+    "options": [
+      "Always defer to the project manager",
+      "Refuse to release without regression testing under any circumstances",
+      "Present a risk-based analysis showing the quality risks of skipping regression testing, allowing stakeholders to make an informed decision",
+      "Secretly conduct regression testing after the release"
+    ],
+    "correctIndex": 2,
+    "explanation": "Expert test managers frame decisions as risk trade-offs, not confrontations — providing stakeholders with quantified quality risk information so they can make informed, accountable decisions.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ctel-tm-010",
+    "certId": "ctel-tm",
+    "domain": "Software Testing",
+    "question": "What does 'test process improvement' based on TMMi Level 5 (Optimizing) involve?",
+    "options": [
+      "Meeting a defined set of test procedures for each project",
+      "Continuously measuring, analyzing, and improving the test process using quantitative feedback",
+      "Documenting all test activities for the first time",
+      "Ensuring all projects follow the same test plan template"
+    ],
+    "correctIndex": 1,
+    "explanation": "TMMi Level 5 (Optimizing) focuses on continuous process improvement driven by quantitative measurement, defect prevention, and innovation — the highest level of test maturity.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ctel-tm-011",
+    "certId": "ctel-tm",
+    "domain": "Software Testing",
+    "question": "What is a 'test competency framework' used for?",
+    "options": [
+      "Selecting test management tools",
+      "Defining the skills, knowledge, and behaviors expected of testers at different career levels",
+      "Documenting test coverage metrics",
+      "Describing the test environment architecture"
+    ],
+    "correctIndex": 1,
+    "explanation": "A test competency framework defines expected skills and knowledge at each testing career level, supporting recruitment, performance reviews, training planning, and professional development.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctel-tm-012",
+    "certId": "ctel-tm",
+    "domain": "Software Testing",
+    "question": "Which approach helps expert test managers communicate test status most effectively to senior executives?",
+    "options": [
+      "Detailed test execution logs",
+      "Executive dashboards with KPIs, risk indicators, and trend charts focused on business impact",
+      "Full defect lists with technical details",
+      "Test case count by domain"
+    ],
+    "correctIndex": 1,
+    "explanation": "Executives need business-level information — dashboards showing quality trends, key risks, release readiness indicators, and business impact — not operational test execution details.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctel-tm-013",
+    "certId": "ctel-tm",
+    "domain": "Software Testing",
+    "question": "What is the primary purpose of a 'testing center of excellence' (TCoE)?",
+    "options": [
+      "To centralize all software development",
+      "To provide specialized testing expertise, standards, tools, and best practices across the organization",
+      "To replace individual project test teams",
+      "To outsource all testing activities"
+    ],
+    "correctIndex": 1,
+    "explanation": "A TCoE is an organizational unit that drives testing excellence across the company by defining standards, providing expertise, managing tools, and enabling knowledge sharing.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ctel-tm-014",
+    "certId": "ctel-tm",
+    "domain": "Software Testing",
+    "question": "In large-scale organizations, how does an expert test manager govern multiple concurrent test projects?",
+    "options": [
+      "By personally reviewing every test case across all projects",
+      "By establishing standards, governance processes, and delegating to test leads with defined accountability",
+      "By centralizing all test execution in one team",
+      "By requiring all projects to use the same test plan"
+    ],
+    "correctIndex": 1,
+    "explanation": "Expert test managers govern at scale through standards, frameworks, and delegation — enabling consistent quality across projects without direct involvement in each project's execution.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ctel-tm-015",
+    "certId": "ctel-tm",
+    "domain": "Software Testing",
+    "question": "What distinguishes a test strategy from a test plan?",
+    "options": [
+      "A test strategy is specific to one project; a test plan is organizational",
+      "A test strategy defines the overall approach and principles for testing at an organizational or program level; a test plan details the specifics for a single project",
+      "They are the same document with different names",
+      "A test plan is written first; the test strategy follows"
+    ],
+    "correctIndex": 1,
+    "explanation": "A test strategy is a high-level document defining the organization's or program's approach to testing (risk appetite, techniques, tools). A test plan operationalizes the strategy for a specific project.",
+    "difficulty": "medium"
+  }
+]

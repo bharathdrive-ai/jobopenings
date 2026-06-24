@@ -4,7 +4,7 @@ export interface Certification {
   code: string;
   vendor: string;
   domain: string;
-  level: 'Foundational' | 'Fundamentals' | 'Entry' | 'Core' | 'Associate' | 'Professional' | 'Expert' | 'Specialty' | 'Foundation';
+  level: 'Foundational' | 'Fundamentals' | 'Entry' | 'Core' | 'Associate' | 'Professional' | 'Expert' | 'Specialty' | 'Foundation' | 'Advanced' | 'Specialist' | 'Intermediate';
   questionCount: number;
   timeMinutes: number;
   passingScore: number;
@@ -71,7 +71,9 @@ export type Domain =
   | 'Cybersecurity'
   | 'Project Management & ITSM'
   | 'DevOps, Kubernetes & Linux'
-  | 'Data, AI & Analytics';
+  | 'Data, AI & Analytics'
+  | 'Software Testing'
+  | 'Agile & Scrum';
 
 export type SortOption = 'name' | 'difficulty' | 'popularity';
 
