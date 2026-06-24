@@ -1,0 +1,202 @@
+[
+  {
+    "id": "comp-1",
+    "certId": "comptia-sy0-701",
+    "domain": "Threats, Attacks & Vulnerabilities",
+    "question": "A user receives an email appearing to be from their bank requesting they verify their account by clicking a link. The link goes to a site that looks identical to the bank's website. What type of attack is this?",
+    "options": ["Vishing", "Spear phishing", "Phishing", "Smishing"],
+    "correctIndex": 2,
+    "explanation": "This is a phishing attack — a social engineering technique where attackers send fraudulent emails impersonating legitimate organizations to trick users into revealing credentials or personal information. Spear phishing targets specific individuals; vishing uses voice calls; smishing uses SMS.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "comp-2",
+    "certId": "comptia-sy0-701",
+    "domain": "Implementation",
+    "question": "Which encryption algorithm is considered asymmetric and is commonly used for secure key exchange?",
+    "options": ["AES-256", "3DES", "RSA", "SHA-256"],
+    "correctIndex": 2,
+    "explanation": "RSA is an asymmetric encryption algorithm that uses a public/private key pair. It's widely used for secure key exchange, digital signatures, and encrypting small amounts of data. AES and 3DES are symmetric algorithms; SHA-256 is a hashing algorithm, not encryption.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "comp-3",
+    "certId": "comptia-sy0-701",
+    "domain": "Architecture & Design",
+    "question": "What security principle ensures that no single person can complete a critical task alone, requiring multiple people's involvement?",
+    "options": ["Least Privilege", "Separation of Duties", "Defense in Depth", "Zero Trust"],
+    "correctIndex": 1,
+    "explanation": "Separation of Duties (SoD) requires that critical tasks be divided among multiple people to prevent fraud, errors, and abuse. For example, the person who approves financial transactions should be different from the one who processes them. This is distinct from least privilege, which limits access rights.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "comp-4",
+    "certId": "comptia-sy0-701",
+    "domain": "Operations & Incident Response",
+    "question": "During a security incident investigation, a forensic analyst needs to ensure that evidence is not altered. Which technique ensures the integrity of digital evidence?",
+    "options": ["Chain of custody documentation", "Write blocker and cryptographic hash verification", "Encrypted backups", "RAID storage of the evidence drive"],
+    "correctIndex": 1,
+    "explanation": "Write blockers prevent any writes to the evidence drive during acquisition, and cryptographic hashes (MD5, SHA-256) taken before and after provide mathematical proof that no data was altered. This is essential for maintaining evidence integrity and admissibility in court.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "comp-5",
+    "certId": "comptia-sy0-701",
+    "domain": "Threats, Attacks & Vulnerabilities",
+    "question": "An attacker inserts malicious SQL code into a login form field that is then executed by the database. What vulnerability is being exploited?",
+    "options": ["Cross-Site Scripting (XSS)", "SQL Injection", "Buffer Overflow", "Cross-Site Request Forgery (CSRF)"],
+    "correctIndex": 1,
+    "explanation": "SQL Injection occurs when user input is not properly sanitized and is directly incorporated into SQL queries. Attackers can manipulate queries to bypass authentication, extract data, or destroy data. Prevention includes parameterized queries and prepared statements.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "comp-6",
+    "certId": "comptia-n10-009",
+    "domain": "Network Fundamentals",
+    "question": "Which protocol operates at Layer 3 of the OSI model and is responsible for logical addressing and routing packets between networks?",
+    "options": ["Ethernet", "TCP", "IP", "ARP"],
+    "correctIndex": 2,
+    "explanation": "IP (Internet Protocol) operates at Layer 3 (Network layer) of the OSI model. It handles logical addressing (IP addresses) and routing packets across different networks. Ethernet operates at Layer 2; TCP operates at Layer 4; ARP operates between Layers 2 and 3.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "comp-7",
+    "certId": "comptia-n10-009",
+    "domain": "Network Implementations",
+    "question": "What is the CIDR notation for a subnet that accommodates exactly 30 host addresses?",
+    "options": ["/26", "/27", "/28", "/29"],
+    "correctIndex": 1,
+    "explanation": "A /27 subnet has 2^5 = 32 addresses, minus 2 (network and broadcast) = 30 usable host addresses. A /26 provides 62 hosts; /28 provides 14 hosts; /29 provides 6 hosts.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "comp-8",
+    "certId": "comptia-n10-009",
+    "domain": "Network Security",
+    "question": "Which type of firewall inspection examines packets in the context of an established connection, tracking the state of network connections?",
+    "options": ["Packet filtering firewall", "Stateful inspection firewall", "Application-layer firewall", "Next-generation firewall"],
+    "correctIndex": 1,
+    "explanation": "Stateful inspection firewalls maintain a state table tracking TCP/UDP connections. They verify that incoming packets are part of an established, legitimate session, providing better security than simple packet filtering which examines each packet in isolation without connection context.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "comp-9",
+    "certId": "comptia-cs0-003",
+    "domain": "Security Operations",
+    "question": "A SIEM alert fires indicating 500 failed SSH login attempts to a single server within 5 minutes, followed by a successful login. What type of attack does this pattern most likely indicate?",
+    "options": ["Phishing attack", "Brute force attack followed by successful compromise", "Denial of Service attack", "Man-in-the-middle attack"],
+    "correctIndex": 1,
+    "explanation": "The pattern of numerous failed login attempts followed by a successful login is a classic indicator of a brute force attack that ultimately succeeded in cracking credentials. The SOC analyst should immediately investigate the successful login for unauthorized activity and consider isolating the system.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "comp-10",
+    "certId": "comptia-pt0-003",
+    "domain": "Reconnaissance & Enumeration",
+    "question": "During a penetration test, which tool performs passive DNS reconnaissance and certificate transparency log analysis to discover subdomains without sending traffic to the target?",
+    "options": ["Nmap", "Shodan with passive mode", "Amass or Subfinder", "Nikto"],
+    "correctIndex": 2,
+    "explanation": "Tools like Amass and Subfinder perform passive reconnaissance by querying DNS records, certificate transparency logs (CT logs), and OSINT sources to discover subdomains without directly interacting with target systems. This avoids detection and is useful in the reconnaissance phase.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "comp-11",
+    "certId": "comptia-sy0-701",
+    "domain": "Governance, Risk & Compliance",
+    "question": "An organization stores customer PII and must demonstrate compliance with data protection regulations. Which framework specifically addresses the handling of personally identifiable information and mandates breach notification within 72 hours?",
+    "options": ["PCI-DSS", "HIPAA", "GDPR", "SOC 2"],
+    "correctIndex": 2,
+    "explanation": "The EU General Data Protection Regulation (GDPR) requires organizations to notify supervisory authorities of personal data breaches within 72 hours of becoming aware of the breach. It also grants individuals rights over their personal data and imposes strict consent and data minimization requirements.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "comp-12",
+    "certId": "comptia-220-1101",
+    "domain": "Hardware",
+    "question": "A technician replaces a failed laptop RAM module. After the replacement, the laptop displays a POST error. What should the technician check first?",
+    "options": ["The BIOS settings for boot order", "Whether the RAM module is seated properly and is compatible with the laptop", "The hard drive connection", "The CPU thermal paste"],
+    "correctIndex": 1,
+    "explanation": "POST errors after RAM replacement almost always indicate the RAM is not fully seated in the slot or is incompatible with the system. The technician should power down, reseat the RAM module, and verify it matches the laptop's specifications (type, speed, max capacity per slot).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "comp-13",
+    "certId": "comptia-xk0-005",
+    "domain": "System Management",
+    "question": "A Linux system administrator needs to set a file's permissions so the owner can read and write, the group can only read, and others have no access. What chmod command achieves this?",
+    "options": ["chmod 644 filename", "chmod 640 filename", "chmod 660 filename", "chmod 600 filename"],
+    "correctIndex": 1,
+    "explanation": "chmod 640 sets: 6 (rw-) for owner = read + write, 4 (r--) for group = read only, 0 (---) for others = no access. In octal: 6=110, 4=100, 0=000 in binary rwx bits.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "comp-14",
+    "certId": "comptia-cv0-004",
+    "domain": "Cloud Architecture & Design",
+    "question": "What cloud service model provides the customer with a virtualized computing environment where they can deploy and manage operating systems and applications?",
+    "options": ["Software as a Service (SaaS)", "Platform as a Service (PaaS)", "Infrastructure as a Service (IaaS)", "Function as a Service (FaaS)"],
+    "correctIndex": 2,
+    "explanation": "IaaS provides virtualized computing infrastructure over the internet. Customers manage the OS, middleware, and applications, while the provider manages the physical hardware, networking, and virtualization layer. Examples include AWS EC2, Azure VMs, and Google Compute Engine.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "comp-15",
+    "certId": "comptia-da0-001",
+    "domain": "Data Analysis",
+    "question": "A data analyst notices that a dataset has a mean of $500 but a median of $200 for customer order values. What does this indicate about the distribution?",
+    "options": ["The data is normally distributed", "The data is positively skewed (right-skewed) with high-value outliers", "The data is negatively skewed (left-skewed) with low-value outliers", "The data has no outliers"],
+    "correctIndex": 1,
+    "explanation": "When the mean is significantly higher than the median, the distribution is positively skewed (right-skewed). This is caused by a small number of very high values (outliers) pulling the mean upward. For example, a few large enterprise orders would create this pattern in order value data.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "comp-16",
+    "certId": "comptia-cas-004",
+    "domain": "Security Architecture",
+    "question": "An enterprise architect must design a solution that allows remote workers to access internal resources while applying consistent security policies regardless of user location or device. Which architecture best addresses this requirement?",
+    "options": ["Traditional VPN with perimeter firewall", "Zero Trust Network Access (ZTNA)", "Split-tunnel VPN", "Site-to-site VPN"],
+    "correctIndex": 1,
+    "explanation": "ZTNA implements the Zero Trust principle of 'never trust, always verify' by authenticating users and devices before granting access to specific applications, regardless of network location. Unlike VPN which grants broad network access, ZTNA provides granular, application-level access control with continuous verification.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "comp-17",
+    "certId": "comptia-n10-009",
+    "domain": "Network Troubleshooting",
+    "question": "A user reports they cannot reach any websites but can ping IP addresses successfully. DNS is suspected. Which command would confirm DNS resolution is failing?",
+    "options": ["ping 8.8.8.8", "tracert google.com", "nslookup google.com", "netstat -an"],
+    "correctIndex": 2,
+    "explanation": "nslookup queries DNS servers to resolve domain names to IP addresses. If nslookup fails but ping to an IP succeeds, DNS resolution is confirmed as the issue. The next step would be checking DNS server configuration and connectivity to the configured DNS servers.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "comp-18",
+    "certId": "comptia-sy0-701",
+    "domain": "Implementation",
+    "question": "Which PKI component is responsible for verifying the identity of entities requesting certificates before issuance?",
+    "options": ["Certificate Authority (CA)", "Registration Authority (RA)", "Certificate Revocation List (CRL)", "Online Certificate Status Protocol (OCSP)"],
+    "correctIndex": 1,
+    "explanation": "The Registration Authority (RA) acts as an intermediary between the Certificate Authority and certificate requesters. It verifies the identity and authority of requesters before forwarding requests to the CA for signing. This separation of duties improves CA security by reducing direct CA exposure.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "comp-19",
+    "certId": "comptia-pt0-003",
+    "domain": "Attacks & Exploits",
+    "question": "During a web application penetration test, a tester discovers an input field that reflects user input in a JavaScript context without sanitization. The tester can control the value of a JavaScript variable. What type of vulnerability exists?",
+    "options": ["SQL Injection", "DOM-based Cross-Site Scripting (XSS)", "CSRF", "XML External Entity (XXE)"],
+    "correctIndex": 1,
+    "explanation": "DOM-based XSS occurs when client-side JavaScript processes attacker-controlled data and writes it to the DOM in an unsafe manner. Unlike reflected or stored XSS, the payload never reaches the server — it's processed entirely client-side. This can allow attackers to execute arbitrary JavaScript in the victim's browser.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "comp-20",
+    "certId": "comptia-220-1102",
+    "domain": "Operating Systems",
+    "question": "A Windows 10 computer fails to boot and displays the error 'BOOTMGR is missing.' What is the MOST appropriate recovery step?",
+    "options": ["Reinstall Windows 10 completely", "Run 'bootrec /fixmbr' and 'bootrec /fixboot' from the Windows Recovery Environment", "Replace the hard drive", "Run sfc /scannow from within Windows"],
+    "correctIndex": 1,
+    "explanation": "BOOTMGR missing errors are typically fixed by repairing the boot record using the Windows Recovery Environment. 'bootrec /fixmbr' rewrites the Master Boot Record, and 'bootrec /fixboot' writes a new boot sector. 'bootrec /rebuildbcd' can also rebuild the Boot Configuration Database if needed.",
+    "difficulty": "medium"
+  }
+]

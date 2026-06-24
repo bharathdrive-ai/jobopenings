@@ -1,0 +1,202 @@
+[
+  {
+    "id": "aws-1",
+    "certId": "aws-clf-c02",
+    "domain": "Cloud Concepts",
+    "question": "Which of the following best describes the AWS Cloud's ability to scale resources up or down based on demand?",
+    "options": ["High Availability", "Elasticity", "Durability", "Fault Tolerance"],
+    "correctIndex": 1,
+    "explanation": "Elasticity refers to the ability to automatically acquire resources as you need them and release resources when you no longer need them. This is a core benefit of cloud computing that allows you to match your infrastructure with demand.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aws-2",
+    "certId": "aws-clf-c02",
+    "domain": "Cloud Concepts",
+    "question": "Under the AWS Shared Responsibility Model, which of the following is the customer's responsibility?",
+    "options": ["Patching the underlying hypervisor", "Managing physical data center security", "Configuring network ACLs and security groups", "Maintaining network hardware"],
+    "correctIndex": 2,
+    "explanation": "Under the Shared Responsibility Model, customers are responsible for 'security IN the cloud,' which includes configuring network ACLs, security groups, IAM policies, and data encryption. AWS handles 'security OF the cloud,' including physical infrastructure.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aws-3",
+    "certId": "aws-clf-c02",
+    "domain": "Billing & Pricing",
+    "question": "A company wants to receive alerts when their AWS costs exceed a predefined threshold. Which AWS service should they use?",
+    "options": ["AWS Cost Explorer", "AWS Budgets", "AWS Pricing Calculator", "AWS Cost and Usage Report"],
+    "correctIndex": 1,
+    "explanation": "AWS Budgets allows you to set custom cost and usage budgets and receive alerts via SNS or email when your costs or usage exceed your budget threshold. Cost Explorer is for analysis, not alerting.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aws-4",
+    "certId": "aws-clf-c02",
+    "domain": "Security & Compliance",
+    "question": "Which AWS service provides a unified security and compliance view across all AWS accounts in an organization?",
+    "options": ["AWS Shield", "Amazon GuardDuty", "AWS Security Hub", "AWS Trusted Advisor"],
+    "correctIndex": 2,
+    "explanation": "AWS Security Hub aggregates, organizes, and prioritizes security findings from multiple AWS services and AWS Partner solutions. It provides a comprehensive view of your security posture across your AWS environment.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aws-5",
+    "certId": "aws-clf-c02",
+    "domain": "Cloud Technology",
+    "question": "Which AWS service would be MOST appropriate for running a serverless function that responds to API requests without managing servers?",
+    "options": ["Amazon EC2", "AWS Lambda", "Amazon ECS", "AWS Elastic Beanstalk"],
+    "correctIndex": 1,
+    "explanation": "AWS Lambda lets you run code without provisioning or managing servers. You pay only for compute time consumed. Lambda integrates natively with API Gateway to create serverless API backends.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aws-6",
+    "certId": "aws-clf-c02",
+    "domain": "Cloud Technology",
+    "question": "A company needs a content delivery network (CDN) to cache static assets closer to global users. Which AWS service fulfills this requirement?",
+    "options": ["Amazon Route 53", "AWS Global Accelerator", "Amazon CloudFront", "AWS Direct Connect"],
+    "correctIndex": 2,
+    "explanation": "Amazon CloudFront is AWS's CDN service. It distributes content to edge locations worldwide, reducing latency for end users. CloudFront integrates with S3, EC2, and other AWS services to cache and deliver content.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "aws-7",
+    "certId": "aws-saa-c03",
+    "domain": "Resilient Architectures",
+    "question": "A company runs a critical application on EC2 instances behind an Application Load Balancer. The application must continue to serve traffic even if an entire Availability Zone becomes unavailable. What is the recommended architecture?",
+    "options": ["Deploy EC2 instances in a single AZ with enhanced networking", "Use Auto Scaling groups spanning at least two AZs with the ALB routing across them", "Deploy instances in a single VPC with Elastic IPs", "Use Reserved Instances in the primary AZ with On-Demand instances as backup"],
+    "correctIndex": 1,
+    "explanation": "For AZ fault tolerance, deploy instances across multiple AZs using Auto Scaling groups. The ALB automatically routes traffic only to healthy instances. If one AZ fails, the ALB redirects traffic to instances in the remaining AZs.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aws-8",
+    "certId": "aws-saa-c03",
+    "domain": "Secure Architectures",
+    "question": "An application on EC2 needs to access S3 buckets without hardcoding AWS credentials. What is the AWS-recommended approach?",
+    "options": ["Store credentials in environment variables on the EC2 instance", "Create an IAM Role with S3 permissions and attach it to the EC2 instance profile", "Store credentials in AWS Systems Manager Parameter Store as plaintext", "Embed access keys in the application source code"],
+    "correctIndex": 1,
+    "explanation": "IAM Roles for EC2 allow applications to access AWS services using temporary credentials automatically obtained from the instance metadata service (IMDS). This eliminates the need to manage long-term credentials and is the AWS security best practice.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aws-9",
+    "certId": "aws-saa-c03",
+    "domain": "Cost-Optimized Architectures",
+    "question": "A company has a batch processing job that runs for 4 hours daily and can tolerate interruptions. Which EC2 purchasing option provides the MOST cost savings?",
+    "options": ["On-Demand Instances", "Reserved Instances (1-year term)", "Spot Instances", "Dedicated Hosts"],
+    "correctIndex": 2,
+    "explanation": "Spot Instances can provide up to 90% cost savings compared to On-Demand pricing. Since the batch job can tolerate interruptions, Spot Instances are ideal. AWS can reclaim Spot Instances with 2-minute warning, but checkpointing or SQS can handle interrupted jobs.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aws-10",
+    "certId": "aws-saa-c03",
+    "domain": "High-Performing Architectures",
+    "question": "A DynamoDB table is experiencing hot partitions due to uneven key distribution. All writes target items with keys beginning with 'USER_'. What is the best solution?",
+    "options": ["Enable DynamoDB Streams", "Add a random suffix or prefix to the partition key to distribute writes", "Increase the table's read capacity units", "Switch to a single-table design"],
+    "correctIndex": 1,
+    "explanation": "Adding a random prefix/suffix (e.g., a 4-character random string prepended to the partition key) distributes writes across multiple partitions, resolving hot partition issues. This technique is called 'write sharding' and is the recommended approach for high-throughput DynamoDB workloads.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aws-11",
+    "certId": "aws-saa-c03",
+    "domain": "Resilient Architectures",
+    "question": "Which S3 storage class is designed for data that is accessed once or twice per month and requires millisecond retrieval?",
+    "options": ["S3 Standard", "S3 Standard-Infrequent Access (S3 Standard-IA)", "S3 Glacier Instant Retrieval", "S3 One Zone-IA"],
+    "correctIndex": 1,
+    "explanation": "S3 Standard-IA is designed for data accessed less frequently but requires rapid access when needed. It offers lower storage cost than S3 Standard with a retrieval fee. S3 Glacier Instant Retrieval is for archive data accessed once a quarter.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aws-12",
+    "certId": "aws-dva-c02",
+    "domain": "Development",
+    "question": "A developer needs to ensure that messages in an SQS queue are not processed by more than one consumer simultaneously. Which SQS feature helps achieve this?",
+    "options": ["Dead Letter Queue", "Visibility Timeout", "Long Polling", "Message Deduplication ID"],
+    "correctIndex": 1,
+    "explanation": "The Visibility Timeout is a period during which SQS prevents other consumers from receiving and processing a message after it's been picked up. If processing succeeds, the consumer deletes the message; if it fails and the timeout expires, the message becomes visible again for reprocessing.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aws-13",
+    "certId": "aws-dva-c02",
+    "domain": "Development",
+    "question": "A Lambda function is timing out when processing messages from an SQS queue. The function currently has a 30-second timeout but the SQS visibility timeout is 15 seconds. What should be done?",
+    "options": ["Decrease the Lambda timeout to 10 seconds", "Set the SQS visibility timeout to at least 6 times the Lambda timeout", "Enable SQS Long Polling", "Add a Dead Letter Queue to the SQS queue"],
+    "correctIndex": 1,
+    "explanation": "AWS recommends setting the SQS visibility timeout to at least 6 times the Lambda function's timeout. This accounts for retry attempts. If Lambda times out and the visibility timeout has expired, SQS may deliver the message to another consumer, causing duplicate processing.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aws-14",
+    "certId": "aws-dva-c02",
+    "domain": "Deployment",
+    "question": "Which AWS service can be used to implement blue/green deployments for Lambda functions with automatic traffic shifting and rollback on CloudWatch alarms?",
+    "options": ["AWS CodePipeline", "AWS CodeDeploy", "AWS Elastic Beanstalk", "AWS CloudFormation"],
+    "correctIndex": 1,
+    "explanation": "AWS CodeDeploy supports Lambda deployment configurations including Linear and Canary traffic shifting. It integrates with CloudWatch alarms to automatically roll back deployments if metrics degrade, enabling safe blue/green deployments for Lambda.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aws-15",
+    "certId": "aws-sap-c02",
+    "domain": "Complex Org Migrations",
+    "question": "A company is migrating 50 on-premises applications to AWS. They need to minimize downtime and track migration progress. Which combination of services should they use?",
+    "options": ["AWS Server Migration Service and AWS CloudTrail", "AWS Migration Hub and AWS Application Migration Service", "AWS DataSync and AWS Transfer Family", "AWS Database Migration Service and AWS Schema Conversion Tool"],
+    "correctIndex": 1,
+    "explanation": "AWS Migration Hub provides a single place to discover existing servers, plan migrations, and track the status of migrations across multiple tools. AWS Application Migration Service (MGN) is the primary migration service for lift-and-shift migrations, using continuous block-level replication to minimize cutover windows.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aws-16",
+    "certId": "aws-scs-c02",
+    "domain": "Threat Detection",
+    "question": "Amazon GuardDuty has detected unusual API calls from an IAM role that appears to be compromised. What is the recommended immediate response to contain the threat?",
+    "options": ["Delete the IAM role immediately", "Attach an explicit deny policy to the IAM role and rotate credentials", "Disable all AWS services in the account", "Change the root account password"],
+    "correctIndex": 1,
+    "explanation": "The recommended response is to attach an explicit deny all policy to the compromised IAM role (using an inline policy) to immediately revoke all permissions while preserving the audit trail. Then rotate credentials, investigate GuardDuty findings, and assess the blast radius before taking further action.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aws-17",
+    "certId": "aws-dop-c02",
+    "domain": "SDLC Automation",
+    "question": "A team wants to automatically run security scans on infrastructure code before deployment. Which approach using AWS services is MOST appropriate?",
+    "options": ["Run AWS Inspector after each deployment", "Add AWS CloudFormation Guard or cfn-nag checks as a stage in CodePipeline", "Use AWS Config rules to check deployed resources", "Enable AWS Macie on the code repository"],
+    "correctIndex": 1,
+    "explanation": "AWS CloudFormation Guard (cfn-guard) and cfn-nag are policy-as-code tools that validate CloudFormation templates against security rules BEFORE deployment. Adding them as a stage in CodePipeline implements a 'shift-left' security approach, catching issues early in the CI/CD pipeline.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "aws-18",
+    "certId": "aws-mls-c01",
+    "domain": "Modeling",
+    "question": "A machine learning model trained on historical sales data performs well during training but poorly on new data. What problem is occurring and what is the primary remedy?",
+    "options": ["Underfitting — add more features to the model", "Overfitting — use regularization, reduce model complexity, or add more training data", "Data leakage — separate the training and test datasets properly", "Class imbalance — apply SMOTE to balance the training set"],
+    "correctIndex": 1,
+    "explanation": "Overfitting occurs when a model learns the training data too well, including noise, resulting in poor generalization to new data. Remedies include L1/L2 regularization, dropout (for neural networks), reducing model complexity, early stopping, and collecting more training data.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aws-19",
+    "certId": "aws-dea-c01",
+    "domain": "Data Ingestion",
+    "question": "A company needs to ingest real-time clickstream data from millions of website users and process it within seconds. Which AWS service is MOST suitable for this ingestion layer?",
+    "options": ["AWS Glue", "Amazon Kinesis Data Streams", "AWS Database Migration Service", "Amazon S3 Transfer Acceleration"],
+    "correctIndex": 1,
+    "explanation": "Amazon Kinesis Data Streams is designed for real-time data ingestion at massive scale. It can handle millions of records per second with sub-second processing latency. Data can then be consumed by Kinesis Data Analytics, Lambda, or Kinesis Data Firehose for processing.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "aws-20",
+    "certId": "aws-dbs-c01",
+    "domain": "Database Security",
+    "question": "A company needs to encrypt data at rest in RDS and must manage their own encryption keys. Which AWS feature should they use?",
+    "options": ["RDS encryption with AWS-managed keys (aws/rds)", "RDS encryption with customer-managed keys in AWS KMS", "Transparent Data Encryption (TDE) for Oracle/SQL Server only", "Application-level encryption before writing to RDS"],
+    "correctIndex": 1,
+    "explanation": "RDS supports encryption using Customer Managed Keys (CMK) in AWS KMS. This allows you to control key rotation, access policies, and audit key usage. CMKs provide more control than AWS-managed keys while still being managed through AWS KMS.",
+    "difficulty": "medium"
+  }
+]

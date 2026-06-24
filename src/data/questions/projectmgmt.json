@@ -1,0 +1,202 @@
+[
+  {
+    "id": "pm-1",
+    "certId": "pmi-pmp",
+    "domain": "Predictive & Agile Frameworks",
+    "question": "A project manager is managing a software development project and notices that the project scope is frequently changing due to new stakeholder requests. Which approach would BEST help manage these changes?",
+    "options": ["Freeze the project scope and reject all changes", "Implement a formal Change Control Board (CCB) with an integrated change control process", "Increase the project budget to accommodate all requests", "Use an agile approach and add all requests to the product backlog"],
+    "correctIndex": 1,
+    "explanation": "Integrated Change Control is a core process in predictive (waterfall) project management. A Change Control Board evaluates change requests against the project baselines (scope, schedule, cost) and approves or rejects them. All approved changes are documented and communicated to stakeholders.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pm-2",
+    "certId": "pmi-pmp",
+    "domain": "Benefits Realization",
+    "question": "A project has a Planned Value (PV) of $100,000, an Earned Value (EV) of $80,000, and an Actual Cost (AC) of $95,000. What is the Cost Performance Index (CPI)?",
+    "options": ["0.84", "1.25", "0.80", "1.18"],
+    "correctIndex": 0,
+    "explanation": "CPI = EV / AC = $80,000 / $95,000 = 0.84. A CPI less than 1.0 indicates the project is over budget — for every dollar spent, only $0.84 of value is being delivered. The Schedule Performance Index (SPI) = EV / PV = $80,000 / $100,000 = 0.80, indicating the project is behind schedule.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pm-3",
+    "certId": "pmi-pmp",
+    "domain": "Stakeholder Engagement",
+    "question": "A project sponsor has high power but shows low interest in the project. How should the project manager engage with this stakeholder?",
+    "options": ["Ignore them since they are not interested", "Manage closely with frequent detailed updates", "Keep satisfied with periodic high-level updates", "Monitor passively with minimal engagement"],
+    "correctIndex": 2,
+    "explanation": "The Stakeholder Power/Interest Grid guides engagement strategies: High Power/Low Interest = Keep Satisfied (provide concise status updates, avoid detail overload, ensure their requirements are met). High Power/High Interest = Manage Closely; Low Power/High Interest = Keep Informed; Low Power/Low Interest = Monitor.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pm-4",
+    "certId": "pmi-pmp",
+    "domain": "Team Leadership",
+    "question": "A project team member is highly capable but is new to the organization and lacks confidence. Using Hersey & Blanchard's Situational Leadership model, what leadership style is MOST appropriate?",
+    "options": ["Delegating — provide minimal oversight", "Directing — provide detailed instructions and close supervision", "Supporting — encourage and facilitate without directing", "Coaching — explain decisions, provide guidance, and encourage"],
+    "correctIndex": 3,
+    "explanation": "The Coaching style (high directive, high supportive) is appropriate for people with high ability but low commitment/confidence (Situational Leadership S3 or SL2). The leader explains decisions and reasoning, provides guidance, and encourages the follower to build confidence while maintaining quality direction.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "pm-5",
+    "certId": "axelos-itil4-f",
+    "domain": "ITIL Practices",
+    "question": "According to ITIL 4, what is the primary purpose of the Incident Management practice?",
+    "options": ["To identify the root cause of recurring incidents", "To minimize the negative impact of incidents by restoring normal service operation as quickly as possible", "To manage changes to the IT infrastructure", "To provide a single point of contact for all IT issues"],
+    "correctIndex": 1,
+    "explanation": "The ITIL 4 Incident Management practice aims to minimize the negative impact of incidents by restoring normal service operation as quickly as possible. Incidents are unplanned interruptions or quality reductions. Problem Management addresses root causes; Service Desk provides the single point of contact.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pm-6",
+    "certId": "axelos-itil4-f",
+    "domain": "ITIL Practices",
+    "question": "What is the ITIL 4 concept that describes the four dimensions that must be considered for effective service management?",
+    "options": ["The Service Value Chain", "The Four Dimensions Model", "The ITIL Guiding Principles", "The Service Value System"],
+    "correctIndex": 1,
+    "explanation": "The Four Dimensions Model in ITIL 4 identifies four critical perspectives for holistic service management: Organizations and People, Information and Technology, Partners and Suppliers, and Value Streams and Processes. Neglecting any dimension can result in poor service quality.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pm-7",
+    "certId": "pmi-acp",
+    "domain": "Value-Driven Delivery",
+    "question": "In Scrum, the product backlog item at the top of the backlog fails to meet its acceptance criteria during the Sprint Review. What happens to this item?",
+    "options": ["It is automatically deleted from the backlog", "It is considered done because effort was spent on it", "It is returned to the product backlog for re-prioritization", "It triggers an emergency change request"],
+    "correctIndex": 2,
+    "explanation": "In Scrum, any work not meeting the Definition of Done is returned to the Product Backlog (not sprint backlog). The Product Owner determines its priority relative to other backlog items. The team does not extend the sprint to complete incomplete items — sprint timeboxes are fixed.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pm-8",
+    "certId": "pmi-acp",
+    "domain": "Adaptive Planning",
+    "question": "A Scrum team has a velocity of 40 story points per sprint. The product backlog contains 320 story points of prioritized items. Approximately how many sprints are needed to complete the backlog?",
+    "options": ["4 sprints", "6 sprints", "8 sprints", "10 sprints"],
+    "correctIndex": 2,
+    "explanation": "Release planning using velocity: 320 story points ÷ 40 points per sprint = 8 sprints. This is an estimate and may change as the team's velocity varies, backlog items are re-estimated, or scope changes. Sprint forecasting using historical velocity is a fundamental agile planning technique.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pm-9",
+    "certId": "scrum-csm",
+    "domain": "Scrum Master Role",
+    "question": "During a Sprint, the Development Team informs the Scrum Master that they are blocked by a dependency on another team. What is the MOST appropriate action for the Scrum Master?",
+    "options": ["Add the blocked items to the next sprint backlog", "Resolve the technical dependency themselves", "Facilitate resolution by helping the teams collaborate and removing the impediment", "Cancel the sprint due to the impediment"],
+    "correctIndex": 2,
+    "explanation": "A core Scrum Master responsibility is removing impediments that block the Development Team. For cross-team dependencies, the Scrum Master facilitates collaboration between teams, escalates to management if needed, and ensures the impediment is resolved. They enable the team rather than doing technical work themselves.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pm-10",
+    "certId": "scrum-csm",
+    "domain": "Sprint Events",
+    "question": "What is the purpose of the Sprint Retrospective in Scrum?",
+    "options": ["To review the product increment with stakeholders", "To plan work for the next sprint", "To inspect the team's process and identify improvements for the next sprint", "To report sprint status to management"],
+    "correctIndex": 2,
+    "explanation": "The Sprint Retrospective is an opportunity for the Scrum Team to inspect itself and create a plan for improvements to be enacted during the next Sprint. It focuses on people, relationships, process, and tools. The outcome is a list of identified improvements that the team commits to implementing in the next sprint.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pm-11",
+    "certId": "pmi-pmp",
+    "domain": "Predictive & Agile Frameworks",
+    "question": "What is the critical path in project schedule management?",
+    "options": ["The longest sequence of tasks determining the project's minimum duration, where any delay extends the project end date", "The most expensive sequence of tasks in the project", "The most important tasks as defined by the project sponsor", "The shortest path from project start to completion"],
+    "correctIndex": 0,
+    "explanation": "The critical path is the longest sequence of dependent tasks that determines the total project duration. Tasks on the critical path have zero float (slack) — any delay to a critical path task directly delays the project end date. Tasks with positive float are non-critical and have scheduling flexibility.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pm-12",
+    "certId": "axelos-prince2-f",
+    "domain": "Organization",
+    "question": "In PRINCE2, which role is responsible for the overall direction of the project and has ultimate accountability for project success?",
+    "options": ["Project Manager", "Project Board — specifically the Executive", "Senior Supplier", "Team Manager"],
+    "correctIndex": 1,
+    "explanation": "In PRINCE2, the Executive role on the Project Board has ultimate accountability for the project. The Executive owns the Business Case and represents the business interests. The Project Board as a whole provides direction, approves stage plans, and controls at project and stage level. The Project Manager manages day-to-day delivery.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pm-13",
+    "certId": "pmi-capm",
+    "domain": "Project Management Principles",
+    "question": "What project management document formally authorizes the existence of a project and gives the project manager authority to apply organizational resources?",
+    "options": ["Project Management Plan", "Project Charter", "Statement of Work", "Business Case"],
+    "correctIndex": 1,
+    "explanation": "The Project Charter formally authorizes the project and gives the project manager authority to apply resources to project activities. It includes: project purpose, objectives, high-level requirements, stakeholders, project manager authority level, and is signed by the project sponsor. It's the first formal project document.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pm-14",
+    "certId": "axelos-itil4-f",
+    "domain": "Service Management Concepts",
+    "question": "According to ITIL 4, what is a 'service'?",
+    "options": ["A piece of software deployed for customers", "A means of enabling value co-creation by facilitating outcomes customers want to achieve without the customer having to manage specific costs and risks", "An SLA agreement between IT and the business", "A technical component in the IT infrastructure"],
+    "correctIndex": 1,
+    "explanation": "ITIL 4 defines a service as 'a means of enabling value co-creation by facilitating outcomes that customers want to achieve, without the customer having to manage specific costs and risks.' The key concept is co-creation of value — both the service provider and customer contribute to creating value.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pm-15",
+    "certId": "pmi-pmp",
+    "domain": "Predictive & Agile Frameworks",
+    "question": "A project is using a hybrid approach with both predictive and agile elements. The hardware delivery follows a waterfall schedule but software development is iterative. What is this approach called?",
+    "options": ["Pure Agile", "Incremental delivery", "Hybrid project management", "Rolling wave planning"],
+    "correctIndex": 2,
+    "explanation": "Hybrid project management combines predictive (waterfall) and agile approaches in a single project. It's increasingly common for complex projects where some components have fixed requirements and deliverables (better suited to predictive) while others benefit from iterative development and frequent feedback (better suited to agile).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pm-16",
+    "certId": "pmi-acp",
+    "domain": "Team Performance",
+    "question": "Which agile team performance practice involves developers reviewing each other's code before it is merged to ensure quality and share knowledge?",
+    "options": ["Daily Standup", "Pair Programming", "Code Review / Pull Request review", "Sprint Demo"],
+    "correctIndex": 2,
+    "explanation": "Code Review (implemented as Pull Request reviews in Git-based workflows) is a practice where peers review each other's code changes before merging. It improves code quality by catching defects early, shares knowledge across the team, enforces coding standards, and is a key technical practice in agile software development.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pm-17",
+    "certId": "axelos-itil4-mp",
+    "domain": "Direct Plan & Improve",
+    "question": "According to ITIL 4's Continual Improvement model, which step comes AFTER establishing the vision for improvement?",
+    "options": ["Take action", "Where do we want to be?", "Where are we now?", "How do we get there?"],
+    "correctIndex": 2,
+    "explanation": "The ITIL 4 Continual Improvement model steps are: 1) What is the vision? 2) Where are we now? (current state assessment) 3) Where do we want to be? (target state) 4) How do we get there? 5) Take action 6) Did we get there? 7) How do we keep the momentum going?",
+    "difficulty": "medium"
+  },
+  {
+    "id": "pm-18",
+    "certId": "scrum-csm",
+    "domain": "Scrum Framework",
+    "question": "Who is responsible for maximizing the value of the product and managing the Product Backlog in Scrum?",
+    "options": ["Scrum Master", "Development Team", "Product Owner", "Stakeholders"],
+    "correctIndex": 2,
+    "explanation": "The Product Owner is accountable for maximizing the value of the product. This includes creating and clearly expressing Product Backlog items, ordering items to achieve goals, and ensuring the backlog is visible and understood. Only the Product Owner has authority to order the backlog, though they collaborate with others.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pm-19",
+    "certId": "pmi-pmp",
+    "domain": "Benefits Realization",
+    "question": "Which risk response strategy is appropriate when a project team decides to eliminate a negative risk by changing the project plan to avoid the threatening condition?",
+    "options": ["Mitigate", "Transfer", "Avoid", "Accept"],
+    "correctIndex": 2,
+    "explanation": "Risk Avoidance eliminates the threat by changing the project plan. Examples include extending the schedule, changing the strategy, or reducing scope. It's the most aggressive strategy and only possible when the risk can be completely removed. Mitigation reduces probability/impact; Transfer shifts impact; Acceptance acknowledges the risk.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "pm-20",
+    "certId": "axelos-prince2-f",
+    "domain": "Risk",
+    "question": "In PRINCE2, what is the difference between a 'threat' and an 'opportunity' in risk management?",
+    "options": ["Threats are certain events; opportunities are uncertain", "Threats are uncertain events with negative impact; opportunities are uncertain events with positive impact", "Threats relate to cost; opportunities relate to schedule", "There is no distinction in PRINCE2 risk management"],
+    "correctIndex": 1,
+    "explanation": "PRINCE2 defines risk as an uncertain event that, if it occurred, would affect achievement of objectives. Risks can be threats (negative impact) or opportunities (positive impact). Organizations should manage both — exploiting opportunities and avoiding/mitigating threats. This dual perspective is a key PRINCE2 risk management concept.",
+    "difficulty": "medium"
+  }
+]

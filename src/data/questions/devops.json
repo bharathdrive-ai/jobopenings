@@ -1,0 +1,202 @@
+[
+  {
+    "id": "dev-1",
+    "certId": "cncf-cka",
+    "domain": "Cluster Architecture",
+    "question": "What is the purpose of etcd in a Kubernetes cluster?",
+    "options": ["Scheduling pods to worker nodes", "Serving as the distributed key-value store that stores all cluster state and configuration", "Providing the container runtime interface", "Managing network policies between pods"],
+    "correctIndex": 1,
+    "explanation": "etcd is a distributed, consistent key-value store that serves as Kubernetes' backing store for all cluster data. It stores the entire cluster state: pod definitions, service configurations, secrets, ConfigMaps, and more. High availability in production requires an etcd cluster with an odd number of members (3 or 5) for quorum.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dev-2",
+    "certId": "cncf-cka",
+    "domain": "Workloads & Scheduling",
+    "question": "A Pod must be scheduled only on nodes labeled 'environment=production'. Which Kubernetes feature enforces this?",
+    "options": ["Pod Affinity", "Node Selector", "Taints and Tolerations", "Resource Quotas"],
+    "correctIndex": 1,
+    "explanation": "nodeSelector is the simplest way to constrain pods to nodes with specific labels. By adding nodeSelector: {environment: production} to the pod spec, the scheduler will only place the pod on nodes with that label. Node Affinity provides more expressive rules; Taints/Tolerations work inversely (repelling pods unless they tolerate the taint).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dev-3",
+    "certId": "cncf-cka",
+    "domain": "Services & Networking",
+    "question": "What type of Kubernetes Service exposes an application externally using a cloud provider's load balancer?",
+    "options": ["ClusterIP", "NodePort", "LoadBalancer", "ExternalName"],
+    "correctIndex": 2,
+    "explanation": "A LoadBalancer Service provisions an external load balancer from the cloud provider (AWS ELB, Azure LB, GCP LB) and assigns a public IP to the service. Traffic flows from external clients → cloud LB → NodePort → ClusterIP → Pod. On-premises clusters can use MetalLB to provide this functionality.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dev-4",
+    "certId": "cncf-cka",
+    "domain": "Storage",
+    "question": "A Pod needs persistent storage that survives pod restarts and can be shared between multiple pods in the same node. What Kubernetes resource should be used?",
+    "options": ["emptyDir volume", "hostPath volume", "PersistentVolumeClaim (PVC)", "ConfigMap"],
+    "correctIndex": 2,
+    "explanation": "PersistentVolumeClaims (PVCs) provide a way for pods to request persistent storage. The PVC binds to a PersistentVolume (PV) which represents actual storage. Unlike emptyDir (deleted when pod dies) or hostPath (node-specific), PVCs decouple storage from pod lifecycle and can be backed by network storage accessible across nodes.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dev-5",
+    "certId": "cncf-ckad",
+    "domain": "Application Design & Build",
+    "question": "An application container needs configuration data that can be updated without rebuilding the image. What is the Kubernetes-native way to achieve this?",
+    "options": ["Rebuild the container image with new configuration", "Use ConfigMaps and mount them as volumes or environment variables", "SSH into the container and modify configuration files", "Hard-code configuration in the Dockerfile"],
+    "correctIndex": 1,
+    "explanation": "ConfigMaps store non-sensitive configuration data as key-value pairs. They can be consumed as environment variables, command-line arguments, or configuration files mounted as volumes. When a ConfigMap is updated, volume-mounted files are automatically updated (with a small delay), enabling configuration changes without pod restarts.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dev-6",
+    "certId": "cncf-cks",
+    "domain": "Cluster Hardening",
+    "question": "What Kubernetes admission controller validates and potentially mutates API requests before objects are persisted to etcd?",
+    "options": ["RBAC", "NetworkPolicy", "OPA Gatekeeper", "PodSecurityAdmission"],
+    "correctIndex": 2,
+    "explanation": "OPA Gatekeeper is a policy engine for Kubernetes that implements the ValidatingWebhookConfiguration and MutatingWebhookConfiguration admission webhooks. It enforces custom policies defined as OPA Rego rules via ConstraintTemplates and Constraints, such as preventing privileged containers or requiring resource limits.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dev-7",
+    "certId": "cncf-cks",
+    "domain": "Supply Chain Security",
+    "question": "A Kubernetes cluster should only allow container images from approved registries. Which security control enforces this at the admission level?",
+    "options": ["ImagePullPolicy: Always", "NetworkPolicy restricting egress to public registries", "OPA Gatekeeper policy checking image registry in pod spec", "Namespace RBAC restrictions"],
+    "correctIndex": 2,
+    "explanation": "OPA Gatekeeper can enforce policies that validate the container image registry in pod specs. A ConstraintTemplate with Rego logic can check that image URLs start with approved registry prefixes and reject pods that reference unapproved registries, implementing allow-listing of trusted registries cluster-wide.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dev-8",
+    "certId": "redhat-rhcsa",
+    "domain": "Managing Security",
+    "question": "What SELinux context type should be assigned to files served by Apache httpd to allow the web server to read them?",
+    "options": ["httpd_sys_content_t", "var_t", "default_t", "httpd_config_t"],
+    "correctIndex": 0,
+    "explanation": "SELinux uses type enforcement to control which processes can access which files. Apache httpd is confined with the httpd_t domain and can only read files labeled httpd_sys_content_t by default policy. Use 'chcon -t httpd_sys_content_t /path/to/file' or set the default context with 'semanage fcontext' for persistence.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dev-9",
+    "certId": "redhat-rhce",
+    "domain": "Ansible Automation",
+    "question": "In an Ansible playbook, how do you ensure a task only runs when a variable 'app_env' equals 'production'?",
+    "options": ["Using 'only_when: app_env == production'", "Using 'when: app_env == \"production\"'", "Using 'condition: app_env is production'", "Using 'if: app_env equals production'"],
+    "correctIndex": 1,
+    "explanation": "Ansible uses the 'when' conditional to control task execution. The syntax 'when: app_env == \"production\"' evaluates the condition and only runs the task if true. Jinja2 expressions are used inside 'when' clauses. Multiple conditions can be combined with 'and'/'or' or as a list (implicitly 'and').",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dev-10",
+    "certId": "mirantis-dca",
+    "domain": "Networking",
+    "question": "What Docker network driver enables containers on different Docker hosts to communicate directly as if they were on the same network?",
+    "options": ["bridge", "host", "overlay", "macvlan"],
+    "correctIndex": 2,
+    "explanation": "The overlay network driver creates distributed networks spanning multiple Docker daemon hosts. It uses VXLAN encapsulation to tunnel traffic between nodes. Overlay networks are the standard networking solution for Docker Swarm services and enable multi-host container communication without port publishing.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dev-11",
+    "certId": "hashicorp-tfc-003",
+    "domain": "Terraform Basics",
+    "question": "Which Terraform command shows a preview of infrastructure changes that will be made on the next 'apply' without making actual changes?",
+    "options": ["terraform validate", "terraform plan", "terraform check", "terraform diff"],
+    "correctIndex": 1,
+    "explanation": "'terraform plan' creates an execution plan by comparing the current state (terraform.tfstate) with the desired configuration. It shows what resources will be created, modified, or destroyed without making any changes. This is the primary way to review and validate changes before applying them.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dev-12",
+    "certId": "hashicorp-tfc-003",
+    "domain": "State Management",
+    "question": "A Terraform deployment is managed by multiple team members. What is the recommended way to store Terraform state to prevent conflicts?",
+    "options": ["Each team member maintains their own local state file", "Store state in a remote backend like S3 with DynamoDB for state locking", "Commit the state file to Git with each change", "Use Terraform without state by adding the -stateless flag"],
+    "correctIndex": 1,
+    "explanation": "Remote backends (S3, Terraform Cloud, Azure Blob) store state centrally so all team members access the same state. DynamoDB provides state locking to prevent concurrent modifications. This pattern prevents state conflicts, enables team collaboration, and is essential for CI/CD pipelines.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dev-13",
+    "certId": "hashicorp-hva-003",
+    "domain": "Authentication Methods",
+    "question": "A Kubernetes pod needs to authenticate to HashiCorp Vault to retrieve database credentials. Which Vault authentication method is MOST appropriate?",
+    "options": ["Token auth with a long-lived root token", "AppRole auth method", "Kubernetes auth method", "LDAP auth method"],
+    "correctIndex": 2,
+    "explanation": "The Vault Kubernetes auth method allows pods to authenticate using their Kubernetes Service Account tokens. The pod's JWT token is verified against the Kubernetes API. This provides native Kubernetes identity without managing separate credentials, and can be scoped per namespace and service account.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dev-14",
+    "certId": "cncf-cka",
+    "domain": "Troubleshooting",
+    "question": "A pod is stuck in 'Pending' state. What is the FIRST command to run to diagnose the issue?",
+    "options": ["kubectl logs <pod-name>", "kubectl describe pod <pod-name>", "kubectl exec -it <pod-name> -- bash", "kubectl delete pod <pod-name>"],
+    "correctIndex": 1,
+    "explanation": "'kubectl describe pod' provides detailed information about pod events, including scheduling errors. For Pending pods, common causes include insufficient resources (CPU/memory), node selector mismatches, taints without tolerations, or unbound PVCs. The Events section at the bottom is particularly useful for diagnosis.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dev-15",
+    "certId": "cncf-ckad",
+    "domain": "Application Observability & Maintenance",
+    "question": "A Kubernetes pod should be automatically restarted by the kubelet if the application inside crashes or becomes unresponsive. Which probe type handles this?",
+    "options": ["Readiness probe", "Liveness probe", "Startup probe", "Health probe"],
+    "correctIndex": 1,
+    "explanation": "Liveness probes determine if a container is still running. If the liveness probe fails, the kubelet kills the container and restarts it based on the pod's restartPolicy. Readiness probes control whether traffic is sent to the pod; startup probes give slow-starting containers time to initialize before other probes begin.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dev-16",
+    "certId": "mirantis-dca",
+    "domain": "Image Creation & Management",
+    "question": "Which Dockerfile instruction is executed at container runtime (not at image build time) and can be overridden by arguments to 'docker run'?",
+    "options": ["RUN", "CMD", "COPY", "ENV"],
+    "correctIndex": 1,
+    "explanation": "CMD provides the default command to execute when a container starts. Unlike RUN (which executes during image build), CMD runs at container start. CMD can be overridden by arguments passed to 'docker run'. ENTRYPOINT sets the main command and is harder to override. Best practice is using ENTRYPOINT for the executable and CMD for default arguments.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dev-17",
+    "certId": "redhat-rhcsa",
+    "domain": "Configure Local Storage",
+    "question": "A RHEL system administrator needs to create a logical volume of 10GB from an existing volume group named 'datavg'. What command creates the logical volume?",
+    "options": ["mkfs.ext4 -L data /dev/datavg/datalv", "lvcreate -L 10G -n datalv datavg", "vgextend datavg /dev/sdb", "pvcreate /dev/sdb"],
+    "correctIndex": 1,
+    "explanation": "'lvcreate -L 10G -n datalv datavg' creates a 10GB logical volume named 'datalv' in the volume group 'datavg'. After creation, you format it with mkfs and mount it. The LVM workflow is: pvcreate (initialize physical volume) → vgcreate/vgextend (volume group) → lvcreate (logical volume) → mkfs → mount.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dev-18",
+    "certId": "cncf-cks",
+    "domain": "Monitoring, Logging & Runtime Security",
+    "question": "Which tool can detect unexpected syscalls from containers at runtime, indicating a potential container escape or malicious activity?",
+    "options": ["OPA Gatekeeper", "Falco", "Trivy", "kube-bench"],
+    "correctIndex": 1,
+    "explanation": "Falco is a cloud-native runtime security tool that uses eBPF or kernel modules to monitor system calls. It detects unexpected behavior like shell spawning in containers, file system changes, network connections, and privilege escalation. Falco is the CNCF standard for Kubernetes runtime security monitoring.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dev-19",
+    "certId": "hashicorp-tfc-003",
+    "domain": "Terraform Modules",
+    "question": "In Terraform, what is the benefit of using modules?",
+    "options": ["Modules allow Terraform to run without cloud provider credentials", "Modules enable reusable, shareable infrastructure configuration that promotes DRY principles", "Modules prevent state file locking", "Modules allow Terraform plans to run faster"],
+    "correctIndex": 1,
+    "explanation": "Terraform modules are self-contained packages of Terraform configuration that encapsulate related resources. They promote reusability, consistency, and maintainability by allowing teams to define infrastructure patterns once and reuse them across environments. Modules can be versioned and shared via the Terraform Registry.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dev-20",
+    "certId": "cncf-cka",
+    "domain": "Cluster Architecture",
+    "question": "What Kubernetes component is responsible for watching for newly created pods with no assigned node and selecting a node for them to run on?",
+    "options": ["kube-apiserver", "kube-controller-manager", "kube-scheduler", "kubelet"],
+    "correctIndex": 2,
+    "explanation": "The kube-scheduler watches for unbound pods (pods with no nodeName set) and selects the optimal node based on resource requirements, affinity/anti-affinity rules, taints/tolerations, and scheduling policies. It ranks all feasible nodes and binds the pod to the highest-scoring node by writing the node name to the pod spec.",
+    "difficulty": "easy"
+  }
+]

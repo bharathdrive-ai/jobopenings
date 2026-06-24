@@ -1,0 +1,202 @@
+[
+  {
+    "id": "az-1",
+    "certId": "az-900",
+    "domain": "Cloud Concepts",
+    "question": "Which cloud deployment model provides the highest level of security and control over data?",
+    "options": ["Public cloud", "Private cloud", "Hybrid cloud", "Community cloud"],
+    "correctIndex": 1,
+    "explanation": "A private cloud is dedicated to a single organization and hosted either on-premises or in a dedicated data center. It provides the highest level of control, customization, and security because resources are not shared with other organizations.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "az-2",
+    "certId": "az-900",
+    "domain": "Azure Architecture & Services",
+    "question": "What Azure service provides a globally distributed, multi-model database service designed for elastic scale and high availability?",
+    "options": ["Azure SQL Database", "Azure Cosmos DB", "Azure Table Storage", "Azure Cache for Redis"],
+    "correctIndex": 1,
+    "explanation": "Azure Cosmos DB is a fully managed NoSQL and relational database service that provides turnkey global distribution, elastic scaling of throughput and storage, and guaranteed single-digit millisecond latencies. It supports multiple APIs including SQL, MongoDB, Cassandra, and Gremlin.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "az-3",
+    "certId": "az-900",
+    "domain": "Azure Management & Governance",
+    "question": "An organization wants to enforce company policies across all Azure subscriptions and ensure resources are compliant. Which Azure service should they use?",
+    "options": ["Azure Blueprints", "Azure Policy", "Azure Resource Manager locks", "Azure Role-Based Access Control"],
+    "correctIndex": 1,
+    "explanation": "Azure Policy enables you to create, assign, and manage policies that enforce rules and effects over your resources. Policies evaluate resources for non-compliance and can prevent non-compliant resource creation. Azure Blueprints orchestrates deployment of multiple policies, RBAC, and templates.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "az-4",
+    "certId": "az-104",
+    "domain": "Manage Azure Identities",
+    "question": "A user needs to reset passwords for all users in Azure Active Directory (Entra ID) except Global Administrators. Which built-in role provides the MINIMUM necessary permissions?",
+    "options": ["User Administrator", "Password Administrator", "Helpdesk Administrator", "Authentication Administrator"],
+    "correctIndex": 0,
+    "explanation": "The User Administrator role can manage all aspects of users and groups, including resetting passwords for non-admins. The Password Administrator can reset passwords for non-admins and Password Admins only. Helpdesk Administrator can only reset passwords for non-admins and Helpdesk Admins.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "az-5",
+    "certId": "az-104",
+    "domain": "Implement & Manage Storage",
+    "question": "A company needs to store unstructured data that will be accessed frequently for the first 30 days, then rarely accessed for 90 days, then archived. Which Azure Blob Storage lifecycle policy should be configured?",
+    "options": ["Move to Cool after 30 days, then delete after 120 days", "Move to Cool after 30 days, move to Archive after 90 days", "Move to Cool after 30 days, move to Archive after 120 days", "Keep in Hot for 30 days, move to Cool after 90 days, move to Archive after 120 days"],
+    "correctIndex": 2,
+    "explanation": "Data starts in Hot tier (first 30 days), moves to Cool after 30 days of no access (days 30-120), then moves to Archive after 120 total days (30+90=120). Archive tier is for data accessed very rarely with retrieval latency of hours.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "az-6",
+    "certId": "az-104",
+    "domain": "Configure Virtual Networking",
+    "question": "Two virtual networks in different Azure regions need to communicate privately without traffic traversing the public internet. Which solution achieves this?",
+    "options": ["VNet Service Endpoints", "Global VNet Peering", "Azure VPN Gateway", "Azure Private Link"],
+    "correctIndex": 1,
+    "explanation": "Global VNet Peering enables connectivity between virtual networks in different Azure regions using Microsoft's backbone network, without public internet traversal. Traffic remains private and benefits from low latency and high bandwidth of the Microsoft global network.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "az-7",
+    "certId": "az-204",
+    "domain": "Azure Compute Solutions",
+    "question": "A developer needs to run a containerized application without managing the underlying infrastructure. The app needs to scale from zero and pay per request. Which Azure service is MOST appropriate?",
+    "options": ["Azure Kubernetes Service (AKS)", "Azure Container Apps", "Azure Container Instances", "Azure App Service (container)"],
+    "correctIndex": 1,
+    "explanation": "Azure Container Apps is a serverless container platform built on Kubernetes that enables building microservices and containerized applications with auto-scaling (including scale to zero). It abstracts infrastructure complexity and is billed per request/compute time, ideal for event-driven workloads.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "az-8",
+    "certId": "az-204",
+    "domain": "Azure Security",
+    "question": "An Azure Function app needs to access Azure Key Vault secrets without storing credentials anywhere in the code or configuration. Which approach should the developer use?",
+    "options": ["Store the Key Vault access key in app settings", "Use a System-Assigned Managed Identity and grant it Key Vault Secrets User role", "Use a service principal with a certificate stored in the function app", "Retrieve secrets using the Key Vault REST API with a hardcoded token"],
+    "correctIndex": 1,
+    "explanation": "Managed Identities provide Azure services with an automatically managed identity in Azure AD. With a System-Assigned Managed Identity on the Function App and the Key Vault Secrets User RBAC role assigned to it, the function can authenticate to Key Vault without any credentials in code.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "az-9",
+    "certId": "az-500",
+    "domain": "Identity & Access Management",
+    "question": "An organization wants to require MFA for all admin sign-ins and block access from risky locations without requiring Azure AD P2 licenses for all users. Which Conditional Access feature should they use?",
+    "options": ["Identity Protection Risk Policies", "Security Defaults", "Named Locations with Conditional Access", "Azure AD Password Protection"],
+    "correctIndex": 2,
+    "explanation": "Conditional Access policies with Named Locations allow you to define trusted and untrusted locations and apply MFA requirements based on location. This feature requires Azure AD P1 (not P2). Identity Protection risk-based policies require P2 licenses.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "az-10",
+    "certId": "az-305",
+    "domain": "Infrastructure Design",
+    "question": "A company needs a disaster recovery solution for an on-premises VMware environment with an RTO of 15 minutes and RPO of 5 minutes. Which Azure service meets these requirements?",
+    "options": ["Azure Backup", "Azure Site Recovery", "Azure Migrate", "Azure Virtual Desktop"],
+    "correctIndex": 1,
+    "explanation": "Azure Site Recovery provides continuous replication of on-premises VMs to Azure, enabling failover within minutes. It supports VMware, Hyper-V, and physical servers. With replication intervals as low as 30 seconds for VMware, it can achieve RPO of 5 minutes and RTO of 15 minutes with properly designed recovery plans.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "az-11",
+    "certId": "az-400",
+    "domain": "CI/CD",
+    "question": "A pipeline deploys to a production environment that requires approval from two specific team leads before proceeding. The approval should expire after 24 hours. Which Azure DevOps feature should be configured?",
+    "options": ["Branch policies", "Deployment gates", "Environment approvals and checks", "Service connection approvals"],
+    "correctIndex": 2,
+    "explanation": "Azure DevOps Environment Approvals allow you to configure pre-deployment approvals specifying required approvers (including multiple approvers), approval order, and timeout settings. When a pipeline stage targets the environment, it pauses until the required approvals are received.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "az-12",
+    "certId": "az-700",
+    "domain": "Azure Virtual Networks",
+    "question": "A company's Azure hub virtual network needs to inspect all traffic between spoke VNets and to the internet using a third-party firewall NVA. Which routing solution achieves this?",
+    "options": ["VNet Peering with gateway transit", "Azure Route Server with User Defined Routes", "Azure Firewall with route tables", "User Defined Routes pointing to the NVA's private IP"],
+    "correctIndex": 3,
+    "explanation": "User Defined Routes (UDRs) allow you to override Azure's default routing and force traffic through a specific next hop. By creating UDRs in spoke VNets pointing to the NVA's private IP as the next hop, all inter-spoke and internet-bound traffic is inspected by the NVA.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "az-13",
+    "certId": "pl-300",
+    "domain": "Model Data",
+    "question": "In Power BI, you need to calculate total sales for the same period in the previous year. Which DAX function should you use?",
+    "options": ["PREVIOUSYEAR()", "DATEADD()", "SAMEPERIODLASTYEAR()", "PARALLELPERIOD()"],
+    "correctIndex": 2,
+    "explanation": "SAMEPERIODLASTYEAR() is a time intelligence function that returns a table of dates corresponding to the same period in the previous year. It's commonly used with CALCULATE() to compute prior year comparisons: CALCULATE(SUM(Sales[Amount]), SAMEPERIODLASTYEAR(Date[Date])).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "az-14",
+    "certId": "dp-203",
+    "domain": "Data Processing",
+    "question": "In Azure Synapse Analytics, which pool type should be used to process large-scale data transformations using distributed SQL queries?",
+    "options": ["Apache Spark Pool", "Dedicated SQL Pool", "Serverless SQL Pool", "Data Explorer Pool"],
+    "correctIndex": 1,
+    "explanation": "Dedicated SQL Pool (formerly SQL Data Warehouse) uses massively parallel processing (MPP) architecture to run complex queries across petabytes of data. It's optimized for complex analytical workloads with predictable performance. Serverless SQL Pool is better for on-demand ad-hoc queries over data lake files.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "az-15",
+    "certId": "ai-102",
+    "domain": "Azure OpenAI",
+    "question": "A developer is building a chatbot using Azure OpenAI Service. They want to maintain conversation context across multiple turns. Which approach should they implement?",
+    "options": ["Use a stateful Azure OpenAI deployment", "Pass the full conversation history in the messages array with each API call", "Enable conversation memory in the Azure OpenAI portal", "Use Azure Cognitive Search to store conversation history"],
+    "correctIndex": 1,
+    "explanation": "Azure OpenAI Service (like OpenAI) is stateless by design. To maintain conversation context, developers must pass the entire conversation history (system, user, and assistant messages) in the messages array with each API call. This is the standard chat completion pattern for multi-turn conversations.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "az-16",
+    "certId": "az-900",
+    "domain": "Azure Architecture & Services",
+    "question": "Which Azure storage service is best suited for storing and serving static website content including HTML, CSS, and JavaScript files?",
+    "options": ["Azure Files", "Azure Blob Storage with static website hosting", "Azure NetApp Files", "Azure Data Lake Storage Gen2"],
+    "correctIndex": 1,
+    "explanation": "Azure Blob Storage supports static website hosting, allowing you to serve static content directly from a storage container. This is a cost-effective solution for static websites, often used with Azure CDN for global distribution and custom domains.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "az-17",
+    "certId": "sc-100",
+    "domain": "Zero Trust Strategy",
+    "question": "According to Microsoft's Zero Trust principles, which statement best describes the 'assume breach' principle?",
+    "options": ["Assume all network traffic is legitimate unless proven otherwise", "Minimize the blast radius and segment access while verifying end-to-end encryption", "Grant access based on the user's network location", "Trust all internal network traffic by default"],
+    "correctIndex": 1,
+    "explanation": "The 'Assume Breach' Zero Trust principle means designing security assuming a breach has already occurred. This includes minimizing blast radius through micro-segmentation, encrypting all traffic end-to-end, using analytics to detect threats, and implementing just-in-time access to reduce attack surface.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "az-18",
+    "certId": "dp-600",
+    "domain": "Microsoft Fabric Architecture",
+    "question": "In Microsoft Fabric, what is the primary purpose of the OneLake?",
+    "options": ["A NoSQL database service for unstructured data", "A single unified data lake that automatically stores all Fabric data across all workloads", "A data warehouse optimized for analytical queries", "A streaming service for real-time data ingestion"],
+    "correctIndex": 1,
+    "explanation": "OneLake is Microsoft Fabric's unified data lake storage, built on Azure Data Lake Storage Gen2. All Fabric workloads (Lakehouse, Warehouse, Real-Time Analytics) automatically store their data in OneLake in Delta Parquet format, enabling seamless access across tools without data movement.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "az-19",
+    "certId": "ai-900",
+    "domain": "AI Workloads",
+    "question": "A retail company wants to automatically categorize customer support tickets into predefined categories. Which Azure AI service is MOST appropriate?",
+    "options": ["Azure Computer Vision", "Azure Custom Vision", "Azure AI Language with Text Classification", "Azure Bot Service"],
+    "correctIndex": 2,
+    "explanation": "Azure AI Language provides custom text classification capabilities that allow you to train models to classify text into custom categories. For support ticket categorization, you would train a multi-class or multi-label classification model using your labeled examples.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "az-20",
+    "certId": "az-500",
+    "domain": "Security Operations",
+    "question": "Microsoft Sentinel detects a threat in your Azure environment. You need to automatically create an incident, notify the SOC team via email, and block the malicious IP in Azure Firewall. What feature enables this automation?",
+    "options": ["Microsoft Sentinel Workbooks", "Microsoft Sentinel Analytics Rules", "Microsoft Sentinel Playbooks (Logic Apps)", "Microsoft Sentinel Hunting"],
+    "correctIndex": 2,
+    "explanation": "Microsoft Sentinel Playbooks are built on Azure Logic Apps and allow automated responses to security incidents. They can be triggered by analytics rules to automatically perform actions like creating tickets, sending notifications, and running remediation steps like blocking IPs in Azure Firewall.",
+    "difficulty": "medium"
+  }
+]

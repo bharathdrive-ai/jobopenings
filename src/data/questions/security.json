@@ -1,0 +1,202 @@
+[
+  {
+    "id": "sec-1",
+    "certId": "isc2-cissp",
+    "domain": "Security & Risk Management",
+    "question": "A CISO is creating a risk management framework. The organization decides to purchase cyber insurance to offset potential financial losses from a data breach. Which risk response strategy is this?",
+    "options": ["Risk avoidance", "Risk mitigation", "Risk transference", "Risk acceptance"],
+    "correctIndex": 2,
+    "explanation": "Risk transference (also called risk sharing) involves shifting the financial impact of a risk to a third party, typically through insurance or outsourcing. Cyber insurance transfers the financial risk to the insurer. The threat itself isn't eliminated; the financial consequence is shifted.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sec-2",
+    "certId": "isc2-cissp",
+    "domain": "Security Architecture",
+    "question": "Which security model is based on the concept that subjects can read objects at their clearance level or below, and write to objects at their clearance level or above (no read up, no write down)?",
+    "options": ["Clark-Wilson model", "Biba model", "Bell-LaPadula model", "Brewer-Nash model"],
+    "correctIndex": 2,
+    "explanation": "The Bell-LaPadula model focuses on confidentiality. Its two key properties are: Simple Security Property (no read up — subjects cannot read objects above their clearance) and Star Property (no write down — subjects cannot write to objects below their clearance). Biba focuses on integrity with opposite rules.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sec-3",
+    "certId": "isc2-cissp",
+    "domain": "Asset Security",
+    "question": "During the data lifecycle, when should security controls be determined for data?",
+    "options": ["During data destruction", "During data creation or acquisition", "During data transmission", "During data archival"],
+    "correctIndex": 1,
+    "explanation": "Security controls should be determined during data creation or acquisition. The data classification determines the required security controls (access, encryption, handling requirements). Applying controls early ensures data is protected throughout its entire lifecycle.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sec-4",
+    "certId": "isc2-cissp",
+    "domain": "Communications & Network Security",
+    "question": "What attack involves an adversary positioning themselves between two communicating parties to intercept and potentially alter communications?",
+    "options": ["Replay attack", "Man-in-the-middle (MitM) attack", "Denial of Service attack", "Smurf attack"],
+    "correctIndex": 1,
+    "explanation": "A Man-in-the-Middle (MitM) attack occurs when an attacker secretly relays and possibly alters communications between two parties who believe they are communicating directly. Mutual authentication and certificate pinning help prevent MitM attacks. SSL/TLS provides encryption but doesn't prevent all MitM if certificates aren't validated properly.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sec-5",
+    "certId": "isc2-cissp",
+    "domain": "Security Operations",
+    "question": "A forensic investigator discovers a system involved in a security incident. What should be the FIRST action taken to preserve evidence?",
+    "options": ["Shut down the system immediately to preserve disk state", "Take a cryptographic hash of the drive before any changes", "Copy all files to an external drive", "Disconnect the system from the network and capture volatile memory (RAM)"],
+    "correctIndex": 3,
+    "explanation": "The order of volatility in forensics dictates capturing the most volatile evidence first. RAM contains running processes, network connections, encryption keys, and can reveal attacker tools not on disk. After capturing RAM, document network connections, then capture disk images. Shutting down without RAM capture destroys volatile evidence.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sec-6",
+    "certId": "isc2-ccsp",
+    "domain": "Cloud Data Security",
+    "question": "Which cloud data security technique ensures that even if cloud storage is compromised, the stored data remains unreadable to unauthorized parties including the cloud provider?",
+    "options": ["Data masking", "Tokenization", "Client-side encryption before upload", "Cloud provider encryption at rest"],
+    "correctIndex": 2,
+    "explanation": "Client-side encryption (encrypting data before uploading to the cloud) ensures the cloud provider never has access to the plaintext data or encryption keys. Cloud provider encryption at rest protects data from external attackers but the provider still manages keys and can theoretically access data. Client-side encryption is the only approach that protects from the provider itself.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sec-7",
+    "certId": "ec-ceh",
+    "domain": "System Hacking",
+    "question": "An ethical hacker has gained access to a Windows system. They want to maintain persistent access that survives reboots without being obvious in the process list. Which technique achieves this?",
+    "options": ["Scheduled Task with a hidden payload", "Creating a new user account", "Running a reverse shell in the current terminal session", "Modifying the hosts file"],
+    "correctIndex": 0,
+    "explanation": "Scheduled Tasks provide persistence by executing a payload on system startup or at scheduled intervals. When properly configured (running as SYSTEM, hidden from regular task lists), they provide stealthy persistence. Attackers can use names that blend with legitimate system tasks to avoid detection.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sec-8",
+    "certId": "ec-ceh",
+    "domain": "Footprinting & Reconnaissance",
+    "question": "During reconnaissance, an ethical hacker uses Google with the query 'site:target.com filetype:pdf' to find sensitive documents. What is this technique called?",
+    "options": ["Web scraping", "Google Hacking (Google Dorking)", "OSINT Framework", "Web crawling"],
+    "correctIndex": 1,
+    "explanation": "Google Hacking (or Google Dorking) uses advanced Google search operators to find sensitive information exposed on target websites. The 'site:' operator restricts results to a domain, and 'filetype:' filters by file type. This can reveal PDF reports, Word documents, and other files with potentially sensitive information.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sec-9",
+    "certId": "isaca-cism",
+    "domain": "Information Security Governance",
+    "question": "A new CISO is developing the information security governance structure. Which document should be developed FIRST to provide the foundation for all other security documentation?",
+    "options": ["Security procedures", "Information Security Policy", "Security standards", "Security guidelines"],
+    "correctIndex": 1,
+    "explanation": "The Information Security Policy is the foundational document that establishes senior management's direction and support for information security. All other security documents (standards, procedures, guidelines, baselines) derive their authority from the policy. The hierarchy is: Policy → Standards → Procedures → Guidelines.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sec-10",
+    "certId": "isaca-cisa",
+    "domain": "IS Acquisition",
+    "question": "During a software acquisition audit, which is the MOST important control to verify regarding third-party software components?",
+    "options": ["The vendor's market share and financial stability", "Software composition analysis for known vulnerabilities and license compliance", "Whether the software was developed using agile or waterfall methodology", "The number of developers who worked on the software"],
+    "correctIndex": 1,
+    "explanation": "Software composition analysis (SCA) identifies third-party and open-source components in an application and checks them against vulnerability databases (like the NVD). For IS auditors, verifying that organizations have processes to identify and remediate vulnerable components (as per OWASP A6) and manage open-source licenses is a critical control.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sec-11",
+    "certId": "isaca-crisc",
+    "domain": "IT Risk Assessment",
+    "question": "An IT risk assessment identifies a vulnerability with a likelihood of 0.3 and an impact of $500,000. What is the calculated Annualized Loss Expectancy (ALE)?",
+    "options": ["$500,000", "$150,000", "$1,666,667", "$166,667"],
+    "correctIndex": 1,
+    "explanation": "ALE = Annual Rate of Occurrence (ARO) × Single Loss Expectancy (SLE). Here, ARO = 0.3 (30% chance per year) and SLE = $500,000. ALE = 0.3 × $500,000 = $150,000. This represents the expected annual financial loss from this risk and helps prioritize countermeasures.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sec-12",
+    "certId": "isc2-sscp",
+    "domain": "Access Controls",
+    "question": "Which access control model grants access based on the identity of the requester and access control lists (ACLs) maintained by resource owners?",
+    "options": ["Mandatory Access Control (MAC)", "Discretionary Access Control (DAC)", "Role-Based Access Control (RBAC)", "Attribute-Based Access Control (ABAC)"],
+    "correctIndex": 1,
+    "explanation": "Discretionary Access Control (DAC) allows resource owners to control access to their resources using access control lists. The owner decides who can access the resource and what permissions they have. NTFS file permissions in Windows are a common example. The 'discretionary' aspect means owners have discretion over who gets access.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sec-13",
+    "certId": "offensive-oscp",
+    "domain": "Password Attacks",
+    "question": "During a penetration test, you have captured a Windows NTLM hash. Without cracking the hash, which attack allows you to authenticate directly using the hash?",
+    "options": ["Rainbow table attack", "Credential stuffing", "Pass-the-Hash (PtH) attack", "Kerberoasting"],
+    "correctIndex": 2,
+    "explanation": "Pass-the-Hash exploits the fact that NTLM authentication uses the password hash directly, not the plaintext password. Tools like Mimikatz, impacket's psexec.py, or CrackMapExec can authenticate to Windows systems using just the NTLM hash without knowing the plaintext password.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sec-14",
+    "certId": "isc2-cissp",
+    "domain": "IAM",
+    "question": "What is the principle of least privilege as it applies to privileged account management?",
+    "options": ["Users should have the least number of accounts possible", "Users should be granted the minimum permissions necessary to perform their job functions", "Privileged accounts should have the weakest passwords to encourage regular rotation", "Admin accounts should be shared among multiple users for accountability"],
+    "correctIndex": 1,
+    "explanation": "Least privilege means granting subjects (users, processes, services) only the permissions necessary to perform their required functions and nothing more. For privileged accounts, this means using just-in-time (JIT) access, privilege bracketing, and separate admin accounts rather than assigning permanent elevated permissions.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sec-15",
+    "certId": "ec-cpent",
+    "domain": "Advanced Windows Attacks",
+    "question": "An attacker has compromised a low-privilege domain user account. Which attack technique can be used to request service tickets for service accounts and then attempt to crack them offline to obtain service account passwords?",
+    "options": ["Pass-the-Ticket", "AS-REP Roasting", "Kerberoasting", "Golden Ticket attack"],
+    "correctIndex": 2,
+    "explanation": "Kerberoasting abuses Kerberos TGS ticket encryption: any authenticated domain user can request service tickets (TGS) for accounts with Service Principal Names (SPNs). These tickets are encrypted with the service account's NTLM hash and can be taken offline for cracking. Service accounts with weak passwords are vulnerable.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "sec-16",
+    "certId": "isc2-cissp",
+    "domain": "Software Development Security",
+    "question": "Which secure SDLC practice involves reviewing code for security vulnerabilities without executing the code?",
+    "options": ["Dynamic Application Security Testing (DAST)", "Static Application Security Testing (SAST)", "Runtime Application Self-Protection (RASP)", "Interactive Application Security Testing (IAST)"],
+    "correctIndex": 1,
+    "explanation": "SAST (Static Application Security Testing) analyzes source code, bytecode, or binaries without executing the application to identify security vulnerabilities like injection flaws, hardcoded credentials, and insecure configurations. It's performed early in the SDLC (shift-left) and integrates into CI/CD pipelines.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sec-17",
+    "certId": "isaca-cism",
+    "domain": "Incident Management",
+    "question": "During a ransomware incident response, the IR team discovers that backups were also encrypted by the ransomware because they were mounted network drives. What fundamental backup strategy should have been implemented to prevent this?",
+    "options": ["Incremental backups instead of full backups", "The 3-2-1 backup strategy with at least one offline or immutable copy", "Encrypting backups with a different key", "Storing backups in a different directory on the same server"],
+    "correctIndex": 1,
+    "explanation": "The 3-2-1 backup strategy (3 copies, 2 different media types, 1 offsite) with air-gapped or immutable storage prevents ransomware from encrypting all copies. Immutable backups (using WORM storage or cloud object lock) or offline/air-gapped backups cannot be modified by ransomware even if network shares are compromised.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sec-18",
+    "certId": "isc2-ccsp",
+    "domain": "Cloud Security Operations",
+    "question": "What is the primary purpose of a Cloud Access Security Broker (CASB)?",
+    "options": ["To provide DDoS protection for cloud-hosted applications", "To enforce security policies between cloud users and cloud service providers", "To manage cloud provider access keys and credentials", "To provide network-level encryption for cloud traffic"],
+    "correctIndex": 1,
+    "explanation": "A CASB sits between users and cloud service providers to enforce security policies including visibility, compliance, data security, and threat protection. CASBs provide visibility into shadow IT usage, enforce DLP policies, detect and respond to cloud threats, and ensure cloud service usage complies with organizational policies.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "sec-19",
+    "certId": "isc2-cissp",
+    "domain": "Security Assessment",
+    "question": "What distinguishes a penetration test from a vulnerability assessment?",
+    "options": ["A penetration test only identifies vulnerabilities; a vulnerability assessment exploits them", "A vulnerability assessment identifies and prioritizes security weaknesses; a penetration test actively exploits vulnerabilities to demonstrate actual risk", "Penetration tests are automated; vulnerability assessments are manual", "They are the same thing, just different terminology"],
+    "correctIndex": 1,
+    "explanation": "Vulnerability assessments identify, classify, and prioritize vulnerabilities without exploiting them. Penetration tests go further by actively exploiting vulnerabilities to determine what an attacker could achieve, measuring the real-world impact. Pen tests provide evidence of exploitability, while vulnerability assessments provide breadth of coverage.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "sec-20",
+    "certId": "isaca-crisc",
+    "domain": "Risk Response & Reporting",
+    "question": "A risk report shows a residual risk that exceeds the organization's risk appetite. The cost to implement additional controls exceeds the value of the asset at risk. What is the MOST appropriate risk response?",
+    "options": ["Implement the additional controls regardless of cost", "Accept the risk with documented approval from senior management", "Transfer the risk to a third party via insurance", "Eliminate the at-risk asset from the environment"],
+    "correctIndex": 1,
+    "explanation": "When control costs exceed the asset value, implementing additional controls is not economically justified. Risk acceptance is appropriate when the cost of mitigation exceeds the potential loss. However, risk acceptance must be formally documented and approved by senior management with full knowledge of the residual risk.",
+    "difficulty": "hard"
+  }
+]

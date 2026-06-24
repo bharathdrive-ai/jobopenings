@@ -1,0 +1,202 @@
+[
+  {
+    "id": "csc-1",
+    "certId": "cisco-200-301",
+    "domain": "Network Fundamentals",
+    "question": "A switch receives a frame destined for a MAC address not in its MAC address table. What does the switch do with the frame?",
+    "options": ["Drops the frame", "Sends the frame only to the default gateway", "Floods the frame out all ports except the receiving port", "Sends an ARP request to find the destination"],
+    "correctIndex": 2,
+    "explanation": "When a switch receives a frame with an unknown destination MAC address (not in the MAC address table), it floods the frame out all ports except the port on which it was received. This is called 'unknown unicast flooding.' The switch learns MAC addresses only from source addresses of incoming frames.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "csc-2",
+    "certId": "cisco-200-301",
+    "domain": "IP Connectivity",
+    "question": "Which routing protocol uses bandwidth and delay as its default composite metric?",
+    "options": ["OSPF", "RIPv2", "EIGRP", "BGP"],
+    "correctIndex": 2,
+    "explanation": "EIGRP (Enhanced Interior Gateway Routing Protocol) uses a composite metric calculated from bandwidth and delay by default. It can optionally include load and reliability in the calculation, but these are disabled by default. OSPF uses cost (based on bandwidth); RIPv2 uses hop count; BGP uses path attributes.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "csc-3",
+    "certId": "cisco-200-301",
+    "domain": "Network Access",
+    "question": "What Cisco feature allows a switch port to dynamically assign a VLAN based on the MAC address of the connecting device?",
+    "options": ["802.1Q trunking", "Dynamic VLAN assignment via RADIUS", "Voice VLAN", "Private VLAN"],
+    "correctIndex": 1,
+    "explanation": "Dynamic VLAN assignment uses a RADIUS server to assign VLANs based on device attributes like MAC address, username, or certificate. When a device connects, the switch queries the RADIUS server using 802.1X authentication, and the server returns the appropriate VLAN in the Access-Accept response.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "csc-4",
+    "certId": "cisco-200-301",
+    "domain": "Security Fundamentals",
+    "question": "Which Cisco IOS feature prevents unauthorized DHCP servers from responding to client requests on a switch?",
+    "options": ["Port security", "DHCP snooping", "Dynamic ARP Inspection", "IP Source Guard"],
+    "correctIndex": 1,
+    "explanation": "DHCP Snooping is a Layer 2 security feature that validates DHCP messages and filters untrusted DHCP traffic. Ports connected to legitimate DHCP servers are configured as 'trusted,' while all other ports are 'untrusted' and cannot send DHCP server responses (OFFER, ACK, NAK).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "csc-5",
+    "certId": "cisco-200-301",
+    "domain": "Automation & Programmability",
+    "question": "What data format does the Cisco IOS XE RESTCONF API use by default for data encoding?",
+    "options": ["XML only", "JSON or XML, depending on the Accept header", "YAML", "CSV"],
+    "correctIndex": 1,
+    "explanation": "RESTCONF APIs support both JSON and XML data formats. The client specifies the desired format using the Accept header (application/yang-data+json or application/yang-data+xml). NETCONF uses XML only; RESTCONF is more flexible and better suited for REST-based automation tooling.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "csc-6",
+    "certId": "cisco-350-401",
+    "domain": "Architecture",
+    "question": "What is the primary difference between Cisco SD-Access and traditional network access?",
+    "options": ["SD-Access uses optical fiber instead of copper", "SD-Access provides automated policy-based segmentation using a fabric overlay with centralized management via DNA Center", "SD-Access eliminates the need for switches and uses wireless only", "SD-Access replaces IP addressing with MAC addressing throughout"],
+    "correctIndex": 1,
+    "explanation": "Cisco SD-Access creates an automated, policy-based network fabric using LISP for control plane, VXLAN for data plane, and CIscoTrustSec (SGTs) for policy. DNA Center (Catalyst Center) provides centralized automation, assurance, and policy management, eliminating manual per-device configuration.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "csc-7",
+    "certId": "cisco-350-701",
+    "domain": "Network Security",
+    "question": "What does Cisco Umbrella use as a first line of defense to block malicious internet traffic?",
+    "options": ["Web proxy inspection", "DNS-layer security", "Email filtering", "Endpoint firewall"],
+    "correctIndex": 1,
+    "explanation": "Cisco Umbrella uses DNS-layer security to block requests to malicious domains and IPs before a connection is ever established. By acting as a recursive DNS resolver, it inspects every DNS query and blocks requests to known malicious domains, preventing connections to malware, phishing, and command-and-control infrastructure.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "csc-8",
+    "certId": "cisco-200-301",
+    "domain": "IP Services",
+    "question": "A router receives a packet destined for 192.168.10.50. The routing table shows: 192.168.10.0/24 via 10.0.0.1, 192.168.10.48/28 via 10.0.0.2, 0.0.0.0/0 via 10.0.0.3. Which route is selected?",
+    "options": ["192.168.10.0/24 via 10.0.0.1", "192.168.10.48/28 via 10.0.0.2", "0.0.0.0/0 via 10.0.0.3", "The packet is dropped because multiple routes match"],
+    "correctIndex": 1,
+    "explanation": "Cisco routers use longest prefix match (most specific route). 192.168.10.50 falls within 192.168.10.48/28 (range .48-.63) and 192.168.10.0/24. The /28 has a longer prefix (more specific) than /24, so the router selects 192.168.10.48/28 via 10.0.0.2.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "csc-9",
+    "certId": "cisco-350-601",
+    "domain": "DC Networking",
+    "question": "In a Cisco ACI fabric, what is the role of the APIC (Application Policy Infrastructure Controller)?",
+    "options": ["It acts as the data plane forwarding engine for the fabric", "It is the centralized policy management controller that programs the fabric", "It provides Layer 4-7 services like load balancing", "It serves as the external routing gateway for the fabric"],
+    "correctIndex": 1,
+    "explanation": "The APIC is the central automation and policy controller for Cisco ACI. It manages the logical model (tenants, VRFs, BDs, EPGs, contracts) and programs the Nexus 9000 spine and leaf switches. The APIC is not in the data path — forwarding decisions are made by the fabric switches autonomously.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "csc-10",
+    "certId": "cisco-200-901",
+    "domain": "Understanding & Using APIs",
+    "question": "When making a REST API call to the Cisco Meraki API, what must be included in every request?",
+    "options": ["A session cookie from a prior login", "An X-Cisco-Meraki-API-Key header containing the API key", "OAuth 2.0 Bearer token", "Basic Authentication with username and password"],
+    "correctIndex": 1,
+    "explanation": "The Cisco Meraki Dashboard API uses API key authentication. Every API request must include the header 'X-Cisco-Meraki-API-Key' with a valid API key. Keys are generated in the Meraki Dashboard under your account profile. Unlike many modern APIs, Meraki does not use OAuth for its standard API.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "csc-11",
+    "certId": "cisco-200-301",
+    "domain": "Network Fundamentals",
+    "question": "What mechanism does Spanning Tree Protocol (STP) use to prevent switching loops?",
+    "options": ["It enables only one active path between any two network segments by blocking redundant ports", "It uses TTL values to prevent packets from looping indefinitely", "It uses VLANs to separate broadcast domains", "It enables load balancing across all redundant paths"],
+    "correctIndex": 0,
+    "explanation": "STP prevents Layer 2 loops by electing a root bridge and calculating the best path to the root from each switch. Redundant paths are placed in a blocking state. Only one active path exists between any two network segments at any time. RSTP improves convergence speed; MSTP maps VLANs to STP instances.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "csc-12",
+    "certId": "cisco-350-401",
+    "domain": "Automation",
+    "question": "A network engineer needs to configure 100 Cisco routers with the same base configuration. Which Cisco automation tool uses YAML-based data models and SSH to push configuration without requiring agents on devices?",
+    "options": ["Cisco DNA Center (DNAC)", "Cisco NSO", "Ansible with cisco.ios collection", "Puppet for network devices"],
+    "correctIndex": 2,
+    "explanation": "Ansible uses SSH and the cisco.ios collection to manage Cisco IOS devices without installing agents. Configuration is defined in YAML-based playbooks. Ansible is agentless, idempotent, and widely used for network automation. NSO is more powerful but more complex; DNAC requires Cisco hardware.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "csc-13",
+    "certId": "cisco-400-007",
+    "domain": "Security",
+    "question": "A network architect needs to segment an enterprise campus network so that IoT devices cannot communicate with corporate workstations even if they are on the same physical infrastructure. Which Cisco technology achieves this at scale?",
+    "options": ["Access Control Lists (ACLs) on every switch", "Cisco TrustSec with Security Group Tags (SGTs)", "VLAN-based segmentation", "Private VLANs"],
+    "correctIndex": 1,
+    "explanation": "Cisco TrustSec uses Security Group Tags (SGTs) to enforce policy based on identity rather than network topology. SGTs are assigned to users/devices at authentication and enforced using Security Group ACLs (SGACLs) throughout the network. This scales much better than VLAN-based segmentation or distributed ACLs.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "csc-14",
+    "certId": "cisco-350-801",
+    "domain": "Telephony & Mobility",
+    "question": "What SIP response code indicates that the called party is temporarily unavailable and the caller should try again later?",
+    "options": ["404 Not Found", "480 Temporarily Unavailable", "487 Request Terminated", "503 Service Unavailable"],
+    "correctIndex": 1,
+    "explanation": "SIP 480 Temporarily Unavailable indicates the called user agent is temporarily unavailable (e.g., phone is turned off or DND is active). 404 means the user doesn't exist at that URI; 487 means the request was cancelled by the caller; 503 means the server cannot process the request.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "csc-15",
+    "certId": "cisco-200-301",
+    "domain": "IP Services",
+    "question": "What is the purpose of the 'ip helper-address' command on a Cisco router interface?",
+    "options": ["Configures a secondary IP address on the interface", "Forwards UDP broadcast packets (like DHCP) to a specified server on another subnet", "Enables OSPF on the interface", "Configures a static ARP entry"],
+    "correctIndex": 1,
+    "explanation": "'ip helper-address' converts DHCP broadcast requests from clients to unicast and forwards them to the specified DHCP server IP address. Without this, DHCP requests cannot cross router boundaries since broadcasts don't propagate between subnets. By default it forwards UDP ports 67, 68, 69, 53, 137, 138, 49, and 517.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "csc-16",
+    "certId": "cisco-400-251",
+    "domain": "Perimeter Security",
+    "question": "An attacker sends malformed packets to a Cisco ASA firewall's outside interface to identify running services. Which ASA feature should be configured to rate-limit and block such reconnaissance activity?",
+    "options": ["ACL with deny any any on outside interface", "Cisco ASA Threat Detection with scanning threat detection", "NAT with hide mode", "IP audit signatures"],
+    "correctIndex": 1,
+    "explanation": "Cisco ASA's scanning threat detection monitors connection rate statistics and identifies hosts performing reconnaissance (e.g., port scanning). When scanning is detected, the feature can shun (block) the attacker's IP address automatically. Basic threat detection tracks packet drop statistics; advanced detects more complex threats.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "csc-17",
+    "certId": "cisco-200-301",
+    "domain": "Network Fundamentals",
+    "question": "Which layer of the OSI model is responsible for end-to-end error detection and correction, ensuring reliable data transfer between applications?",
+    "options": ["Network Layer (Layer 3)", "Data Link Layer (Layer 2)", "Transport Layer (Layer 4)", "Session Layer (Layer 5)"],
+    "correctIndex": 2,
+    "explanation": "The Transport Layer (Layer 4) provides end-to-end communication, error recovery, and flow control between applications. TCP at Layer 4 provides reliable, ordered delivery with error detection and retransmission. UDP at Layer 4 provides best-effort delivery without these guarantees.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "csc-18",
+    "certId": "cisco-350-901",
+    "domain": "Software Development",
+    "question": "When designing a webhook integration with Cisco Webex to receive real-time event notifications, what must the receiving server provide?",
+    "options": ["A persistent WebSocket connection to Webex servers", "An HTTPS endpoint that accepts POST requests and returns HTTP 200", "A polling loop querying the Webex API every 5 seconds", "An SMTP server to receive email notifications"],
+    "correctIndex": 1,
+    "explanation": "Webex webhooks require an HTTPS endpoint that accepts POST requests with JSON payloads. The endpoint must be publicly accessible, respond with HTTP 200 OK, and validate the webhook secret (X-Spark-Signature header) to verify authenticity. The server processes events asynchronously after acknowledging receipt.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "csc-19",
+    "certId": "cisco-200-301",
+    "domain": "IP Connectivity",
+    "question": "What is the default administrative distance of OSPF routes in Cisco IOS?",
+    "options": ["90", "110", "120", "115"],
+    "correctIndex": 1,
+    "explanation": "OSPF has a default administrative distance of 110 in Cisco IOS. Administrative distance is used to select between routes from different routing protocols to the same destination. Lower values are preferred: Connected=0, Static=1, EIGRP=90, OSPF=110, IS-IS=115, RIP=120.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "csc-20",
+    "certId": "cisco-350-701",
+    "domain": "Secure Network Access",
+    "question": "A company wants to authenticate 802.1X supplicants using certificates instead of usernames and passwords. Which EAP method provides mutual certificate-based authentication between the client and authentication server?",
+    "options": ["EAP-MD5", "PEAP-MSCHAPv2", "EAP-TLS", "LEAP"],
+    "correctIndex": 2,
+    "explanation": "EAP-TLS uses X.509 certificates on both the client (supplicant) and server (authentication server) for mutual authentication. It provides the highest security among EAP methods but requires a PKI infrastructure to issue client certificates. PEAP-MSCHAPv2 only requires a server certificate.",
+    "difficulty": "hard"
+  }
+]

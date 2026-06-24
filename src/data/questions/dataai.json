@@ -1,0 +1,202 @@
+[
+  {
+    "id": "dai-1",
+    "certId": "databricks-dbx-de",
+    "domain": "Lakehouse Platform",
+    "question": "What is the primary advantage of the Databricks Lakehouse architecture over traditional data lakes?",
+    "options": ["Lakehouses are cheaper to store data in", "Lakehouses provide ACID transactions, schema enforcement, and data quality on open file formats", "Lakehouses eliminate the need for any transformation", "Lakehouses only support structured data"],
+    "correctIndex": 1,
+    "explanation": "The Lakehouse architecture combines the scalability and cost-effectiveness of data lakes with the reliability and performance features of data warehouses. Delta Lake provides ACID transactions, schema enforcement, time travel, and data versioning on Parquet files, addressing the reliability issues of traditional data lakes.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dai-2",
+    "certId": "databricks-dbx-de",
+    "domain": "ELT with Spark SQL & Python",
+    "question": "In Delta Lake, what command allows you to query the state of a Delta table as it existed at a specific point in time?",
+    "options": ["RESTORE TABLE AS OF TIMESTAMP", "SELECT * FROM table VERSION AS OF 5", "TIME TRAVEL TO '2024-01-01'", "QUERY HISTORICAL DATA FROM table"],
+    "correctIndex": 1,
+    "explanation": "Delta Lake time travel allows querying historical versions of a table using 'VERSION AS OF' or 'TIMESTAMP AS OF' syntax: SELECT * FROM table VERSION AS OF 5 or SELECT * FROM table TIMESTAMP AS OF '2024-01-01'. This enables auditing, rollback, and reproducible ML experiments.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dai-3",
+    "certId": "databricks-dbx-de",
+    "domain": "Incremental Data Processing",
+    "question": "What Databricks feature enables processing only new or changed data in Delta tables, rather than reprocessing the entire table each time?",
+    "options": ["Auto Loader", "Spark Streaming", "Delta Live Tables with STREAMING tables", "Databricks SQL Serverless"],
+    "correctIndex": 2,
+    "explanation": "Delta Live Tables (DLT) with STREAMING keyword creates streaming tables that process only new records incrementally. Combined with Auto Loader for file ingestion, this enables efficient, stateful incremental processing pipelines. DLT manages checkpointing, error handling, and data quality expectations automatically.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dai-4",
+    "certId": "databricks-dbx-mlp",
+    "domain": "Experimentation",
+    "question": "What Databricks component enables tracking of machine learning experiments including parameters, metrics, artifacts, and model versions?",
+    "options": ["Databricks Feature Store", "MLflow on Databricks", "Databricks AutoML", "Delta Lake for ML"],
+    "correctIndex": 1,
+    "explanation": "MLflow (natively integrated in Databricks) provides experiment tracking (MLflow Tracking), model packaging (MLflow Projects), model serving (MLflow Models), and model registry (MLflow Model Registry). It allows reproducible ML experiments by logging parameters, metrics, and artifacts for every training run.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dai-5",
+    "certId": "snowflake-spc",
+    "domain": "Snowflake Architecture",
+    "question": "What is Snowflake's multi-cluster shared data architecture and how does it enable concurrent workloads?",
+    "options": ["A shared-nothing architecture where each node has its own storage and compute", "A three-layer architecture separating cloud services, virtual warehouses (compute), and storage, allowing independent scaling", "A single-server architecture with horizontal sharding", "An HDFS-based architecture with Spark compute clusters"],
+    "correctIndex": 1,
+    "explanation": "Snowflake's architecture has three independent layers: Cloud Services (security, metadata, query planning), Virtual Warehouses (compute clusters that can be independently scaled and paused), and Centralized Storage (columnar data stored in cloud object storage). Multiple virtual warehouses can query the same data simultaneously without contention.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dai-6",
+    "certId": "snowflake-spc",
+    "domain": "Virtual Warehouses",
+    "question": "A Snowflake virtual warehouse is set to AUTO_SUSPEND=60 and AUTO_RESUME=TRUE. What is the impact on costs and performance?",
+    "options": ["The warehouse runs 24/7 at full capacity regardless of usage", "The warehouse automatically pauses after 60 seconds of inactivity, reducing costs, and resumes automatically when queries arrive", "The warehouse is suspended manually and must be manually resumed", "AUTO_SUSPEND only works with Enterprise edition"],
+    "correctIndex": 1,
+    "explanation": "AUTO_SUSPEND automatically suspends the virtual warehouse after the specified number of seconds of inactivity, stopping credit consumption. AUTO_RESUME=TRUE means Snowflake automatically resumes the warehouse when SQL queries are received. There may be a brief startup latency when resuming, but this is typically 1-2 seconds.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dai-7",
+    "certId": "tableau-tds",
+    "domain": "Connecting to & Preparing Data",
+    "question": "What is a Tableau Extract (.hyper file) and when should it be used instead of a live connection?",
+    "options": ["A live connection that updates every 5 minutes", "A snapshot of data stored locally/in Tableau Cloud that enables faster query performance and offline analysis, best for large datasets or slow sources", "A connection type only for Excel files", "A compressed CSV format for sharing data"],
+    "correctIndex": 1,
+    "explanation": "A Tableau Extract (.hyper file) is a local copy of data optimized for Tableau's in-memory analytics engine. Extracts improve performance for large datasets, enable offline access, and reduce load on source systems. Use live connections when real-time data is required or the source is already fast. Extracts must be refreshed to show updated data.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dai-8",
+    "certId": "tableau-tds",
+    "domain": "Exploring & Analyzing Data",
+    "question": "In Tableau, what is the difference between a Dimension and a Measure?",
+    "options": ["Dimensions are always dates; measures are always numbers", "Dimensions are categorical fields used to slice and dice data; measures are quantitative fields that can be aggregated", "Dimensions are row-level fields; measures are column-level fields", "Dimensions are from databases; measures are calculated"],
+    "correctIndex": 1,
+    "explanation": "Dimensions are qualitative/categorical fields (names, dates, categories) used to group, filter, and segment data. Measures are quantitative values that can be aggregated (summed, averaged, counted). Tableau automatically classifies fields but these can be changed. Placing a measure on the view applies an aggregation.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dai-9",
+    "certId": "microsoft-pl-300",
+    "domain": "Model Data",
+    "question": "In Power BI, what relationship type allows filtering in both directions between two tables?",
+    "options": ["One-to-One relationship", "One-to-Many with single direction filter", "Many-to-Many relationship", "Cross-filter direction: Both"],
+    "correctIndex": 3,
+    "explanation": "By default, Power BI relationships filter in one direction (from the 'one' side to the 'many' side). Setting Cross-filter direction to 'Both' enables bidirectional filtering, allowing the filter to propagate in both directions. This is useful in specific scenarios but can cause ambiguity and performance issues if overused.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dai-10",
+    "certId": "microsoft-pl-300",
+    "domain": "Prepare Data",
+    "question": "In Power Query Editor, what transformation combines all rows from two tables with the same columns into a single table?",
+    "options": ["Merge Queries", "Append Queries", "Group By", "Pivot Columns"],
+    "correctIndex": 1,
+    "explanation": "Append Queries stacks the rows of two or more tables with identical (or compatible) column structures, resulting in a single table with all rows. This is equivalent to SQL UNION ALL. Merge Queries performs SQL JOIN-like operations, combining columns from two tables based on matching keys.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dai-11",
+    "certId": "cloudera-cdp-a",
+    "domain": "CDP Architecture",
+    "question": "What component of Cloudera Data Platform provides unified security and governance across all CDP services?",
+    "options": ["Cloudera Manager", "Apache Ranger and Apache Atlas", "Cloudera Data Warehouse", "Apache Knox"],
+    "correctIndex": 1,
+    "explanation": "Apache Ranger provides centralized authorization policies for Hadoop ecosystem services (HDFS, Hive, HBase, etc.). Apache Atlas provides metadata management and data governance, including data lineage and classification. Together, they form the security and governance layer for Cloudera Data Platform.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dai-12",
+    "certId": "dbt-dbt-ae",
+    "domain": "Models & Materializations",
+    "question": "In dbt, what is the difference between a 'view' and a 'table' materialization?",
+    "options": ["Views are permanent; tables are temporary", "Views are SQL queries that execute on each query; tables are materialized (physically stored) in the data warehouse, requiring storage but with better query performance", "Tables are only for fact tables; views are for dimension tables", "There is no functional difference in dbt"],
+    "correctIndex": 1,
+    "explanation": "dbt materializations determine how models are built in the data warehouse. 'view' creates a SQL view that executes the underlying query each time it's referenced (no storage cost, always fresh). 'table' drops and recreates a physical table on each dbt run (storage cost, but faster queries). 'incremental' adds only new rows. Choose based on query frequency and data size.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dai-13",
+    "certId": "dbt-dbt-ae",
+    "domain": "Tests & Documentation",
+    "question": "What built-in dbt test validates that all values in a column are unique?",
+    "options": ["not_null", "unique", "accepted_values", "relationships"],
+    "correctIndex": 1,
+    "explanation": "dbt has four built-in generic tests: 'unique' (all values in a column are unique), 'not_null' (no null values), 'accepted_values' (all values are in a specified list), and 'relationships' (referential integrity between tables). These are configured in schema.yml files and run with 'dbt test'.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dai-14",
+    "certId": "snowflake-spc",
+    "domain": "Account Access & Security",
+    "question": "A Snowflake developer is granted the SYSADMIN role and creates a new database. By default, who owns this database?",
+    "options": ["The user who created it personally", "The SYSADMIN role", "The ACCOUNTADMIN role", "The PUBLIC role"],
+    "correctIndex": 1,
+    "explanation": "In Snowflake, when a user creates an object while using a specific role, the role (not the user) owns the object. Since the developer is using SYSADMIN when creating the database, SYSADMIN becomes the owner. Role-based ownership is a key security concept in Snowflake's access control model.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dai-15",
+    "certId": "databricks-dbx-mlp",
+    "domain": "Model Deployment",
+    "question": "What is the purpose of Databricks' Model Serving (Mosaic AI Model Serving) in a production ML workflow?",
+    "options": ["Training ML models on large clusters", "Providing a scalable REST API endpoint to serve ML model predictions in real-time", "Storing feature data for model training", "Scheduling batch inference jobs on Spark"],
+    "correctIndex": 1,
+    "explanation": "Databricks Model Serving creates a production REST API endpoint for real-time model inference. It handles auto-scaling, versioning (A/B testing multiple model versions), monitoring, and integration with the MLflow Model Registry. This enables low-latency predictions from trained models without managing infrastructure.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dai-16",
+    "certId": "microsoft-pl-300",
+    "domain": "Visualize & Analyze Data",
+    "question": "In Power BI, which visual type is BEST for showing the relationship and distribution between two continuous numerical variables?",
+    "options": ["Bar chart", "Scatter chart", "Treemap", "Funnel chart"],
+    "correctIndex": 1,
+    "explanation": "Scatter charts (scatter plots) are ideal for visualizing relationships between two numerical variables. Each dot represents an observation, and the pattern of dots reveals correlations, clusters, and outliers. Power BI scatter charts can also add a third dimension using bubble size and a fourth using color.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dai-17",
+    "certId": "databricks-dbx-de",
+    "domain": "Production Pipelines",
+    "question": "In Databricks Delta Live Tables, what is a 'Data Quality Expectation' and what happens when a record fails an expectation?",
+    "options": ["An expectation is a schema validation that always drops failing records", "An expectation is a constraint defining valid data, with configurable actions: warn (log), drop (filter), or fail (stop pipeline) on violations", "An expectation only applies to streaming tables, not batch tables", "An expectation is an alert sent to administrators"],
+    "correctIndex": 1,
+    "explanation": "DLT Expectations define data quality constraints using EXPECT syntax. Three modes: EXPECT (warn — log failures but continue), EXPECT ... OR DROP (drop failing rows), EXPECT ... OR FAIL (fail the pipeline). This enables data quality monitoring and enforcement within ETL pipelines without separate tooling.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "dai-18",
+    "certId": "dbt-dbt-ae",
+    "domain": "Sources & Seeds",
+    "question": "What is the purpose of a dbt 'seed' file?",
+    "options": ["Generating random test data for models", "Loading small static reference data from CSV files in the repository into the data warehouse", "Initializing the dbt project structure", "Providing database connection credentials"],
+    "correctIndex": 1,
+    "explanation": "dbt seeds are CSV files in the 'seeds/' directory that dbt loads into the data warehouse using 'dbt seed'. They're ideal for small, slow-changing reference data like country codes, department names, or lookup tables. Seeds become tables in the warehouse that can be referenced by other models using ref().",
+    "difficulty": "easy"
+  },
+  {
+    "id": "dai-19",
+    "certId": "snowflake-spc",
+    "domain": "Performance Concepts",
+    "question": "What Snowflake feature enables automatic caching of query results for identical queries, eliminating re-computation for up to 24 hours?",
+    "options": ["Materialized Views", "Virtual Warehouse cache", "Query Result Cache", "Data Clustering"],
+    "correctIndex": 2,
+    "explanation": "The Snowflake Query Result Cache stores the results of every query for 24 hours. If the same query is re-run (same SQL, same user permissions, same table data), Snowflake returns the cached result without using any virtual warehouse credits. The warehouse doesn't even need to be running. Results are invalidated when underlying data changes.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "dai-20",
+    "certId": "tableau-tds",
+    "domain": "Sharing Insights",
+    "question": "What is the difference between a Tableau Workbook (.twb) and a Packaged Workbook (.twbx)?",
+    "options": ["They are the same format with different extensions", ".twb contains all data embedded; .twbx only contains the workbook XML", ".twb is a workbook XML referencing external data; .twbx includes the workbook and a local copy of data (extracts/files), enabling sharing without needing source system access", ".twbx requires Tableau Desktop; .twb works in Tableau Online only"],
+    "correctIndex": 2,
+    "explanation": "A .twb file is a lightweight XML file that references external data sources but doesn't include the data. A .twbx (Packaged Workbook) bundles the workbook XML with any local extracts, custom images, or background maps into a single ZIP file. Use .twbx for sharing with users who don't have access to the original data sources.",
+    "difficulty": "medium"
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "gcp-1",
+    "certId": "gcp-cdl",
+    "domain": "Cloud Concepts",
+    "question": "What Google Cloud service allows organizations to run containerized applications without managing the underlying cluster infrastructure?",
+    "options": ["Google Kubernetes Engine (GKE)", "Cloud Run", "Compute Engine", "App Engine Flexible"],
+    "correctIndex": 1,
+    "explanation": "Cloud Run is a fully managed compute platform that lets you run stateless containers without managing infrastructure. It automatically scales up from zero and down to zero based on traffic, and you only pay when code is running.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gcp-2",
+    "certId": "gcp-cdl",
+    "domain": "Data & AI",
+    "question": "A company wants to analyze petabytes of data using SQL without managing any infrastructure. Which Google Cloud service should they use?",
+    "options": ["Cloud SQL", "Spanner", "BigQuery", "Bigtable"],
+    "correctIndex": 2,
+    "explanation": "BigQuery is Google Cloud's fully managed, serverless data warehouse that enables super-fast SQL queries using the processing power of Google's infrastructure. It can analyze petabytes of data without requiring you to provision or manage any infrastructure.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gcp-3",
+    "certId": "gcp-ace",
+    "domain": "Setting Up Cloud Environment",
+    "question": "What is the correct hierarchy for organizing Google Cloud resources from broadest to most specific?",
+    "options": ["Organization → Folder → Project → Resource", "Account → Organization → Project → Resource", "Organization → Project → Folder → Resource", "Billing Account → Organization → Project → Resource"],
+    "correctIndex": 0,
+    "explanation": "Google Cloud resources are organized in a hierarchy: Organization (the root node, tied to a Google Workspace or Cloud Identity domain) → Folders (optional grouping containers) → Projects (the base-level organizing entity) → Resources (VMs, buckets, etc.).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gcp-4",
+    "certId": "gcp-ace",
+    "domain": "Configuring Access & Security",
+    "question": "A developer needs to give a Cloud Function access to write to a Cloud Storage bucket. Following the principle of least privilege, what should be configured?",
+    "options": ["Assign the Editor role to the Cloud Function's service account", "Assign the Storage Object Creator role to the Cloud Function's service account", "Store service account credentials in the function's environment variables", "Grant the function owner access to the project"],
+    "correctIndex": 1,
+    "explanation": "Following least privilege, grant only the permissions needed. Storage Object Creator allows the service account to create (write) new objects in Cloud Storage without providing read or delete access. Assigning Editor would grant excessive permissions across all services.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gcp-5",
+    "certId": "gcp-pca",
+    "domain": "Cloud Architecture Design",
+    "question": "An application requires a globally consistent database that can serve reads and writes from multiple regions simultaneously with strong consistency. Which Google Cloud service meets this requirement?",
+    "options": ["Cloud SQL with read replicas", "Firebase Realtime Database", "Cloud Spanner", "Cloud Bigtable"],
+    "correctIndex": 2,
+    "explanation": "Cloud Spanner is the only service that provides external consistency (strongest form of consistency) at global scale. It uses TrueTime to achieve globally distributed strong consistency, allowing reads and writes from any region with automatic replication and failover.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gcp-6",
+    "certId": "gcp-pca",
+    "domain": "Designing for Security & Compliance",
+    "question": "A company needs to ensure that all data stored in Google Cloud remains within the EU and cannot be moved by any Google employee. Which Google Cloud feature should they implement?",
+    "options": ["Resource Location Restriction using Organization Policy", "Sovereign Controls on Google Cloud (Assured Workloads EU Sovereign)", "VPC Service Controls", "Customer-Managed Encryption Keys (CMEK)"],
+    "correctIndex": 1,
+    "explanation": "Assured Workloads with EU Sovereign controls provides data residency guarantees, access controls on Google personnel, and compliance controls specific to EU sovereignty requirements. It restricts where data is stored and processed and limits Google operator access to data.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gcp-7",
+    "certId": "gcp-pde",
+    "domain": "Data Ingestion & Processing",
+    "question": "A streaming pipeline processes IoT sensor data. Some events arrive out of order by up to 2 minutes. The pipeline must produce accurate windowed aggregations. Which Dataflow windowing strategy should be used?",
+    "options": ["Fixed Windows with no watermarks", "Sliding Windows with default watermarks", "Fixed Windows with a 2-minute allowed lateness and custom watermarks", "Session Windows with a 5-minute gap duration"],
+    "correctIndex": 2,
+    "explanation": "For out-of-order event streams, use event-time watermarks to track progress and allowed lateness to handle late arrivals. Fixed 2-minute windows with a 2-minute allowed lateness and appropriate watermarks ensures late-arriving events are included in the correct window without waiting indefinitely.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gcp-8",
+    "certId": "gcp-pcde",
+    "domain": "Building & Implementing CI/CD Pipelines",
+    "question": "A team uses Cloud Build for CI/CD. They want to deploy to Cloud Run only after tests pass and the container image passes a vulnerability scan. What Cloud Build feature enables this workflow?",
+    "options": ["Build triggers with substitution variables", "Cloud Build steps with sequential execution and Binary Authorization", "Cloud Build with GitHub Checks integration", "Cloud Deploy with approval gates"],
+    "correctIndex": 1,
+    "explanation": "Cloud Build steps execute sequentially or in parallel. A pipeline can run tests in one step, scan the image using Container Analysis in another, and deploy to Cloud Run only if all previous steps succeed. Binary Authorization can enforce that only attested images are deployed.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gcp-9",
+    "certId": "gcp-pmle",
+    "domain": "Model Development",
+    "question": "A data scientist trained a TensorFlow model and wants to serve it with autoscaling and versioning without managing infrastructure. Which Google Cloud service is MOST appropriate?",
+    "options": ["Compute Engine with TensorFlow Serving", "Vertex AI Prediction", "Cloud Functions with TensorFlow Lite", "GKE with TF Serving container"],
+    "correctIndex": 1,
+    "explanation": "Vertex AI Prediction (formerly AI Platform Prediction) provides fully managed model serving with automatic scaling, versioning, and monitoring. You upload your model to Cloud Storage and Vertex AI handles deployment, autoscaling, and traffic management without managing infrastructure.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gcp-10",
+    "certId": "gcp-pcse",
+    "domain": "Configuring Access",
+    "question": "A company wants to prevent services in one GCP project from accessing Cloud Storage buckets in another project, even if they have IAM permissions. Which Google Cloud feature achieves this?",
+    "options": ["Organization Policy constraints", "VPC Service Controls perimeter", "Cloud Armor rules", "IAM Deny policies"],
+    "correctIndex": 1,
+    "explanation": "VPC Service Controls create a security perimeter around Google Cloud resources, preventing data exfiltration even for authorized users. They restrict access to services based on context (project, network, identity) regardless of IAM permissions, providing an additional security layer.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gcp-11",
+    "certId": "gcp-pcne",
+    "domain": "VPC Networks",
+    "question": "A company with a hub-and-spoke network topology wants to route traffic between spoke VPCs through a central hub VPC without creating direct peering between spokes. Which solution achieves this?",
+    "options": ["VPC Network Peering between all VPCs", "Cloud VPN between each spoke pair", "Network Connectivity Center (NCC) with VPC spokes", "Shared VPC with host project"],
+    "correctIndex": 2,
+    "explanation": "Network Connectivity Center (NCC) provides a hub-and-spoke model where spoke VPCs connect to a central hub. Unlike VPC Peering (which isn't transitive), NCC allows traffic between spokes to route through the hub, enabling centralized network management and inspection.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gcp-12",
+    "certId": "gcp-ace",
+    "domain": "Deploying & Implementing",
+    "question": "What command deploys an application to App Engine Standard environment using the app.yaml configuration file?",
+    "options": ["gcloud app deploy", "gcloud run deploy", "gcloud compute deploy", "gcloud functions deploy"],
+    "correctIndex": 0,
+    "explanation": "The 'gcloud app deploy' command deploys the application in the current directory to App Engine using the app.yaml file. The command packages the application, uploads it to Cloud Storage, and updates the serving version in App Engine.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gcp-13",
+    "certId": "gcp-pca",
+    "domain": "Analyzing & Optimizing Processes",
+    "question": "A BigQuery query is scanning 5TB of data each time it runs but only needs 100GB. What optimization technique would MOST reduce costs and improve performance?",
+    "options": ["Enable BigQuery BI Engine", "Partition the table by date and cluster by frequently filtered columns", "Increase the slot count for the project", "Export data to Cloud Storage before querying"],
+    "correctIndex": 1,
+    "explanation": "Partitioning reduces the amount of data scanned by restricting queries to specific partitions (e.g., date ranges). Clustering further optimizes performance by sorting data within partitions, allowing BigQuery to skip blocks of data. Together they can dramatically reduce data scanned and query costs.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gcp-14",
+    "certId": "gcp-cdl",
+    "domain": "Digital Transformation",
+    "question": "Which Google Cloud tool allows organizations to assess their workloads for cloud migration readiness, estimate TCO, and generate migration recommendations?",
+    "options": ["Migrate for Compute Engine", "Google Cloud Pricing Calculator", "StratoZone (formerly Cornerstone)", "Cloud Asset Inventory"],
+    "correctIndex": 2,
+    "explanation": "StratoZone (acquired by Google and integrated as a migration assessment tool) helps organizations discover and assess on-premises workloads, analyze cloud fit, estimate TCO and ROI, and generate migration plans. It's used in the discovery and planning phase of cloud migrations.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gcp-15",
+    "certId": "gcp-pde",
+    "domain": "Storing Data",
+    "question": "A financial application requires storing time-series data from millions of sensors with sub-10ms read latency for recent data and must scale to hundreds of terabytes. Which storage service is MOST appropriate?",
+    "options": ["Cloud Firestore", "Cloud SQL", "Cloud Bigtable", "BigQuery"],
+    "correctIndex": 2,
+    "explanation": "Cloud Bigtable is a fully managed NoSQL wide-column database optimized for low-latency, high-throughput workloads like time-series data. It scales to petabytes, provides single-digit millisecond latency, and is used by Google's own services like Gmail and Google Analytics.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gcp-16",
+    "certId": "gcp-ace",
+    "domain": "Ensuring Successful Operations",
+    "question": "A GKE application is experiencing performance issues. You need to view CPU and memory usage metrics at the container level. Which Google Cloud service provides this visibility?",
+    "options": ["Cloud Logging", "Google Cloud Monitoring with GKE workload metrics", "Cloud Trace", "Cloud Profiler"],
+    "correctIndex": 1,
+    "explanation": "Google Cloud Monitoring automatically collects metrics from GKE clusters including container-level CPU and memory usage. The GKE dashboard provides pre-built dashboards for nodes, pods, and containers. You can also set up custom alerts for resource utilization thresholds.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "gcp-17",
+    "certId": "gcp-pmle",
+    "domain": "Framing ML Problems",
+    "question": "A model predicting customer churn achieves 95% accuracy on test data, but only 5% of customers actually churn. What metric would better evaluate model performance for this imbalanced dataset?",
+    "options": ["Accuracy", "Precision-Recall AUC or F1-Score", "Mean Squared Error", "R-squared"],
+    "correctIndex": 1,
+    "explanation": "With class imbalance (95% non-churn), a model predicting 'no churn' for everyone would achieve 95% accuracy while being useless. Precision-Recall AUC focuses on the positive class (churners) and is more informative. F1-score balances precision and recall for imbalanced datasets.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gcp-18",
+    "certId": "gcp-pcdb",
+    "domain": "Designing Database Solutions",
+    "question": "An application needs a fully managed relational database compatible with MySQL that can automatically scale read capacity across multiple regions with strong consistency for writes. Which solution should be recommended?",
+    "options": ["Cloud SQL for MySQL with read replicas", "Spanner with MySQL dialect", "AlloyDB for PostgreSQL", "Cloud SQL for MySQL with high availability"],
+    "correctIndex": 1,
+    "explanation": "Cloud Spanner now supports a MySQL-compatible dialect while providing global distribution, horizontal scaling, and strong consistency that Cloud SQL cannot offer across regions. AlloyDB is PostgreSQL-compatible. Spanner's MySQL dialect enables migration without application code changes.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "gcp-19",
+    "certId": "gcp-pwsa",
+    "domain": "Managing Security & Compliance",
+    "question": "An organization needs to prevent Google Workspace users from sharing files externally with personal Gmail accounts while allowing sharing with partner organization domains. Which Google Workspace feature should be configured?",
+    "options": ["Google Vault sharing restrictions", "Data Loss Prevention (DLP) rules", "Drive sharing settings with allowlisted domains", "Context-Aware Access policies"],
+    "correctIndex": 2,
+    "explanation": "Google Workspace Drive sharing settings allow administrators to restrict external sharing to only allowlisted domains. You can prevent sharing with personal accounts (consumer Gmail) while allowing sharing with specific partner organization domains by adding them to the allowlist.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "gcp-20",
+    "certId": "gcp-pcse",
+    "domain": "Ensuring Data Protection",
+    "question": "A company must encrypt sensitive data in BigQuery with keys they control and must be able to rotate. The keys should be stored outside Google's infrastructure. Which solution meets these requirements?",
+    "options": ["Google-managed encryption keys", "Customer-managed encryption keys (CMEK) with Cloud KMS", "Customer-supplied encryption keys (CSEK)", "External Key Manager (EKM) with Cloud KMS"],
+    "correctIndex": 3,
+    "explanation": "External Key Manager (EKM) allows you to use encryption keys stored in external key management partners (outside Google's infrastructure). This meets the requirement for keys stored outside Google while still enabling BigQuery encryption. CMEK uses keys in Cloud KMS which is still Google-hosted.",
+    "difficulty": "hard"
+  }
+]
