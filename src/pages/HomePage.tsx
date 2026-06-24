@@ -19,14 +19,14 @@ const DOMAIN_COUNTS = DOMAINS.map((d) => ({
 const FEATURED = certs.filter((c) => c.popular).slice(0, 6);
 
 const STATS = [
-  { label: 'Certification Exams', value: '87' },
+  { label: 'Certification Exams', value: '111' },
   { label: 'Practice Questions', value: '1,700+' },
-  { label: 'Domains Covered', value: '9' },
+  { label: 'Domains Covered', value: '11' },
   { label: 'Active Learners', value: '24,500+' },
 ];
 
 const HOW_IT_WORKS = [
-  { icon: <BookOpen size={28} />, title: 'Browse & Choose', desc: 'Explore 87 certifications across 9 domains. Filter by vendor, level, and domain to find your target exam.' },
+  { icon: <BookOpen size={28} />, title: 'Browse & Choose', desc: 'Explore 111 certifications across 11 domains. Filter by vendor, level, and domain to find your target exam.' },
   { icon: <Zap size={28} />, title: 'Practice & Learn', desc: 'Take full-length timed practice exams with realistic MCQ questions and instant answer explanations.' },
   { icon: <BarChart3 size={28} />, title: 'Track Progress', desc: 'Review detailed score breakdowns, identify weak domains, and monitor your improvement over time.' },
 ];
@@ -47,7 +47,7 @@ export function HomePage() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-indigo-600/30 border border-indigo-500/50 rounded-full px-4 py-1.5 text-sm text-indigo-300 mb-6">
             <Shield size={14} />
-            87 exams across 9 domains
+            111 exams across 11 domains
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
             Ace Your IT{' '}
@@ -147,7 +147,7 @@ export function HomePage() {
           </div>
           <div className="text-center mt-10">
             <Button variant="secondary" size="lg" onClick={() => navigate('/catalog')}>
-              View All 87 Exams <ArrowRight size={16} />
+              View All 111 Exams <ArrowRight size={16} />
             </Button>
           </div>
         </div>

@@ -13,7 +13,7 @@ export function Footer() {
               CertPath
             </Link>
             <p className="text-sm leading-relaxed max-w-xs">
-              The most comprehensive IT certification exam prep platform. Master 87 exams across 9 domains with realistic practice tests and detailed explanations.
+              The most comprehensive IT certification exam prep platform. Master 111 exams across 11 domains with realistic practice tests and detailed explanations.
             </p>
             <div className="flex gap-3 mt-4">
               {[Github, Twitter, Linkedin].map((Icon, i) => (
