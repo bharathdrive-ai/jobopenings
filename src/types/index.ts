@@ -90,3 +90,19 @@ export interface Toast {
   message: string;
   type: 'success' | 'error' | 'info';
 }
+
+export type UserRole = 'admin' | 'jobSeeker' | 'jobPoster';
+
+export interface RoleInfo {
+  id: UserRole;
+  label: string;
+  description: string;
+}
+
+export interface AuthUser {
+  id: string;
+  username: string;
+  email: string;
+  name: string;
+  role: UserRole;
+}

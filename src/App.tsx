@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { UserProvider, useUser } from './context/UserContext';
 import { ExamProvider } from './context/ExamContext';
+import { AuthProvider } from './context/AuthContext';
+import { RequireRole } from './components/auth/RequireRole';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { ToastContainer } from './components/ui/ToastContainer';
@@ -11,6 +13,8 @@ import { CertDetailPage } from './pages/CertDetailPage';
 import { ExamPage } from './pages/ExamPage';
 import { ResultsPage } from './pages/ResultsPage';
 import { DashboardPage } from './pages/DashboardPage';
+import { LoginPage } from './pages/LoginPage';
+import { AdminHomePage, SeekerHomePage, PosterHomePage } from './pages/RoleHomePages';
 
 function AppContent() {
   const { darkMode, toasts } = useUser();
@@ -34,6 +38,10 @@ function AppContent() {
           <Route path="/exam/:id" element={<ExamPage />} />
           <Route path="/results/:sessionId" element={<ResultsPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/admin" element={<RequireRole roles={['admin']}><AdminHomePage /></RequireRole>} />
+          <Route path="/seeker" element={<RequireRole roles={['jobSeeker']}><SeekerHomePage /></RequireRole>} />
+          <Route path="/poster" element={<RequireRole roles={['jobPoster']}><PosterHomePage /></RequireRole>} />
         </Routes>
       </main>
       <Footer />
@@ -45,9 +53,11 @@ function AppContent() {
 export default function App() {
   return (
     <UserProvider>
-      <ExamProvider>
-        <AppContent />
-      </ExamProvider>
+      <AuthProvider>
+        <ExamProvider>
+          <AppContent />
+        </ExamProvider>
+      </AuthProvider>
     </UserProvider>
   );
 }

@@ -1,18 +1,31 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Moon, Sun, BookOpen, LayoutDashboard, Library, Menu, X, GraduationCap } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Moon, Sun, BookOpen, LayoutDashboard, Library, Menu, X, GraduationCap, LogIn, LogOut, UserCircle } from 'lucide-react';
 import { useUser } from '../../context/UserContext';
+import { useAuth, ROLES, ROLE_HOME } from '../../context/AuthContext';
 
 export function Navbar() {
-  const { darkMode, toggleDarkMode } = useUser();
+  const { darkMode, toggleDarkMode, showToast } = useUser();
+  const { user, logout } = useAuth();
   const location = useLocation();
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
     { to: '/', label: 'Home', icon: <GraduationCap size={18} /> },
     { to: '/catalog', label: 'Catalog', icon: <Library size={18} /> },
     { to: '/dashboard', label: 'Dashboard', icon: <LayoutDashboard size={18} /> },
+    ...(user ? [{ to: ROLE_HOME[user.role], label: 'My Portal', icon: <UserCircle size={18} /> }] : []),
   ];
+
+  const roleLabel = user ? ROLES.find((r) => r.id === user.role)?.label : '';
+
+  const handleLogout = () => {
+    logout();
+    setMenuOpen(false);
+    showToast('Signed out', 'info');
+    navigate('/login');
+  };
 
   const isActive = (to: string) =>
     to === '/' ? location.pathname === '/' : location.pathname.startsWith(to);
@@ -44,6 +57,29 @@ export function Navbar() {
           </div>
 
           <div className="flex items-center gap-2">
+            {user ? (
+              <div className="hidden md:flex items-center gap-3">
+                <div className="text-right leading-tight">
+                  <p className="text-sm font-medium">{user.name}</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">{roleLabel}</p>
+                </div>
+                <button
+                  onClick={handleLogout}
+                  className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                >
+                  <LogOut size={18} />
+                  Sign out
+                </button>
+              </div>
+            ) : (
+              <Link
+                to="/login"
+                className="hidden md:flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium bg-indigo-600 hover:bg-indigo-700 text-white transition-colors"
+              >
+                <LogIn size={18} />
+                Sign in
+              </Link>
+            )}
             <button
               onClick={toggleDarkMode}
               className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 transition-colors"
@@ -77,6 +113,24 @@ export function Navbar() {
                 {l.label}
               </Link>
             ))}
+            {user ? (
+              <button
+                onClick={handleLogout}
+                className="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-400"
+              >
+                <LogOut size={18} />
+                Sign out ({user.name} · {roleLabel})
+              </button>
+            ) : (
+              <Link
+                to="/login"
+                onClick={() => setMenuOpen(false)}
+                className="flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium text-indigo-700 dark:text-indigo-400"
+              >
+                <LogIn size={18} />
+                Sign in
+              </Link>
+            )}
           </div>
         )}
       </div>

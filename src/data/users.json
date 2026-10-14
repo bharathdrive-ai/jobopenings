@@ -1,0 +1,41 @@
+{
+  "roles": [
+    { "id": "admin", "label": "Admin", "description": "Manage users, exams and platform settings" },
+    { "id": "jobSeeker", "label": "Job Seeker", "description": "Practise exams and showcase your certifications" },
+    { "id": "jobPoster", "label": "Job Poster", "description": "Post openings and find certified candidates" }
+  ],
+  "users": [
+    {
+      "id": "u-001",
+      "username": "admin",
+      "email": "admin@certpath.dev",
+      "password": "Admin@123",
+      "role": "admin",
+      "name": "Platform Admin"
+    },
+    {
+      "id": "u-002",
+      "username": "seeker",
+      "email": "seeker@certpath.dev",
+      "password": "Seeker@123",
+      "role": "jobSeeker",
+      "name": "Priya Sharma"
+    },
+    {
+      "id": "u-003",
+      "username": "seeker2",
+      "email": "rahul@certpath.dev",
+      "password": "Seeker@456",
+      "role": "jobSeeker",
+      "name": "Rahul Verma"
+    },
+    {
+      "id": "u-004",
+      "username": "poster",
+      "email": "poster@certpath.dev",
+      "password": "Poster@123",
+      "role": "jobPoster",
+      "name": "Acme Talent Team"
+    }
+  ]
+}
